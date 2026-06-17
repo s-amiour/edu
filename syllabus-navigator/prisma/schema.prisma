@@ -1,0 +1,372 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native"]
+  previewFeatures = ["pgvector"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ───────────────────────────────────────────────────────────────────
+
+enum Role {
+  STUDENT
+  PROFESSOR
+  ADMIN
+}
+
+enum AssessmentType {
+  EXAM
+  QUIZ
+  PROJECT
+  HOMEWORK
+}
+
+enum MasteryState {
+  UNSEEN
+  SEEN
+  PRACTICED
+  CONFIDENT
+}
+
+enum ContentFormat {
+  summary
+  flashcards
+  worked_example
+  analogy
+  quiz
+}
+
+enum Feedback {
+  HELPFUL
+  NOT_HELPFUL
+}
+
+// ─── User ────────────────────────────────────────────────────────────────────
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  name          String?
+  passwordHash  String
+  role          Role     @default(STUDENT)
+  programLevel  String   @default("beginner")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  coursesTaught         Course[]
+  masteryRecords        MasteryRecord[]
+  contentRecommendations ContentRecommendation[]
+  quizAttempts          QuizAttempt[]
+  uploadedDocuments     UploadedDocument[]
+  activityLogs          ActivityLog[]
+
+  @@map("users")
+}
+
+// ─── Course ──────────────────────────────────────────────────────────────────
+
+model Course {
+  id          String   @id @default(cuid())
+  code        String   @unique
+  name        String
+  description String?
+  semester    String?
+  year        Int?
+  professorId String?
+  createdAt   DateTime @default(now())
+
+  professor            User?               @relation(fields: [professorId], references: [id], onDelete: SetNull)
+  modules              Module[]
+  assessments          Assessment[]
+  quizzes              Quiz[]
+  coursePrereqsAsDep   CoursePrerequisite[] @relation("dependentCourse")
+  coursePrereqsAsPre   CoursePrerequisite[] @relation("prerequisiteCourse")
+  uploadedDocuments    UploadedDocument[]
+
+  @@index([code])
+  @@index([professorId])
+  @@map("courses")
+}
+
+// ─── Module ──────────────────────────────────────────────────────────────────
+
+model Module {
+  id          String  @id @default(cuid())
+  courseId    String
+  name      String
+  order       Int
+  description String?
+
+  course Course  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  topics Topic[]
+
+  @@index([courseId])
+  @@map("modules")
+}
+
+// ─── Topic ───────────────────────────────────────────────────────────────────
+
+model Topic {
+  id          String  @id @default(cuid())
+  moduleId    String
+  name        String
+  description String?
+  order       Int
+
+  module               Module                @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  learningObjectives   LearningObjective[]
+  assessmentTopics     AssessmentTopic[]
+  prereqsAsDependent   Prerequisite[]        @relation("dependentTopic")
+  prereqsAsPrerequisite Prerequisite[]       @relation("prerequisiteTopic")
+  masteryRecords       MasteryRecord[]
+  contentRecommendations ContentRecommendation[]
+  quizzes              Quiz[]
+
+  @@index([moduleId])
+  @@map("topics")
+}
+
+// ─── LearningObjective ───────────────────────────────────────────────────────
+
+model LearningObjective {
+  id          String @id @default(cuid())
+  topicId     String
+  description String
+  bloomLevel  String
+
+  topic Topic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@index([topicId])
+  @@map("learning_objectives")
+}
+
+// ─── Assessment ──────────────────────────────────────────────────────────────
+
+model Assessment {
+  id          String         @id @default(cuid())
+  courseId    String
+  type        AssessmentType
+  name        String
+  weight      Float
+  dueDate     DateTime
+  description String?
+
+  course        Course            @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  assessmentTopics AssessmentTopic[]
+
+  @@index([courseId])
+  @@index([dueDate])
+  @@map("assessments")
+}
+
+// ─── AssessmentTopic (join table) ────────────────────────────────────────────
+
+model AssessmentTopic {
+  assessmentId String
+  topicId      String
+
+  assessment Assessment @relation(fields: [assessmentId], references: [id], onDelete: Cascade)
+  topic      Topic      @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@id([assessmentId, topicId])
+  @@index([assessmentId])
+  @@index([topicId])
+  @@map("assessment_topics")
+}
+
+// ─── Prerequisite (self-referential topic graph) ─────────────────────────────
+
+model Prerequisite {
+  prerequisiteTopicId String
+  dependentTopicId    String
+
+  prerequisiteTopic Topic @relation("prerequisiteTopic", fields: [prerequisiteTopicId], references: [id], onDelete: Cascade)
+  dependentTopic    Topic @relation("dependentTopic", fields: [dependentTopicId], references: [id], onDelete: Cascade)
+
+  @@id([prerequisiteTopicId, dependentTopicId])
+  @@index([prerequisiteTopicId])
+  @@index([dependentTopicId])
+  @@map("prerequisites")
+}
+
+// ─── CoursePrerequisite ──────────────────────────────────────────────────────
+
+model CoursePrerequisite {
+  prerequisiteCourseId String
+  dependentCourseId    String
+
+  prerequisiteCourse Course @relation("prerequisiteCourse", fields: [prerequisiteCourseId], references: [id], onDelete: Cascade)
+  dependentCourse    Course @relation("dependentCourse", fields: [dependentCourseId], references: [id], onDelete: Cascade)
+
+  @@id([prerequisiteCourseId, dependentCourseId])
+  @@index([prerequisiteCourseId])
+  @@index([dependentCourseId])
+  @@map("course_prerequisites")
+}
+
+// ─── MasteryRecord ───────────────────────────────────────────────────────────
+
+model MasteryRecord {
+  id                String       @id @default(cuid())
+  studentId         String
+  topicId           String
+  state             MasteryState @default(UNSEEN)
+  score             Float?
+  lastInteractedAt  DateTime     @default(now())
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+
+  student         User            @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  topic           Topic           @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  history         MasteryHistory[]
+
+  @@unique([studentId, topicId])
+  @@index([studentId])
+  @@index([topicId])
+  @@index([state])
+  @@map("mastery_records")
+}
+
+// ─── MasteryHistory ──────────────────────────────────────────────────────────
+
+model MasteryHistory {
+  id              String   @id @default(cuid())
+  masteryRecordId String
+  previousState   String
+  newState        String
+  reason          String
+  createdAt       DateTime @default(now())
+
+  masteryRecord MasteryRecord @relation(fields: [masteryRecordId], references: [id], onDelete: Cascade)
+
+  @@index([masteryRecordId])
+  @@index([createdAt])
+  @@map("mastery_history")
+}
+
+// ─── ContentRecommendation ───────────────────────────────────────────────────
+
+model ContentRecommendation {
+  id          String        @id @default(cuid())
+  studentId   String
+  topicId     String
+  format      ContentFormat
+  reason      String
+  urgency     String
+  content     Json
+  generatedAt DateTime      @default(now())
+  consumedAt  DateTime?
+  feedback    Feedback?
+
+  student User  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  topic   Topic @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@index([studentId])
+  @@index([topicId])
+  @@index([generatedAt])
+  @@map("content_recommendations")
+}
+
+// ─── Quiz ────────────────────────────────────────────────────────────────────
+
+model Quiz {
+  id         String   @id @default(cuid())
+  title      String
+  courseId   String?
+  topicId    String?
+  documentId String?
+  questions  Json
+  createdAt  DateTime @default(now())
+
+  course   Course?           @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  topic    Topic?            @relation(fields: [topicId], references: [id], onDelete: SetNull)
+  document UploadedDocument? @relation(fields: [documentId], references: [id], onDelete: SetNull)
+  attempts QuizAttempt[]
+
+  @@index([courseId])
+  @@index([topicId])
+  @@map("quizzes")
+}
+
+// ─── QuizAttempt ─────────────────────────────────────────────────────────────
+
+model QuizAttempt {
+  id              String   @id @default(cuid())
+  quizId          String
+  studentId       String
+  answers         Json
+  score           Float
+  completedAt     DateTime @default(now())
+  timeSpentSeconds Int
+
+  quiz    Quiz  @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  student User  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@index([quizId])
+  @@index([studentId])
+  @@index([completedAt])
+  @@map("quiz_attempts")
+}
+
+// ─── UploadedDocument ────────────────────────────────────────────────────────
+
+model UploadedDocument {
+  id          String    @id @default(cuid())
+  userId      String
+  courseId    String?
+  fileName    String
+  fileType    String
+  storageKey  String
+  processedAt DateTime?
+  chunkCount  Int       @default(0)
+  createdAt   DateTime  @default(now())
+
+  user    User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course  Course?        @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  chunks  DocumentChunk[]
+  quizzes Quiz[]
+
+  @@index([userId])
+  @@index([courseId])
+  @@map("uploaded_documents")
+}
+
+// ─── DocumentChunk ───────────────────────────────────────────────────────────
+
+model DocumentChunk {
+  id         String                          @id @default(cuid())
+  documentId String
+  content    String                          @db.Text
+  embedding  Unsupported("vector(1536)")?
+  metadata   Json
+  order      Int
+
+  document UploadedDocument @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId])
+  @@index([order])
+  @@map("document_chunks")
+}
+
+// ─── ActivityLog ─────────────────────────────────────────────────────────────
+
+model ActivityLog {
+  id         String   @id @default(cuid())
+  userId     String
+  type       String
+  entityType String
+  entityId   String
+  metadata   Json
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([type])
+  @@index([entityType, entityId])
+  @@index([createdAt])
+  @@map("activity_logs")
+}
