@@ -1,0 +1,677 @@
+[
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a bright blue circular glow. Below the key, a glowing blue ring sits on a surface of intricate blue circuit board patterns. Numerous small, glowing orange and yellow dots are scattered throughout the scene, creating a digital, high-tech atmosphere. A glowing key icon on a circuit board background. Identity and Access Management Fundamentals Session 2 Authentication Mechanisms zixiong.wang@epita.fr",
+    "page": 0
+  },
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a bright blue circular glow. Below the key, a glowing blue ring sits on a surface of intricate blue circuit board patterns. Numerous small, glowing orange and yellow dots are scattered throughout the scene, creating a digital, high-tech atmosphere. A glowing key icon on a circuit board background.",
+    "page": 0
+  },
+  {
+    "section": "The Journey Forward",
+    "content": "The Journey Forward A stylized illustration of a winding, glowing path leading through a landscape of rolling hills and clouds. The path is marked with several location pins, each containing a different icon: a person, a gear, a star, and a person with a plus sign. The path ends with a large arrow pointing upwards and to the right, suggesting a journey or progression. Today's Journey (Session Flow) Icon of a document with a checkmark, representing a checklist or a list of items. What is authentication? Icon of a globe with a network of lines, representing global connectivity or a network. Authentication factor types (Knowledge, Possession, Inherence) Icon of a gear, representing settings or configuration. Comparing methods: TOTP, Push, Challenge-Response, FIDO2 Icon of a network of nodes and lines, representing a protocol or a network structure. Protocols: SAML, OIDC, LDAP, Kerberos, etc. Icon of a shield, representing protection, security, or risk. Real-world risks and design choices Icon of a keyboard, representing a practice or a setup. Practice: Keycloak MFA setup",
+    "page": 1
+  },
+  {
+    "section": "The Journey Forward",
+    "content": "A stylized illustration of a winding, glowing path leading through a landscape of rolling hills and clouds. The path is marked with several location pins, each containing a different icon: a person, a gear, a star, and a person with a plus sign. The path ends with a large arrow pointing upwards and to the right, suggesting a journey or progression.",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "What Do You Already Know? Discuss in pairs (2 minutes). An illustration of a man in a blue shirt holding a smartphone. The phone screen shows a 2FA code '847291' and a 'Verify' button. The background is a light purple and blue gradient with a faint circular pattern. Illustration of a person holding a smartphone displaying a 2FA code. ✓ Have you used 2FA or MFA before? What types of multi-factor authentication have you experienced? A screenshot of a login page with a purple and blue gradient background. At the top are links for 'HOME', 'ABOUT', and 'CONTACT US'. In the center are two large buttons: 'Login with Google' and 'Sign in with Apple'. Below them is a link 'Or create an account' and a 'Sign up' button. Screenshot of a login page with 'Login with Google' and 'Sign in with Apple' buttons. ✓ 'Login with Google' or 'Sign in with Apple' Have you used these single sign-on options? A diagram of an IAM system architecture. It shows a central hub with various components connected to it. On the left, there are 'User Database' and 'User Database' (both labeled 'Managed Accounts'). On the right, there are 'API Gateway' and 'API Gateway' (both labeled 'Managed Accounts'). The central hub includes 'User Database', 'User Database', 'API Gateway', 'API Gateway', 'API Gateway', and 'API Gateway'. The diagram is set against a light blue background with a grid pattern. Diagram of an Identity and Access Management (IAM) system architecture. → Behind the Scenes What do you think happens when you use these authentication methods?",
+    "page": 2
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of a man in a blue shirt holding a smartphone. The phone screen shows a 2FA code '847291' and a 'Verify' button. The background is a light purple and blue gradient with a faint circular pattern. Illustration of a person holding a smartphone displaying a 2FA code.",
+    "page": 2
+  },
+  {
+    "section": "Unknown",
+    "content": "A screenshot of a login page with a purple and blue gradient background. At the top are links for 'HOME', 'ABOUT', and 'CONTACT US'. In the center are two large buttons: 'Login with Google' and 'Sign in with Apple'. Below them is a link 'Or create an account' and a 'Sign up' button. Screenshot of a login page with 'Login with Google' and 'Sign in with Apple' buttons.",
+    "page": 2
+  },
+  {
+    "section": "Unknown",
+    "content": "A diagram of an IAM system architecture. It shows a central hub with various components connected to it. On the left, there are 'User Database' and 'User Database' (both labeled 'Managed Accounts'). On the right, there are 'API Gateway' and 'API Gateway' (both labeled 'Managed Accounts'). The central hub includes 'User Database', 'User Database', 'API Gateway', 'API Gateway', 'API Gateway', and 'API Gateway'. The diagram is set against a light blue background with a grid pattern. Diagram of an Identity and Access Management (IAM) system architecture.",
+    "page": 2
+  },
+  {
+    "section": "Learning Objectives",
+    "content": "Learning Objectives Icon of a computer monitor with a document on it, representing Authentication Factor Types. Authentication Factor Types Identify and classify knowledge, possession, and inherence factors Icon of a Twitter bird, representing Authentication Protocols. Authentication Protocols Compare key protocols: OIDC, SAML, LDAP, Kerberos, RADIUS, FIDO2 Icon of a laptop, representing Context-Based Authentication. Context-Based Authentication Evaluate authentication needs across different roles and contexts Icon of a fingerprint, representing Authentication Methods. Authentication Methods Explain TOTP, Push-based, and Challenge-Response authentication Icon of a shield with a checkmark, representing SSO Implementation. SSO Implementation Understand how SAML/OIDC support delegated authentication and SSO Icon of a gear, representing Hands-On Practice. Hands-On Practice Set up TOTP and customize login flows in Keycloak",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "A digital illustration featuring a glowing blue key with a circuit pattern on its head, positioned to unlock a padlock. The padlock has a glowing blue screen displaying the text 'ACCESS GRANTED'. The background consists of flowing, wavy lines in shades of blue and purple, creating a sense of motion and digital connectivity. What is Authentication? Authentication is the process of proving your identity It forms the first line of defense in Identity and Access Management (IAM). Icon of a key, representing passwords. Passwords Icon of a fingerprint, representing biometrics. Biometrics Icon of a laptop with a checkmark, representing approvals. Approvals",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "A digital illustration featuring a glowing blue key with a circuit pattern on its head, positioned to unlock a padlock. The padlock has a glowing blue screen displaying the text 'ACCESS GRANTED'. The background consists of flowing, wavy lines in shades of blue and purple, creating a sense of motion and digital connectivity.",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "How Do You Log In? Raise your hand with your most common login method: An illustration showing a person's hands typing on a laptop keyboard. The laptop screen displays a login form with fields for 'EMAIL' and 'PASSWORD', and a 'Log In' button. Illustration of hands typing on a laptop keyboard with a login screen visible on the screen. A) Just a password Traditional username and password combination An illustration of a smartphone on a white surface. The screen shows a login interface with a circular icon containing the number '6' and a green progress bar at the bottom. Illustration of a smartphone displaying a login screen with a circular icon and a green bar. B) Password + authenticator app Two-factor authentication with time-based codes An illustration showing a hand with a finger being scanned on a device. The device screen has the text 'Scan Me' and a circular sensor area. Illustration of a hand scanning a finger on a device labeled 'Scan Me'. C) Biometrics Face ID or fingerprint recognition An illustration of a person sitting in a purple armchair, using a laptop. The laptop screen shows a login form with a 'Remember Me' checkbox that is checked. Illustration of a person sitting in a chair, using a laptop, with a 'Remember Me' checkbox checked. D) I stay logged in forever 😊 \"Remember me\" is my best friend → Let's see how diverse our login habits are!",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration showing a person's hands typing on a laptop keyboard. The laptop screen displays a login form with fields for 'EMAIL' and 'PASSWORD', and a 'Log In' button. Illustration of hands typing on a laptop keyboard with a login screen visible on the screen.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of a smartphone on a white surface. The screen shows a login interface with a circular icon containing the number '6' and a green progress bar at the bottom. Illustration of a smartphone displaying a login screen with a circular icon and a green bar.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration showing a hand with a finger being scanned on a device. The device screen has the text 'Scan Me' and a circular sensor area. Illustration of a hand scanning a finger on a device labeled 'Scan Me'.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of a person sitting in a purple armchair, using a laptop. The laptop screen shows a login form with a 'Remember Me' checkbox that is checked. Illustration of a person sitting in a chair, using a laptop, with a 'Remember Me' checkbox checked.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "Types of Authentication Factors Weak A vertical blue arrow pointing downwards, indicating the strength of authentication factors from weak at the top to strong at the bottom. Factor Definition Examples Knowledge Something the user knows Password, PIN, security question, passphrase Possession Something the user has One-time password token (TOTP), hardware token, smartcard, mobile phone Inherence Something the user is Fingerprint, face recognition, iris scan, voice recognition Strong",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "A vertical blue arrow pointing downwards, indicating the strength of authentication factors from weak at the top to strong at the bottom.",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "Factor Definition Examples Knowledge Something the user knows Password, PIN, security question, passphrase Possession Something the user has One-time password token (TOTP), hardware token, smartcard, mobile phone Inherence Something the user is Fingerprint, face recognition, iris scan, voice recognition",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "Mini Quiz: Factor Matching Match each example to its authentication factor type: • Face ID → ? Inherence • SmartCard → ? Possession • Password → ? Knowledge → Raise your hand or shout it out!",
+    "page": 8
+  },
+  {
+    "section": "Unknown",
+    "content": "Multi-Factor Authentication (MFA) Combining two or more authentication factors for significantly increasing security A woman in a light purple blazer is sitting at a desk, looking at her smartphone. A laptop is open in front of her. In the background, there is a lamp and a plant. A digital overlay shows a padlock icon with the word 'Secure' below it. In the top left corner, the text 'Your Digital Fortress' is visible. A woman using a laptop and a smartphone for authentication. Password + Authenticator App Something you know combined with something you have A man in a dark suit is holding a blue card up to a black biometric scanner. The scanner has a glowing blue light and a fingerprint icon. The background is a modern office with purple lighting. A man using a card and a biometric scanner. Card + Biometrics Something you have combined with something you are A woman in a light purple blazer is holding a smartphone and looking at it. A digital overlay shows a face icon with a lock symbol. In the bottom right corner, the text 'Secure. Seamless. You.' is visible. A woman using a smartphone and face recognition. PIN + Face Recognition Something you know combined with something you are Any other combinations ?",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "A woman in a light purple blazer is sitting at a desk, looking at her smartphone. A laptop is open in front of her. In the background, there is a lamp and a plant. A digital overlay shows a padlock icon with the word 'Secure' below it. In the top left corner, the text 'Your Digital Fortress' is visible. A woman using a laptop and a smartphone for authentication.",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "A man in a dark suit is holding a blue card up to a black biometric scanner. The scanner has a glowing blue light and a fingerprint icon. The background is a modern office with purple lighting. A man using a card and a biometric scanner.",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "A woman in a light purple blazer is holding a smartphone and looking at it. A digital overlay shows a face icon with a lock symbol. In the bottom right corner, the text 'Secure. Seamless. You.' is visible. A woman using a smartphone and face recognition.",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "A yellow emoji of a face with a furrowed brow and a small frown, indicating a state of confusion or deep thought. Thinking face emoji Is This MFA? Consider this authentication scenario and discuss whether it qualifies as true Multi-Factor Authentication. The Scenario 1 A system requires both a password AND a security question (e.g., \"What's your pet's name?\") to log in. ? Would you consider this setup to be Multi-Factor Authentication? Authentication Factors 2 Discuss with a partner: • Are these truly different authentication factors? • How strong is this form of protection? True MFA Alternatives 3 What would you replace the security question with to create genuine MFA? Be ready to explain your reasoning to the group!",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "A yellow emoji of a face with a furrowed brow and a small frown, indicating a state of confusion or deep thought. Thinking face emoji",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "Consider this authentication scenario and discuss whether it qualifies as true Multi-Factor Authentication.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "1 A system requires both a password AND a security question (e.g., \"What's your pet's name?\") to log in.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "Knowledge-Based Authentication Methods Knowledge-based methods rely on ' something you know '. These are often the most familiar — but also the most vulnerable. Illustration of a password entry screen with the text 'Enter password' and a masked input field showing six asterisks. Passwords User-defined secret strings that must be remembered • Prone to phishing attacks • Often reused across sites • Strengthen with password managers Illustration of a hand holding a smartphone displaying a PIN entry screen with the text 'Enter your pin' and a numeric keypad. PIN Codes Typically short numeric sequences for device unlock • Vulnerable to shoulder surfing • Limited complexity (usually 4-6 digits) • Common in ATMs and mobile devices Illustration of a smartphone screen displaying a security question prompt: 'Let's get you back in', 'What is your answer?', and 'Enter your verification'. Security Questions Answers to predefined personal questions • Can be researched via social media • Often have guessable answers • Commonly used for account recovery Illustration of a blue and purple ribbon forming a loop with the text 'SECURE CONNECTION' overlaid. Passphrases Longer, more complex sequences of words • Typically more secure than passwords • Easier to remember than complex passwords • Best used as part of MFA, not alone ⚠ Remember: All knowledge-based methods benefit from length and complexity but should ideally be used as part of Multi-Factor Authentication rather than alone.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Knowledge-based methods rely on ' something you know '. These are often the most familiar — but also the most vulnerable.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Illustration of a password entry screen with the text 'Enter password' and a masked input field showing six asterisks.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Illustration of a hand holding a smartphone displaying a PIN entry screen with the text 'Enter your pin' and a numeric keypad.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "• Vulnerable to shoulder surfing • Limited complexity (usually 4-6 digits) • Common in ATMs and mobile devices",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Illustration of a smartphone screen displaying a security question prompt: 'Let's get you back in', 'What is your answer?', and 'Enter your verification'.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "• Can be researched via social media • Often have guessable answers • Commonly used for account recovery",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "• Typically more secure than passwords • Easier to remember than complex passwords • Best used as part of MFA, not alone",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "⚠ Remember: All knowledge-based methods benefit from length and complexity but should ideally be used as part of Multi-Factor Authentication rather than alone.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Case Study: RockYou2021 – Password Reuse Breach 1 Event In 2021, the largest known password leak occurred — called RockYou2021. 2 What Happened • Over 8 billion passwords were posted online in a mega leak. • Data was compiled from years of breaches (e.g., LinkedIn, Adobe). • Attackers used these for credential stuffing: trying passwords across many sites. 3 Why This Is a Knowledge-Based Failure Passwords = 'something you know' (knowledge factor). People reused the same passwords across services. No second factor (MFA) meant easy unauthorized access. 4 Lesson Passwords are easily leaked, guessed, or reused. Never rely on knowledge factors alone for secure authentication.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "• Over 8 billion passwords were posted online in a mega leak. • Data was compiled from years of breaches (e.g., LinkedIn, Adobe). • Attackers used these for credential stuffing: trying passwords across many sites.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "Possession-Based Authentication Methods A small yellow padlock icon with a black outline, representing a weak level of security. Weak lock icon Weak (easy to intercept or hijack): • SMS OTP → Sent to your phone number (vulnerable to SIM swap) A small yellow padlock icon with a black outline, representing a strong level of security. Strong lock icon Strong (local generation or challenge-response): • TOTP App → Code from Authenticator app (offline, rotating) • Push Notification → Tap to approve (real-time) • Smartcard → Physical card with cryptographic certificate Two small yellow padlock icons with black outlines, representing a very strong level of security. Very strong lock icon Very Strong (cryptographic, phishing-resistant): • FIDO2 Key → Public-key cryptography, scoped per site • Platform Authenticator → Embedded in OS (e.g., Windows Hello, Face ID) • X.509 Certificate → Requires PKI, often on smartcard or browser 💡 Not all 'possession' methods are created equal — evaluate based on context and risk. A photograph of a wooden desk with a silver padlock, a smartphone displaying the word 'protected' on its screen, and a blue smartcard with a circular logo and the word 'Access' on it. Smartphone and smartcard with a padlock",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "A small yellow padlock icon with a black outline, representing a weak level of security. Weak lock icon",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "A small yellow padlock icon with a black outline, representing a strong level of security. Strong lock icon",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "• TOTP App → Code from Authenticator app (offline, rotating) • Push Notification → Tap to approve (real-time) • Smartcard → Physical card with cryptographic certificate",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "Two small yellow padlock icons with black outlines, representing a very strong level of security. Very strong lock icon",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "• FIDO2 Key → Public-key cryptography, scoped per site • Platform Authenticator → Embedded in OS (e.g., Windows Hello, Face ID) • X.509 Certificate → Requires PKI, often on smartcard or browser",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "A photograph of a wooden desk with a silver padlock, a smartphone displaying the word 'protected' on its screen, and a blue smartcard with a circular logo and the word 'Access' on it. Smartphone and smartcard with a padlock",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "Case Study: Coinbase Breach via SIM-Swap (2022) A simple line-art icon of a calendar with a date marker. Calendar icon Event In 2022, attackers exploited SMS-based MFA to access Coinbase accounts. A simple line-art icon of two stylized human figures. People icon What Happened: Attackers used social engineering to perform a SIM-swap with the victim's mobile provider. They gained control of the victim's phone number and intercepted SMS OTP codes. With previously leaked passwords and the intercepted OTP, they accessed accounts. A simple line-art icon of a clock face with an arrow indicating a cycle. Clock icon Why It Mattered: Showed SMS OTP can be phished or hijacked via telecom weaknesses. A simple line-art icon of a checkmark inside a circle. Checkmark icon Outcome: Coinbase strengthened MFA practices and advised users to use app-based TOTP or FIDO2.",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "Inherence-Based Authentication Methods These authentication methods rely on ' something you are ' - biometric and behavioral traits unique to each user. A close-up illustration of a smartphone with a glowing blue fingerprint sensor on its screen. A blue, semi-transparent fingerprint is being scanned on the sensor. Illustration of a fingerprint scan on a smartphone. Fingerprint Scan Most common biometric method used on phones and laptops ✅ Fast and convenient verification A woman's face is shown with a blue, wireframe-like mesh overlay. The mesh tracks facial features, illustrating how facial recognition technology works. Illustration of facial recognition using a mesh overlay on a person's face. Facial Recognition Used in systems like Face ID and Windows Hello ✅ Hands-free authentication experience A close-up illustration of a human eye. A blue, semi-transparent iris is being scanned, with light rays emanating from the center of the eye. Illustration of an iris scan showing the iris being scanned. Iris Scan Deployed in high-security environments ✅ Extremely difficult to spoof or replicate A stylized illustration of sound waves in shades of blue and purple. The waves are depicted as concentric, overlapping shapes, representing the unique patterns of a person's voice. Illustration of voice recognition showing sound waves. Voice Recognition Common in call centers and smart assistants ✅ Works remotely without special hardware A laptop screen displays a document with a large, glowing blue fingerprint icon overlaid on it. The background is a soft, blue-toned illustration of a person's hands typing on a keyboard. Illustration of behavioral biometrics showing a person's typing pattern on a laptop. Behavioral Biometrics Analyzes typing rhythm, gait, or mouse movements ✅ Continuous authentication without user action ⚠️ Challenges with Biometric Authentication: May require special hardware - Privacy concerns with storage - Risk of biometric spoofing 💡 Best used as part of MFA or with local secure storage (e.g., TPM).",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "These authentication methods rely on ' something you are ' - biometric and behavioral traits unique to each user.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up illustration of a smartphone with a glowing blue fingerprint sensor on its screen. A blue, semi-transparent fingerprint is being scanned on the sensor. Illustration of a fingerprint scan on a smartphone.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A woman's face is shown with a blue, wireframe-like mesh overlay. The mesh tracks facial features, illustrating how facial recognition technology works. Illustration of facial recognition using a mesh overlay on a person's face.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up illustration of a human eye. A blue, semi-transparent iris is being scanned, with light rays emanating from the center of the eye. Illustration of an iris scan showing the iris being scanned.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A stylized illustration of sound waves in shades of blue and purple. The waves are depicted as concentric, overlapping shapes, representing the unique patterns of a person's voice. Illustration of voice recognition showing sound waves.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A laptop screen displays a document with a large, glowing blue fingerprint icon overlaid on it. The background is a soft, blue-toned illustration of a person's hands typing on a keyboard. Illustration of behavioral biometrics showing a person's typing pattern on a laptop.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "Case: Samsung Galaxy S10 Fingerprint Bypass (2019) What Happened: 1 Galaxy S10 used an ultrasonic fingerprint sensor under the screen. With certain third-party screen protectors, any fingerprint could unlock the phone. The scanner misread patterns in the protector as valid fingerprints. Why This Is an Inherence-Based Authentication Flaw: 2 Relied on biometric (fingerprint) input — 'something you are'. Showed how biometric sensors can be spoofed or tricked. Consequences: 3 Security of biometric factor was bypassed. Samsung had to issue a software fix and warn users against using unsupported protectors. Lesson: 4 Biometrics offer convenience, but aren't immune to failure. Inherence-based methods require secure sensors and fallback safeguards. A close-up photograph of a Samsung Galaxy S10 smartphone. The screen is lit up with a vibrant, iridescent blue and purple pattern. In the center of the screen, a glowing purple fingerprint sensor overlay is visible, showing the ridges and valleys of a fingerprint. The phone's camera and sensors are visible at the top left corner of the screen. The background is dark with out-of-focus, warm-toned bokeh lights. A close-up image of a Samsung Galaxy S10 smartphone screen displaying a glowing purple fingerprint sensor overlay. The background is dark with bokeh light effects.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "1 Galaxy S10 used an ultrasonic fingerprint sensor under the screen. With certain third-party screen protectors, any fingerprint could unlock the phone. The scanner misread patterns in the protector as valid fingerprints.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "2 Relied on biometric (fingerprint) input — 'something you are'. Showed how biometric sensors can be spoofed or tricked.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "3 Security of biometric factor was bypassed. Samsung had to issue a software fix and warn users against using unsupported protectors.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "4 Biometrics offer convenience, but aren't immune to failure. Inherence-based methods require secure sensors and fallback safeguards.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up photograph of a Samsung Galaxy S10 smartphone. The screen is lit up with a vibrant, iridescent blue and purple pattern. In the center of the screen, a glowing purple fingerprint sensor overlay is visible, showing the ridges and valleys of a fingerprint. The phone's camera and sensors are visible at the top left corner of the screen. The background is dark with out-of-focus, warm-toned bokeh lights. A close-up image of a Samsung Galaxy S10 smartphone screen displaying a glowing purple fingerprint sensor overlay. The background is dark with bokeh light effects.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "Inherence-Based Authentication Discuss with a partner (2-3 minutes): 1. Have you ever used biometric authentication (Face ID, fingerprint, etc.)? - Where did you use it? How did it feel? 2. Do you trust biometrics more or less than passwords? Why? 3. What would you do if your fingerprint stopped working on your phone? - What does this tell you about fallback mechanisms? Be ready to share one surprising insight with the group! A smartphone is shown vertically, displaying a black screen. At the top, the text \"Access granted\" is written in a white, sans-serif font. Below the text is a large, glowing fingerprint scanner area. The scanner area is composed of many thin, curved lines in shades of blue and purple, creating a sense of motion and light. The phone is set against a background of soft, out-of-focus blue and white light streaks. A smartphone screen displaying 'Access granted' above a glowing fingerprint scan area.",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "A smartphone is shown vertically, displaying a black screen. At the top, the text \"Access granted\" is written in a white, sans-serif font. Below the text is a large, glowing fingerprint scanner area. The scanner area is composed of many thin, curved lines in shades of blue and purple, creating a sense of motion and light. The phone is set against a background of soft, out-of-focus blue and white light streaks. A smartphone screen displaying 'Access granted' above a glowing fingerprint scan area.",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "TOTP (Time-based One-Time Password) The diagram illustrates the TOTP generation process in two parallel paths, both resulting in the same passcode: 829 170 . Top Path (User's phone): A QR code labeled \"Shared: OTP Secret Key, issuer, period\" is scanned by a \"User's phone\" containing an \"Authenticator App (Authy, Google Authenticator, etc.)\". This app, combined with a clock icon representing time, produces a \"Passcode\" of 829 170 . The process is labeled \"hashed, truncated\". A green checkmark is placed below the resulting passcode. Bottom Path (Application Infrastructure): The same QR code is scanned by \"Servers\" (represented by server rack icons). These servers, combined with a clock icon representing time, also produce a \"Passcode\" of 829 170 . This process is also labeled \"hashed, truncated\". Both paths are enclosed in dashed-line boxes, and the identical passcode output demonstrates that both the user's device and the infrastructure have synchronized clocks and use the same shared secret. Diagram illustrating TOTP generation by both a user's phone and application infrastructure. • It is generated by an authenticator app (e.g., Google Authenticator, Microsoft Authenticator). • The passcode is based on a shared secret and current timestamp. • The device and the server must have synchronized clocks. • No internet connection is required after setup. • Used in two-factor authentication (2FA) to prove possession. A photograph of a smartphone displaying the Microsoft Authenticator app. The screen shows the app's logo at the top, followed by a green checkmark icon and a QR code. Below the QR code, the text \"45651kqnd - 002012\" is visible. The large number \"582917\" is displayed prominently in the center. At the bottom of the screen, there is a numeric keypad (1, 2, 3, 6, 9) and a green button labeled \"Use this\". The phone is resting on a blue surface, and a blurred background shows a person's hand. A smartphone displaying the Microsoft Authenticator app interface.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the TOTP generation process in two parallel paths, both resulting in the same passcode: 829 170 . Top Path (User's phone): A QR code labeled \"Shared: OTP Secret Key, issuer, period\" is scanned by a \"User's phone\" containing an \"Authenticator App (Authy, Google Authenticator, etc.)\". This app, combined with a clock icon representing time, produces a \"Passcode\" of 829 170 . The process is labeled \"hashed, truncated\". A green checkmark is placed below the resulting passcode. Bottom Path (Application Infrastructure): The same QR code is scanned by \"Servers\" (represented by server rack icons). These servers, combined with a clock icon representing time, also produce a \"Passcode\" of 829 170 . This process is also labeled \"hashed, truncated\". Both paths are enclosed in dashed-line boxes, and the identical passcode output demonstrates that both the user's device and the infrastructure have synchronized clocks and use the same shared secret. Diagram illustrating TOTP generation by both a user's phone and application infrastructure.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "• It is generated by an authenticator app (e.g., Google Authenticator, Microsoft Authenticator). • The passcode is based on a shared secret and current timestamp. • The device and the server must have synchronized clocks. • No internet connection is required after setup. • Used in two-factor authentication (2FA) to prove possession.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "A photograph of a smartphone displaying the Microsoft Authenticator app. The screen shows the app's logo at the top, followed by a green checkmark icon and a QR code. Below the QR code, the text \"45651kqnd - 002012\" is visible. The large number \"582917\" is displayed prominently in the center. At the bottom of the screen, there is a numeric keypad (1, 2, 3, 6, 9) and a green button labeled \"Use this\". The phone is resting on a blue surface, and a blurred background shows a person's hand. A smartphone displaying the Microsoft Authenticator app interface.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "Push-based Authentication graph LR; User[Login initiated by user] --> Server[Authentication server sends push notification]; Server --> Device[User approves or denies request]; Device --> Server; Server --> User; The diagram illustrates the Push-based Authentication process. It shows three main components: a user (represented by a computer icon), an authentication server (represented by a server rack icon), and a mobile device (represented by a smartphone icon). The process flow is as follows: 1. The user initiates a login. 2. The authentication server sends a push notification to the mobile device. 3. The user approves or denies the request on the mobile device. 4. The response is sent back to the server. 5. Finally, access is granted or blocked to the user. Diagram of the Push-based Authentication flow • Push authentication sends a login approval request to your mobile app. • You simply tap 'Approve' or 'Deny' on your device. • It requires real-time communication between the IAM system and your device. • Provides a smoother user experience compared to typing codes. • May include context like login location, device, or IP address. • Not supported natively in Keycloak; external services like Duo or Azure AD are used. A hand holding a smartphone displaying a push authentication screen. The screen shows a white 'Approve' button and a purple 'Deny' button. The background of the screen is a light purple gradient. The phone is held against a background of large, soft-focus purple balloons. A hand holding a smartphone displaying a push authentication screen with 'Approve' and 'Deny' buttons.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "graph LR; User[Login initiated by user] --> Server[Authentication server sends push notification]; Server --> Device[User approves or denies request]; Device --> Server; Server --> User; The diagram illustrates the Push-based Authentication process. It shows three main components: a user (represented by a computer icon), an authentication server (represented by a server rack icon), and a mobile device (represented by a smartphone icon). The process flow is as follows: 1. The user initiates a login. 2. The authentication server sends a push notification to the mobile device. 3. The user approves or denies the request on the mobile device. 4. The response is sent back to the server. 5. Finally, access is granted or blocked to the user. Diagram of the Push-based Authentication flow",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "• Push authentication sends a login approval request to your mobile app. • You simply tap 'Approve' or 'Deny' on your device. • It requires real-time communication between the IAM system and your device. • Provides a smoother user experience compared to typing codes. • May include context like login location, device, or IP address. • Not supported natively in Keycloak; external services like Duo or Azure AD are used.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "A hand holding a smartphone displaying a push authentication screen. The screen shows a white 'Approve' button and a purple 'Deny' button. The background of the screen is a light purple gradient. The phone is held against a background of large, soft-focus purple balloons. A hand holding a smartphone displaying a push authentication screen with 'Approve' and 'Deny' buttons.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "Think Fast: Push MFA Pitfalls What could go wrong with push-based authentication? • Accidental approval? • Stolen phone? → Share an experience or guess a risk. An illustration of a woman with long dark hair, wearing a blue shirt, looking surprised or concerned. She is holding a black smartphone. On the screen of the phone, there is a white circular icon with a black 'M' inside, and below it, a white button with the word 'Approve' in black text. A white speech bubble with a black outline is coming from the top right of the phone, containing the word 'Whoops!' in black text. In the background, a laptop and a mouse are visible on a desk. Illustration of a woman looking surprised while holding a smartphone displaying a push notification to approve a login. A speech bubble says 'Whoops!'.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of a woman with long dark hair, wearing a blue shirt, looking surprised or concerned. She is holding a black smartphone. On the screen of the phone, there is a white circular icon with a black 'M' inside, and below it, a white button with the word 'Approve' in black text. A white speech bubble with a black outline is coming from the top right of the phone, containing the word 'Whoops!' in black text. In the background, a laptop and a mouse are visible on a desk. Illustration of a woman looking surprised while holding a smartphone displaying a push notification to approve a login. A speech bubble says 'Whoops!'.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "Challenge-Response Authentication How It Works Used when the authenticator app requires the user to enter a code shown by the server. The server displays a numeric challenge (e.g., 849123). User Action User enters this challenge code into their authenticator app. Response Generation The app uses a shared secret to compute a one-time response. Authentication The server verifies this response to authenticate the user. This method is less common than TOTP but is useful for device pairing or extra security. sequenceDiagram\n participant User\n participant Server as Authentication Server\n User->>Server: Request to login\n Server-->>User: Send Challenge\n User->>Server: Respond to Challenge\n Server-->>User: Pass / Deny The diagram illustrates the Challenge-Response Authentication process. It shows two main entities: the User and the Authentication Server . User : Represented by a green box containing a black silhouette of a person. Authentication Server : Represented by a green box containing icons of server racks and a monitor. Below these is a white rounded rectangle labeled Verification , which contains a yellow box labeled PAD . The interaction flow is as follows: The User sends a Request to login to the Authentication Server . The Authentication Server sends a Send Challenge back to the User . The User sends a Respond to Challenge back to the Authentication Server . The Authentication Server sends a Pass / Deny response back to the User . Diagram of Challenge-Response Authentication flow between a User and an Authentication Server.",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "Used when the authenticator app requires the user to enter a code shown by the server. The server displays a numeric challenge (e.g., 849123).",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "The server verifies this response to authenticate the user. This method is less common than TOTP but is useful for device pairing or extra security.",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "sequenceDiagram\n participant User\n participant Server as Authentication Server\n User->>Server: Request to login\n Server-->>User: Send Challenge\n User->>Server: Respond to Challenge\n Server-->>User: Pass / Deny The diagram illustrates the Challenge-Response Authentication process. It shows two main entities: the User and the Authentication Server . User : Represented by a green box containing a black silhouette of a person. Authentication Server : Represented by a green box containing icons of server racks and a monitor. Below these is a white rounded rectangle labeled Verification , which contains a yellow box labeled PAD . The interaction flow is as follows: The User sends a Request to login to the Authentication Server . The Authentication Server sends a Send Challenge back to the User . The User sends a Respond to Challenge back to the Authentication Server . The Authentication Server sends a Pass / Deny response back to the User . Diagram of Challenge-Response Authentication flow between a User and an Authentication Server.",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "Quick Poll: Challenge– Response Have you ever used this method? A) Yes B) No C) Not sure → Raise your hand An illustration of a woman with dark hair, wearing a dark blue long-sleeved shirt, raising her right hand towards a bright yellow light source in the upper right corner. The background is a gradient of purple and blue, with wavy lines suggesting light or energy. The woman has a slight smile and is looking up at the light. Illustration of a woman raising her hand.",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of a woman with dark hair, wearing a dark blue long-sleeved shirt, raising her right hand towards a bright yellow light source in the upper right corner. The background is a gradient of purple and blue, with wavy lines suggesting light or energy. The woman has a slight smile and is looking up at the light. Illustration of a woman raising her hand.",
+    "page": 22
+  },
+  {
+    "section": "Modern Passwordless Authentication: FIDO2 & Passkeys",
+    "content": "Modern Passwordless Authentication: FIDO2 & Passkeys 1 FIDO2 (Fast Identity Online) and Passkeys represent the future of secure, passwordless login. 2 Key Concepts: - Passkey = a public/private key pair used to replace passwords - FIDO2 = the protocol standard behind passkeys - WebAuthn + CTAP (Client to Authenticator Protocol) - Platform Authenticators = built-in options like Windows Hello, Face ID 3 Benefits: - Phishing-resistant (no shared secrets) - Device-bound and origin-specific - Easy to use — login with fingerprint or face scan 4 Summary: Passwordless login is real and growing, powered by strong cryptography. A close-up photograph of a person's finger touching a black, rectangular security key (likely a YubiKey) which is resting on a white laptop keyboard. The key features a yellow circular logo with a stylized 'Y' and a small 'FIDO' logo. The keyboard keys visible include 'caps lock', 'shift', and 'f'.",
+    "page": 23
+  },
+  {
+    "section": "Modern Passwordless Authentication: FIDO2 & Passkeys",
+    "content": "- Passkey = a public/private key pair used to replace passwords - FIDO2 = the protocol standard behind passkeys - WebAuthn + CTAP (Client to Authenticator Protocol) - Platform Authenticators = built-in options like Windows Hello, Face ID",
+    "page": 23
+  },
+  {
+    "section": "Modern Passwordless Authentication: FIDO2 & Passkeys",
+    "content": "- Phishing-resistant (no shared secrets) - Device-bound and origin-specific - Easy to use — login with fingerprint or face scan",
+    "page": 23
+  },
+  {
+    "section": "Modern Passwordless Authentication: FIDO2 & Passkeys",
+    "content": "A close-up photograph of a person's finger touching a black, rectangular security key (likely a YubiKey) which is resting on a white laptop keyboard. The key features a yellow circular logo with a stylized 'Y' and a small 'FIDO' logo. The keyboard keys visible include 'caps lock', 'shift', and 'f'.",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "Passkeys : Enrollment Creating a passkey sequenceDiagram\n participant User\n participant Passkey_provider\n participant Browser\n participant Frontend\n participant Backend\n\n User->>Frontend: Initiate passkey creation\n Frontend->>Backend: Request credential data\n Backend-->>Frontend: Send user info, challenge, credential IDs, etc.\n Frontend->>Browser: navigator.credentials.create()\n Browser->>Passkey_provider: Generate passkey\n Passkey_provider-->>User: User verification\n User-->>Passkey_provider: Successful verification\n Passkey_provider->>Passkey_provider: Passkey creation\n Passkey_provider-->>Browser: Return public key\n Browser->>Frontend: Return public key credential\n Frontend->>Backend: Send public key credential\n Backend->>Backend: Store public key and data\n Backend-->>User: Send notification The diagram illustrates the passkey enrollment process across five entities: User, Passkey provider, Browser, Frontend, and Backend. The process begins with the User initiating passkey creation, which is received by the Frontend. The Frontend then requests credential data from the Backend, which responds with user info, challenges, and credential IDs. The Frontend uses this to initiate navigator.credentials.create() in the Browser. The Browser generates a passkey and sends it to the Passkey provider for user verification. Upon successful verification, the Passkey provider creates the passkey and returns the public key to the Browser. The Browser then returns a public key credential to the Frontend, which sends it to the Backend. The Backend stores the public key and data, and finally sends a notification back to the User. The diagram also indicates that the initial steps (User to Frontend) are part of the CATP (Credential Authentication and Transfer Protocol) and the subsequent steps (Frontend to Backend) are part of the WebAuthn (Web Authentication) standard. Sequence diagram showing the passkey enrollment process between User, Passkey provider, Browser, Frontend, and Backend. A close-up photograph showing a person's index finger holding a black USB security key. The key has a yellow circular logo with a stylized 'Y' or similar symbol. It is being held over a white laptop keyboard, with the 'caps lock' and 'shift' keys visible in the foreground. A hand holding a black USB security key with a yellow circular logo, positioned over a laptop keyboard.",
+    "page": 24
+  },
+  {
+    "section": "Unknown",
+    "content": "Creating a passkey sequenceDiagram\n participant User\n participant Passkey_provider\n participant Browser\n participant Frontend\n participant Backend\n\n User->>Frontend: Initiate passkey creation\n Frontend->>Backend: Request credential data\n Backend-->>Frontend: Send user info, challenge, credential IDs, etc.\n Frontend->>Browser: navigator.credentials.create()\n Browser->>Passkey_provider: Generate passkey\n Passkey_provider-->>User: User verification\n User-->>Passkey_provider: Successful verification\n Passkey_provider->>Passkey_provider: Passkey creation\n Passkey_provider-->>Browser: Return public key\n Browser->>Frontend: Return public key credential\n Frontend->>Backend: Send public key credential\n Backend->>Backend: Store public key and data\n Backend-->>User: Send notification The diagram illustrates the passkey enrollment process across five entities: User, Passkey provider, Browser, Frontend, and Backend. The process begins with the User initiating passkey creation, which is received by the Frontend. The Frontend then requests credential data from the Backend, which responds with user info, challenges, and credential IDs. The Frontend uses this to initiate navigator.credentials.create() in the Browser. The Browser generates a passkey and sends it to the Passkey provider for user verification. Upon successful verification, the Passkey provider creates the passkey and returns the public key to the Browser. The Browser then returns a public key credential to the Frontend, which sends it to the Backend. The Backend stores the public key and data, and finally sends a notification back to the User. The diagram also indicates that the initial steps (User to Frontend) are part of the CATP (Credential Authentication and Transfer Protocol) and the subsequent steps (Frontend to Backend) are part of the WebAuthn (Web Authentication) standard. Sequence diagram showing the passkey enrollment process between User, Passkey provider, Browser, Frontend, and Backend.",
+    "page": 24
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up photograph showing a person's index finger holding a black USB security key. The key has a yellow circular logo with a stylized 'Y' or similar symbol. It is being held over a white laptop keyboard, with the 'caps lock' and 'shift' keys visible in the foreground. A hand holding a black USB security key with a yellow circular logo, positioned over a laptop keyboard.",
+    "page": 24
+  },
+  {
+    "section": "Unknown",
+    "content": "Passkeys : Sign in Creating a passkey sequenceDiagram\n participant User\n participant PP as Passkey provider\n participant B as Browser\n participant F as Frontend\n participant BE as Backend\n\n User->>F: Visits sign-in page\n F->>BE: Request auth challenge\n BE-->>F: Respond with challenge\n F->>B: navigator.credentials.get()\n B->>PP: Show autofill passkey dialog\n PP-->>User: User verification\n User-->>PP: Successful verification\n PP-->>B: Return public key with signature\n B->>F: Resolve promise with credential (signature)\n F->>BE: Send public key credential (signature)\n BE->>BE: Verify against stored public key\n BE-->>F: Authentication success\n F-->>User: Sign-in success The diagram illustrates the sign-in process for passkeys. It involves five main components: User, Passkey provider, Browser, Frontend, and Backend. The process begins with the User visiting the sign-in page on the Frontend. The Frontend then requests an authentication challenge from the Backend. The Backend responds with the challenge, which the Frontend passes to the Browser via navigator.credentials.get() . The Browser shows an autofill passkey dialog to the User for verification. Upon successful verification, the Passkey provider returns a public key and a signature to the Browser. The Browser then resolves this promise and sends the credential (signature) to the Frontend. The Frontend sends the public key credential (signature) to the Backend, which verifies it against the stored public key. Once authentication is successful, the Frontend informs the User of sign-in success. Sequence diagram showing the sign-in process for passkeys involving User, Passkey provider, Browser, Frontend, and Backend. A close-up photograph showing a person's index finger touching a black, USB-shaped security key. The key features a yellow circular logo with a stylized 'Y' and a registered trademark symbol. The key is being used to authenticate on a laptop, with the 'caps lock' and 'shift' keys visible in the foreground. A hand using a passkey security key to sign in on a laptop.",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "Creating a passkey sequenceDiagram\n participant User\n participant PP as Passkey provider\n participant B as Browser\n participant F as Frontend\n participant BE as Backend\n\n User->>F: Visits sign-in page\n F->>BE: Request auth challenge\n BE-->>F: Respond with challenge\n F->>B: navigator.credentials.get()\n B->>PP: Show autofill passkey dialog\n PP-->>User: User verification\n User-->>PP: Successful verification\n PP-->>B: Return public key with signature\n B->>F: Resolve promise with credential (signature)\n F->>BE: Send public key credential (signature)\n BE->>BE: Verify against stored public key\n BE-->>F: Authentication success\n F-->>User: Sign-in success The diagram illustrates the sign-in process for passkeys. It involves five main components: User, Passkey provider, Browser, Frontend, and Backend. The process begins with the User visiting the sign-in page on the Frontend. The Frontend then requests an authentication challenge from the Backend. The Backend responds with the challenge, which the Frontend passes to the Browser via navigator.credentials.get() . The Browser shows an autofill passkey dialog to the User for verification. Upon successful verification, the Passkey provider returns a public key and a signature to the Browser. The Browser then resolves this promise and sends the credential (signature) to the Frontend. The Frontend sends the public key credential (signature) to the Backend, which verifies it against the stored public key. Once authentication is successful, the Frontend informs the User of sign-in success. Sequence diagram showing the sign-in process for passkeys involving User, Passkey provider, Browser, Frontend, and Backend.",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up photograph showing a person's index finger touching a black, USB-shaped security key. The key features a yellow circular logo with a stylized 'Y' and a registered trademark symbol. The key is being used to authenticate on a laptop, with the 'caps lock' and 'shift' keys visible in the foreground. A hand using a passkey security key to sign in on a laptop.",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "A smartphone and a laptop are shown on a desk. The smartphone screen displays a large green Passkey logo, which is a stylized 'G' shape. The laptop screen also displays the word 'Passkey' in a green, sans-serif font. The background is a soft, out-of-focus purple and blue gradient. A smartphone and a laptop displaying the Passkey logo. Passkeys in Practice: Real-World Examples A small icon representing Windows Hello, showing a speech bubble with three dots inside. Windows Hello icon Windows Hello Face/fingerprint or PIN to unlock FIDO2 credential A small icon representing Apple Passkeys, showing an Apple logo with a keyhole in the center. Apple Passkeys icon Apple Passkeys Face ID or Touch ID synced via iCloud Keychain A small icon representing a YubiKey, showing a stylized 'Y' shape. YubiKey icon YubiKey External FIDO2 security key (USB/NFC) A small icon representing an Android device, showing a stylized robot head. Android Device icon Android Device Google Play Services supports FIDO2 APIs Takeaway: These are modern replacements for passwords — more secure and easier to use. → No need to dive deep — just know how to recognize and explain them.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "A smartphone and a laptop are shown on a desk. The smartphone screen displays a large green Passkey logo, which is a stylized 'G' shape. The laptop screen also displays the word 'Passkey' in a green, sans-serif font. The background is a soft, out-of-focus purple and blue gradient. A smartphone and a laptop displaying the Passkey logo.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "A small icon representing Windows Hello, showing a speech bubble with three dots inside. Windows Hello icon",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "A small icon representing Apple Passkeys, showing an Apple logo with a keyhole in the center. Apple Passkeys icon",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "Why a PIN Instead of a Password? A screenshot of a Windows Hello login screen for a user named \"John Smith\". The background is dark blue. At the bottom, there is a white rectangular input field with the text \"PIN\" inside it. Screenshot of Windows Hello login screen for John Smith, showing a PIN input field. A screenshot of a Windows Hello login screen for a user named \"Administrator\". The background is light blue. At the bottom, there is a white rectangular input field with the text \"Password\" inside it, and to its right is a blue circular button with a white right-pointing arrow. Screenshot of Windows Hello login screen for Administrator, showing a Password input field and a blue arrow button. 💡 Think about this: —💡 Windows Hello asks you for a PIN instead of your Microsoft account password. A small white question mark inside a light gray square box. Question mark icon in a box. ❓ Question: - Isn't a PIN just a short password? - Why would Microsoft consider this more secure? 🗨️ Discuss in pairs (2 minutes): —🗨️ - What's the difference between a local PIN and a global password? - Could a short PIN really be more secure? → Be ready to share your reasoning — you may be surprised by the answer!",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "A screenshot of a Windows Hello login screen for a user named \"John Smith\". The background is dark blue. At the bottom, there is a white rectangular input field with the text \"PIN\" inside it. Screenshot of Windows Hello login screen for John Smith, showing a PIN input field.",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "A screenshot of a Windows Hello login screen for a user named \"Administrator\". The background is light blue. At the bottom, there is a white rectangular input field with the text \"Password\" inside it, and to its right is a blue circular button with a white right-pointing arrow. Screenshot of Windows Hello login screen for Administrator, showing a Password input field and a blue arrow button.",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "- What's the difference between a local PIN and a global password? - Could a short PIN really be more secure? → Be ready to share your reasoning — you may be surprised by the answer!",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "Break & Reflection • Time for 10-minute recharge! • → Get ready to dive into authentication protocols with fresh focus.",
+    "page": 28
+  },
+  {
+    "section": "From Method to Protocol: Why Protocols Matter",
+    "content": "An illustration at the top of the slide shows a laptop on the left and a server rack on the right. A dashed purple line connects them, with a key icon positioned above the line in the center. The background is a light purple gradient with some abstract shapes and small star-like icons. Illustration of a laptop connected by a dashed line to a server rack, with a key icon above the line, symbolizing authentication or security. From Method to Protocol: Why Protocols Matter Methods & Protocols Authentication methods = how users prove who they are (e.g., password, Face ID, smartcard). Authentication protocols = how systems communicate and validate that proof securely. 🧠 Analogy: 'Methods' are like saying your name; 'protocols' are the secure mail that delivers it to someone who needs to verify it. The Delivery Chain Think of protocols as the delivery mechanism that moves credentials between: • Your browser or app • An identity provider (like Google or Azure AD) • The system you're trying to access",
+    "page": 29
+  },
+  {
+    "section": "From Method to Protocol: Why Protocols Matter",
+    "content": "An illustration at the top of the slide shows a laptop on the left and a server rack on the right. A dashed purple line connects them, with a key icon positioned above the line in the center. The background is a light purple gradient with some abstract shapes and small star-like icons. Illustration of a laptop connected by a dashed line to a server rack, with a key icon above the line, symbolizing authentication or security.",
+    "page": 29
+  },
+  {
+    "section": "From Method to Protocol: Why Protocols Matter",
+    "content": "'Methods' are like saying your name; 'protocols' are the secure mail that delivers it to someone who needs to verify it.",
+    "page": 29
+  },
+  {
+    "section": "From Method to Protocol: Why Protocols Matter",
+    "content": "• Your browser or app • An identity provider (like Google or Azure AD) • The system you're trying to access",
+    "page": 29
+  },
+  {
+    "section": "Unknown",
+    "content": "A 3D illustration of digital authentication concepts. A purple sphere labeled 'OIDC TOKEN' is on the left, and a blue sphere labeled 'SAML ASSERTION' is on the right, partially enclosed by a transparent shield. They are set against a background of glowing circuit lines and data points. Why Authentication Protocols Matter ✓ Authentication protocols solve critical problems in digital identity: 1. Secure exchange of authentication data - Prevent replay or man-in-the-middle attacks 2. Interoperability across platforms and systems - Use Google login on a third-party app 3. Support federation (IDP ≠ Application) - Authenticate once, access multiple services 4. Enable method reuse (e.g., biometrics via FIDO2) - Consistent login across devices and channels 💡 Without protocols, authentication stays local and non-portable.",
+    "page": 30
+  },
+  {
+    "section": "Unknown",
+    "content": "A 3D illustration of digital authentication concepts. A purple sphere labeled 'OIDC TOKEN' is on the left, and a blue sphere labeled 'SAML ASSERTION' is on the right, partially enclosed by a transparent shield. They are set against a background of glowing circuit lines and data points.",
+    "page": 30
+  },
+  {
+    "section": "Common Authentication Protocols (Grouped by Context)",
+    "content": "Common Authentication Protocols (Grouped by Context) Web SSO / Federation: OIDC: Modern protocol used for web logins (e.g., Google login). SAML: XML-based, used in enterprise apps (e.g., university portals). Network and Certificate-Based: RADIUS: Used in VPN and Wi-Fi authentication. X.509 / PKI: Certificate-based authentication (smartcards, email). Icon representing Web SSO / Federation Icon representing Internal / Legacy Systems Icon representing Network and Certificate-Based Icon representing Passwordless / Modern Internal / Legacy Systems: LDAP: Query protocol for identity directories (e.g., Active Directory). Kerberos: Ticket-based authentication in Windows environments. Passwordless / Modern: FIDO2: Public key cryptography for phishing-resistant authentication (e.g., YubiKey, Face ID). A glowing, futuristic padlock with circuitry patterns, symbolizing security and authentication.",
+    "page": 31
+  },
+  {
+    "section": "Protocol Matching",
+    "content": "A decorative header image featuring a network diagram with blue nodes and lines, overlaid with a large green checkmark inside a gold padlock, symbolizing secure network authentication. Protocol Matching 1 VPN login → RADIUS - RADIUS is commonly used to authenticate remote access through VPNs. 2 Wi-Fi at school → Kerberos - Many school networks use Active Directory for authentication, which relies on Kerberos internally. - Especially relevant for domain-joined devices on Windows networks. 3 Google login on Trello → OIDC - This uses OpenID Connect for federated web login, authenticating via a third-party identity provider. Tip: Think about the environment — web, enterprise, or infrastructure — to match the right protocol.",
+    "page": 32
+  },
+  {
+    "section": "Protocol Matching",
+    "content": "A decorative header image featuring a network diagram with blue nodes and lines, overlaid with a large green checkmark inside a gold padlock, symbolizing secure network authentication.",
+    "page": 32
+  },
+  {
+    "section": "Protocol Matching",
+    "content": "- Many school networks use Active Directory for authentication, which relies on Kerberos internally. - Especially relevant for domain-joined devices on Windows networks.",
+    "page": 32
+  },
+  {
+    "section": "Protocol Matching",
+    "content": "- This uses OpenID Connect for federated web login, authenticating via a third-party identity provider.",
+    "page": 32
+  },
+  {
+    "section": "Unknown",
+    "content": "SAML & OIDC as Authentication Protocols SAML and OIDC are protocols used to delegate authentication to a trusted Identity Provider (IdP). ✓ Purpose: • Allow users to log in once and access multiple applications (SSO). • Transfer identity information from IdP to applications. 🔄 Authentication Perspective: • User logs in at the Identity Provider. • IdP sends proof of identity to the application (e.g., via token or assertion). • The app trusts the IdP to verify the user. 1 We'll explore federation setups and deep-dive into these protocols in Session 5. A digital illustration of a person's silhouette composed of glowing blue dots, standing on a glowing blue and purple cube. The person is surrounded by several laptops and tablets, each displaying a user interface. The background is dark blue with glowing blue lines and dots, suggesting a digital or network environment.",
+    "page": 33
+  },
+  {
+    "section": "Unknown",
+    "content": "• Allow users to log in once and access multiple applications (SSO). • Transfer identity information from IdP to applications.",
+    "page": 33
+  },
+  {
+    "section": "Unknown",
+    "content": "• User logs in at the Identity Provider. • IdP sends proof of identity to the application (e.g., via token or assertion). • The app trusts the IdP to verify the user.",
+    "page": 33
+  },
+  {
+    "section": "Unknown",
+    "content": "A digital illustration of a person's silhouette composed of glowing blue dots, standing on a glowing blue and purple cube. The person is surrounded by several laptops and tablets, each displaying a user interface. The background is dark blue with glowing blue lines and dots, suggesting a digital or network environment.",
+    "page": 33
+  },
+  {
+    "section": "Unknown",
+    "content": "SAML & OIDC as Authentication Protocols The diagram illustrates the SAML & OIDC authentication flow involving four main components: End User, Application (Client), Resource Provider (Relying Party), and Authorization Server. The flow is as follows: ① Authentication Request : The Application (Client) sends an authentication request to the Authorization Server. ② Access Token and ID Token : The Authorization Server returns the Access Token and ID Token to the Application (Client). ③ Resource Call : The Application (Client) calls the Resource Provider (Relying Party). ④ Access Token Validation : The Resource Provider (Relying Party) validates the Access Token with the Authorization Server. ⑤ Resource Response : The Resource Provider (Relying Party) returns the resource response to the Application (Client). Diagram illustrating the SAML & OIDC authentication flow between an End User, Application (Client), Resource Provider (Relying Party), and Authorization Server.",
+    "page": 34
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the SAML & OIDC authentication flow involving four main components: End User, Application (Client), Resource Provider (Relying Party), and Authorization Server. The flow is as follows: ① Authentication Request : The Application (Client) sends an authentication request to the Authorization Server. ② Access Token and ID Token : The Authorization Server returns the Access Token and ID Token to the Application (Client). ③ Resource Call : The Application (Client) calls the Resource Provider (Relying Party). ④ Access Token Validation : The Resource Provider (Relying Party) validates the Access Token with the Authorization Server. ⑤ Resource Response : The Resource Provider (Relying Party) returns the resource response to the Application (Client). Diagram illustrating the SAML & OIDC authentication flow between an End User, Application (Client), Resource Provider (Relying Party), and Authorization Server.",
+    "page": 34
+  },
+  {
+    "section": "Unknown",
+    "content": "A futuristic, glowing purple device labeled 'SECURECONNECT' is centered in the image. It has a dark, circuit-like pattern on its face. The background is a blurred, light blue surface with glowing purple dots and lines, suggesting a high-tech or digital environment. A futuristic, glowing purple device labeled 'SECURECONNECT' on a circuit board background. Match the Protocol to the Use Case 1 Logging into a corporate HR portal → SAML. SAML is common in enterprise environments with XML assertions. 2 Signing in with Google on a 3rd-party web app → OIDC. OIDC is ideal for modern web SSO using OAuth2 and JSON. 3 Legacy SaaS tool that only supports XML assertions → Many older applications were built with SAML-only support. 4 Mobile app that uses federated login → OIDC is lightweight and mobile-friendly, unlike SAML. Let's test your understanding of when to use SAML vs OIDC. 💬 Discuss with your neighbor: • What clues helped you decide? • Are both protocols still relevant today? → Be ready to share your logic! • 💡 Takeaway: SAML dominates older enterprise systems, while OIDC powers modern, web-based federation.",
+    "page": 35
+  },
+  {
+    "section": "Unknown",
+    "content": "A futuristic, glowing purple device labeled 'SECURECONNECT' is centered in the image. It has a dark, circuit-like pattern on its face. The background is a blurred, light blue surface with glowing purple dots and lines, suggesting a high-tech or digital environment. A futuristic, glowing purple device labeled 'SECURECONNECT' on a circuit board background.",
+    "page": 35
+  },
+  {
+    "section": "Unknown",
+    "content": "1 Logging into a corporate HR portal → SAML. SAML is common in enterprise environments with XML assertions. 2 Signing in with Google on a 3rd-party web app → OIDC. OIDC is ideal for modern web SSO using OAuth2 and JSON. 3 Legacy SaaS tool that only supports XML assertions → Many older applications were built with SAML-only support. 4 Mobile app that uses federated login → OIDC is lightweight and mobile-friendly, unlike SAML.",
+    "page": 35
+  },
+  {
+    "section": "Unknown",
+    "content": "• 💡 Takeaway: SAML dominates older enterprise systems, while OIDC powers modern, web-based federation.",
+    "page": 35
+  },
+  {
+    "section": "Unknown",
+    "content": "A woman with red hair, wearing a light blue blazer, sits at a desk in a modern office, smiling at the camera. In front of her is a computer monitor displaying a graphic with the text 'ACCESS CONTROL' and three padlock icons. The background shows a large window with a city view. Apply your knowledge: Corporate Access Control Design authentication methods for the following roles: • IT Administrators • HR Employees • External Contractors → What methods would you recommend? Why? → Consider risk level, data access, location, and device type Discuss in pairs and be ready to share your reasoning with the class.",
+    "page": 36
+  },
+  {
+    "section": "Unknown",
+    "content": "A woman with red hair, wearing a light blue blazer, sits at a desk in a modern office, smiling at the camera. In front of her is a computer monitor displaying a graphic with the text 'ACCESS CONTROL' and three padlock icons. The background shows a large window with a city view.",
+    "page": 36
+  },
+  {
+    "section": "Where Are We Going? (Future of Authentication)",
+    "content": "Where Are We Going? (Future of Authentication) 1 Passkeys — Replace passwords with device-bound cryptographic keys 2 Continuous authentication — Behavior-based verification over time 3 AI-powered risk scoring — Adjust authentication strength based on context 4 Zero Trust — Verify everything, every time, no implicit trust 5 Mobile-first biometrics — Face ID, fingerprint, device-native login A vertical timeline diagram showing the future of authentication with five numbered steps: 1. Passkeys, 2. Continuous authentication, 3. AI-powered risk scoring, 4. Zero Trust, and 5. Mobile-first biometrics. 💡 Question: Which of these feels realistic to you? Which feels risky?",
+    "page": 37
+  },
+  {
+    "section": "Where Are We Going? (Future of Authentication)",
+    "content": "1 Passkeys — Replace passwords with device-bound cryptographic keys 2 Continuous authentication — Behavior-based verification over time 3 AI-powered risk scoring — Adjust authentication strength based on context 4 Zero Trust — Verify everything, every time, no implicit trust 5 Mobile-first biometrics — Face ID, fingerprint, device-native login A vertical timeline diagram showing the future of authentication with five numbered steps: 1. Passkeys, 2. Continuous authentication, 3. AI-powered risk scoring, 4. Zero Trust, and 5. Mobile-first biometrics.",
+    "page": 37
+  },
+  {
+    "section": "Optional:",
+    "content": "Reflect & Predict Icon of a speech bubble, representing a quick activity or discussion. Quick Activity: Which authentication method do you think will dominate in 10 years? What will be completely obsolete? Icon of a person, representing a discussion or sharing activity. Discuss in pairs or raise hands to share. Icon of a pencil, representing an optional writing activity. Optional: Write 1 prediction in the chat or on a sticky note. → Be bold — we're designing the future!",
+    "page": 38
+  },
+  {
+    "section": "Final Recap & Takeaways",
+    "content": "Final Recap & Takeaways 1 Authentication verifies identity using factors like passwords, devices, or biometrics 2 MFA significantly improves security – TOTP and Push offer different trade-offs 3 Challenge-response adds flexibility for device pairing or high-security flows 4 OIDC and SAML delegate authentication in SSO systems – we'll explore more in Session 5 5 FIDO2 enables phishing-resistant, passwordless authentication using public-key crypto 6 Protocols like LDAP, Kerberos, and RADIUS still power many backend systems 7 Authentication must match user risk, role, and context – design choices matter! An abstract digital graphic featuring a network of glowing purple and blue nodes connected by thin lines. A large, flowing, translucent blue ribbon-like shape curves through the foreground, creating a sense of motion and depth. The background is dark, making the glowing elements stand out. Abstract graphic showing a network of glowing purple and blue nodes connected by lines, with a large, flowing, translucent blue ribbon-like shape in the foreground.",
+    "page": 39
+  },
+  {
+    "section": "Final Recap & Takeaways",
+    "content": "1 Authentication verifies identity using factors like passwords, devices, or biometrics 2 MFA significantly improves security – TOTP and Push offer different trade-offs 3 Challenge-response adds flexibility for device pairing or high-security flows 4 OIDC and SAML delegate authentication in SSO systems – we'll explore more in Session 5 5 FIDO2 enables phishing-resistant, passwordless authentication using public-key crypto 6 Protocols like LDAP, Kerberos, and RADIUS still power many backend systems 7 Authentication must match user risk, role, and context – design choices matter!",
+    "page": 39
+  },
+  {
+    "section": "Final Recap & Takeaways",
+    "content": "An abstract digital graphic featuring a network of glowing purple and blue nodes connected by thin lines. A large, flowing, translucent blue ribbon-like shape curves through the foreground, creating a sense of motion and depth. The background is dark, making the glowing elements stand out. Abstract graphic showing a network of glowing purple and blue nodes connected by lines, with a large, flowing, translucent blue ribbon-like shape in the foreground.",
+    "page": 39
+  },
+  {
+    "section": "Teaser: Next Session – Authorization Models",
+    "content": "A close-up, artistic photograph of a smartphone screen and a pen tip, suggesting a focus on technology and security. Teaser: Next Session – Authorization Models What can users do after they log in? Authorization is the process of verifying that a user has permission to access a resource or perform an action. RBAC: Role-Based Access Control A popular access control method where permissions are assigned to roles, and users are assigned to roles. ABAC: Attribute-Based Access Control ABAC uses attributes of the user, resource, and environment to determine access. PBAC: Policy-Based Access Control PBAC uses policies to manage and automate access control decisions. Practice: Design and test role-based access in Keycloak Hands-on session to configure and test RBAC in Keycloak.",
+    "page": 40
+  },
+  {
+    "section": "Teaser: Next Session – Authorization Models",
+    "content": "A close-up, artistic photograph of a smartphone screen and a pen tip, suggesting a focus on technology and security.",
+    "page": 40
+  },
+  {
+    "section": "Teaser: Next Session – Authorization Models",
+    "content": "Authorization is the process of verifying that a user has permission to access a resource or perform an action.",
+    "page": 40
+  },
+  {
+    "section": "Teaser: Next Session – Authorization Models",
+    "content": "A popular access control method where permissions are assigned to roles, and users are assigned to roles.",
+    "page": 40
+  },
+  {
+    "section": "Unknown",
+    "content": "Decorative header image featuring binary code (0s and 1s) on a purple background, with a central graphic of a stylized 'Q' or 'G' shape and a glowing light effect. Practice Overview (Keycloak) 1 ✓ Enable TOTP 2 ✓ Register MFA app 3 ✓ Customize login flow",
+    "page": 41
+  },
+  {
+    "section": "Unknown",
+    "content": "Decorative header image featuring binary code (0s and 1s) on a purple background, with a central graphic of a stylized 'Q' or 'G' shape and a glowing light effect.",
+    "page": 41
+  },
+  {
+    "section": "Unknown",
+    "content": "Post-Practice Reflection 1 Reflect on your practice experience: 2 → What was the most challenging part? 3 → What would you do differently in a real-world system? 4 → Share one takeaway with your group or instructor. A woman with reddish-brown hair, wearing a blue blazer, is sitting at a light-colored desk. She is looking out a large window to her right, with her hand resting on her chin in a thoughtful pose. A small potted plant with white flowers is on the desk near the window. The scene is brightly lit, suggesting a sunny day. A woman in a blue blazer sitting at a desk, looking out a window, reflecting.",
+    "page": 42
+  },
+  {
+    "section": "Unknown",
+    "content": "1 Reflect on your practice experience: 2 → What was the most challenging part? 3 → What would you do differently in a real-world system? 4 → Share one takeaway with your group or instructor.",
+    "page": 42
+  },
+  {
+    "section": "Unknown",
+    "content": "A woman with reddish-brown hair, wearing a blue blazer, is sitting at a light-colored desk. She is looking out a large window to her right, with her hand resting on her chin in a thoughtful pose. A small potted plant with white flowers is on the desk near the window. The scene is brightly lit, suggesting a sunny day. A woman in a blue blazer sitting at a desk, looking out a window, reflecting.",
+    "page": 42
+  }
+]

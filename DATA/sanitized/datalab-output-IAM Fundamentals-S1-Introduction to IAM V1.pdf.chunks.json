@@ -1,0 +1,642 @@
+[
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a bright blue circular glow. Below the key, a glowing blue ring sits on a surface of intricate blue circuit board patterns. Numerous small, glowing orange and yellow dots are scattered throughout the scene, creating a sense of digital activity and connectivity. A glowing key icon on a circuit board background. Identity and Access Management Fundamentals Z Zixiong WANG Zixiong.wang@epita.com",
+    "page": 0
+  },
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a bright blue circular glow. Below the key, a glowing blue ring sits on a surface of intricate blue circuit board patterns. Numerous small, glowing orange and yellow dots are scattered throughout the scene, creating a sense of digital activity and connectivity. A glowing key icon on a circuit board background.",
+    "page": 0
+  },
+  {
+    "section": "About me",
+    "content": "About me Education & Entrepreneurship PhD in Pattern Recognition and AI from Télécom Paris. Founded Sysium, serving top French corporations and government agencies. Corporate Leadership Managed IAM services at Orange Business Services. Manager at Aduneo (pure player on IAM), developing business units and leading implementation projects.",
+    "page": 1
+  },
+  {
+    "section": "About me",
+    "content": "Manager at Aduneo (pure player on IAM), developing business units and leading implementation projects.",
+    "page": 1
+  },
+  {
+    "section": "IAM Mistake Bingo!",
+    "content": "IAM Mistake Bingo! Stand up and present your-self if you've done one of these: ✗ Reused the same password on multiple sites ✗ Forgotten a password more than once in a week ✗ Sent a password via email or SMS ✗ Shared your login with someone else ✗ Clicked on a fake login page by mistake",
+    "page": 2
+  },
+  {
+    "section": "IAM Mistake Bingo!",
+    "content": "✗ Reused the same password on multiple sites ✗ Forgotten a password more than once in a week ✗ Sent a password via email or SMS ✗ Shared your login with someone else ✗ Clicked on a fake login page by mistake",
+    "page": 2
+  },
+  {
+    "section": "Our program",
+    "content": "Our program Session 1: Introduction to Identity and Access Management Foundation concepts and principles of IAM Lightbulb icon representing introduction or foundation. Session 2: Authentication Mechanisms Methods for verifying user identities Padlock icon representing authentication or security. Session 3: Authorization Models Frameworks for determining access permissions Shield icon representing authorization or protection. Session 4: Identity Lifecycle Management Managing identities from creation to retirement User icon representing identity management. Session 5: Federated Identity and Single Sign-On (SSO) Cross-domain identity management solutions Group of people icon representing federated identity or SSO. Session 6: Identity and Access Governance Policies and controls for IAM oversight Gears icon representing governance or policy. Session 7: IAM for cloud environment When IAM meets cloud Checklist icon representing cloud environment or implementation. Exam Final assessment of IAM knowledge Gears icon representing exam or assessment.",
+    "page": 3
+  },
+  {
+    "section": "Session Structure: Theory + Practice",
+    "content": "Session Structure: Theory + Practice Concept Presentation 1 hour of core concepts Visual demonstrations Interactive Q&A breaks Hands-on Workshop 2 hours of guided practice Real-world applications Direct skill application",
+    "page": 4
+  },
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a blue circuit board background. The key is illuminated from below, casting a bright blue glow. The circuit board features intricate patterns of blue lines and numerous small, glowing orange and yellow dots, suggesting a digital or technological theme. A glowing key icon on a circuit board background. Identity and Access Management Fundamentals Session 1 Introduction to Identity and Access Management",
+    "page": 5
+  },
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a blue circuit board background. The key is illuminated from below, casting a bright blue glow. The circuit board features intricate patterns of blue lines and numerous small, glowing orange and yellow dots, suggesting a digital or technological theme. A glowing key icon on a circuit board background.",
+    "page": 5
+  },
+  {
+    "section": "Learning Objectives",
+    "content": "Learning Objectives Icon of a document with lines, representing understanding fundamentals. Understand IAM Fundamentals Define IAM and explain its purpose in cybersecurity frameworks. Icon of a key, representing mastering core concepts. Master Core IAM Concepts Grasp Identity, Authentication, Authorization, and Accounting principles. Icon of a shield, representing exploring the role of IAM in security. Explore the Role of IAM in Security Identify IAM's role in protection and compliance. Icon of a gear, representing familiarizing with IAM components. Familiarize with IAM Components Understand key elements like users, roles, permissions, and policies. Icon of a diamond with a plus sign, representing setting up a basic IAM system. Set Up Basic IAM System Perform hands-on tasks using free IAM tool A group of people sitting around a table in a meeting room, looking at a large screen displaying a dashboard with charts and graphs. The room is dimly lit with a single overhead light.",
+    "page": 6
+  },
+  {
+    "section": "Learning Objectives",
+    "content": "A group of people sitting around a table in a meeting room, looking at a large screen displaying a dashboard with charts and graphs. The room is dimly lit with a single overhead light.",
+    "page": 6
+  },
+  {
+    "section": "Why IAM?Real-World Case Studies",
+    "content": "Why IAM?Real-World Case Studies A stylized illustration of a person wearing a black hoodie, sitting at a laptop. The person's face is obscured by shadow. The background is split into blue and red/pink sections, with various digital elements like code snippets, data tables, and network diagrams floating around. The laptop screen shows some data. The overall aesthetic is cyberpunk or digital security-themed. Illustration of a hooded hacker at a laptop with digital code and data elements in the background.",
+    "page": 7
+  },
+  {
+    "section": "Why IAM?Real-World Case Studies",
+    "content": "A stylized illustration of a person wearing a black hoodie, sitting at a laptop. The person's face is obscured by shadow. The background is split into blue and red/pink sections, with various digital elements like code snippets, data tables, and network diagrams floating around. The laptop screen shows some data. The overall aesthetic is cyberpunk or digital security-themed. Illustration of a hooded hacker at a laptop with digital code and data elements in the background.",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "1. Former Employees Retaining Access (Offboarding failures) Williams Company Management Group (2024) Former employee Paul Comazzi accessed and stole sensitive HR and financial data. ▼ Impact: Serious data breach, legal risks, and reputational damage. Stradis Healthcare (2020) Furloughed executive Christopher Dobbins used retained credentials to delete critical data, disrupting COVID-19 personal protective equipment delivery. ▼ Impact: Operational delays and potential health risks.",
+    "page": 8
+  },
+  {
+    "section": "Unknown",
+    "content": "Furloughed executive Christopher Dobbins used retained credentials to delete critical data, disrupting COVID-19 personal protective equipment delivery.",
+    "page": 8
+  },
+  {
+    "section": "Unknown",
+    "content": "Illustration of three people working at desks in an office environment. The person in the foreground is looking at a laptop with a concerned expression. The person in the background is looking at a monitor. The office has bookshelves, plants, and a window. 2. Delayed Access for New Employees (Onboarding inefficiencies) Icon of a cloud with a gear inside, representing a large bank or financial institution. Large Bank New employees waited several days for access due to manual provisioning. ▼ Impact: Lost productivity; delayed projects. Icon of a 3x3 grid, representing Microsoft. Microsoft (2022) Leaked GitHub credentials exposed due to improper access hygiene during onboarding. ▼ Impact: Potential unauthorized access; compliance risks. Icon of a bar chart, representing a statistic. Stat: Delayed access can cost $800/week per employee in lost productivity — up to $41,600/year . Poor onboarding also contributes to 22% of early attrition .",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "Illustration of three people working at desks in an office environment. The person in the foreground is looking at a laptop with a concerned expression. The person in the background is looking at a monitor. The office has bookshelves, plants, and a window.",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "Stat: Delayed access can cost $800/week per employee in lost productivity — up to $41,600/year . Poor onboarding also contributes to 22% of early attrition .",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "A document with 'GDPR' written in large red letters, placed on top of several stacks of papers. 3. Audit Failures & Regulatory Fines (Lack of accountability & traceability) £20M British Airways Fine Data breach due to poor access control on third-party systems. ▼ Impact: £20M GDPR fine + reputational damage. £18.4M Marriott Fine 5 million guest records compromised via compromised employee credentials. ▼ Impact: £18.4M fine for GDPR violations.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "Data breach due to poor access control on third-party systems. ▼ Impact: £20M GDPR fine + reputational damage.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "5 million guest records compromised via compromised employee credentials. ▼ Impact: £18.4M fine for GDPR violations.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "4. Password Fatigue & Fragmented Identity Experience (No SSO / Identity Silos) Icon of a key, representing multiple logins. Multiple Logins SaaS Sales Team juggled multiple logins, leading to errors and frustration Icon of a person with a speech bubble, representing phishing. Phishing Vulnerability Reddit attack succeeded due to fragmented login approach Icon of a computer monitor, representing data exposure. Data Exposure Attacker gained access via a tricked employee SaaS Sales Team : Employees juggled multiple logins, leading to errors and frustration. ▼ Impact: Lower efficiency; user experience issues. Reddit (2023): Phishing attack succeeded due to fragmented login approach; attacker gained access via a tricked employee. ▼ Impact: User data exposure; PR fallout.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Reddit (2023): Phishing attack succeeded due to fragmented login approach; attacker gained access via a tricked employee.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "A person with dark hair, wearing a dark jacket and a lanyard with a badge, is standing in a server room. They are reaching into a server rack. The server racks are illuminated with red light, and the person's face is also lit with a red glow. The background shows more server racks in a dimly lit room. A person in a server room, wearing a lanyard and badge, interacting with a server rack illuminated by red lights. 5. Excessive Privileges & Insider Threats (No least privilege / RBAC) Cisco (2018) Ex-employee deleted 456 VMs, impacting ~16,000 clients. Impact: $1.4 million in damages; service disruption. NCS Group (2024) A former IT worker deleted 180 virtual servers after keeping admin rights. Impact: $600,000 in damages. Twitter (2015) Two insiders spied on 6,000+ users for a foreign government. Impact: Lawsuits and massive trust loss.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "A person with dark hair, wearing a dark jacket and a lanyard with a badge, is standing in a server room. They are reaching into a server rack. The server racks are illuminated with red light, and the person's face is also lit with a red glow. The background shows more server racks in a dimly lit room. A person in a server room, wearing a lanyard and badge, interacting with a server rack illuminated by red lights.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "Ex-employee deleted 456 VMs, impacting ~16,000 clients. Impact: $1.4 million in damages; service disruption.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "A former IT worker deleted 180 virtual servers after keeping admin rights. Impact: $600,000 in damages.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "Two insiders spied on 6,000+ users for a foreign government. Impact: Lawsuits and massive trust loss.",
+    "page": 12
+  },
+  {
+    "section": "IAM in Your Daily Life",
+    "content": "IAM in Your Daily Life Question for you: 👉 Can you think of a situation (at school, work, online shopping, etc.) where you personally experienced a problem due to poor Identity and Access Management? 🧠 Examples: • Trouble logging into a system • Accessing information you shouldn't have • Managing dozens of passwords • Delayed access when starting a new study/job • Still having access after leaving a school/company",
+    "page": 13
+  },
+  {
+    "section": "IAM in Your Daily Life",
+    "content": "👉 Can you think of a situation (at school, work, online shopping, etc.) where you personally experienced a problem due to poor Identity and Access Management?",
+    "page": 13
+  },
+  {
+    "section": "IAM in Your Daily Life",
+    "content": "• Trouble logging into a system • Accessing information you shouldn't have • Managing dozens of passwords • Delayed access when starting a new study/job • Still having access after leaving a school/company",
+    "page": 13
+  },
+  {
+    "section": "What is IAM?",
+    "content": "What is IAM? The right individuals have the right access to the right resources at the right time A simple black outline icon of a person's head and shoulders, representing a user or identity. Icon of a person silhouette representing Identity Management. Identity Management Defining who you are • Life cycle management • Provisioning • Roles, Policy definition A black outline icon of a fingerprint, representing biometric authentication. Icon of a fingerprint representing Authentication. Authentication Verifying that you are who you claim to be • Passwords • Biometrics • MFA A black outline icon of a magnifying glass with a bar chart inside the lens, representing monitoring or accounting. Icon of a magnifying glass over a bar chart representing Accounting. Accounting Tracking what you did • Audit logs • Activity monitoring A black outline icon of a checkmark inside a circle, representing approval or authorization. Icon of a checkmark inside a circle representing Authorization. Authorization Determining what you can access • Permissions • Access control",
+    "page": 14
+  },
+  {
+    "section": "What is IAM?",
+    "content": "A simple black outline icon of a person's head and shoulders, representing a user or identity. Icon of a person silhouette representing Identity Management.",
+    "page": 14
+  },
+  {
+    "section": "What is IAM?",
+    "content": "A black outline icon of a fingerprint, representing biometric authentication. Icon of a fingerprint representing Authentication.",
+    "page": 14
+  },
+  {
+    "section": "What is IAM?",
+    "content": "A black outline icon of a magnifying glass with a bar chart inside the lens, representing monitoring or accounting. Icon of a magnifying glass over a bar chart representing Accounting.",
+    "page": 14
+  },
+  {
+    "section": "What is IAM?",
+    "content": "A black outline icon of a checkmark inside a circle, representing approval or authorization. Icon of a checkmark inside a circle representing Authorization.",
+    "page": 14
+  },
+  {
+    "section": "What is IAM?",
+    "content": "What is IAM? The right individuals have the right access to the right resources at the right time Identity Management Authentication Authorization Accounting Before During After User icon Fingerprint icon Checkmark icon Bar chart icon",
+    "page": 15
+  },
+  {
+    "section": "What is IAM?",
+    "content": "Identity Management Authentication Authorization Accounting Before During After User icon Fingerprint icon Checkmark icon Bar chart icon",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "IAM in ActionEnterprise Security How IAM Works Companies deploy IAM systems to control employee access to critical data. These systems verify identities and enforce permissions based on job roles. Real-World Example When employees log into the company intranet, SSO systems authenticate their credentials. The IAM framework then grants access to specific resources based on predetermined role permissions. An illustration of a modern office environment. Two people, a man and a woman, are seated at a long desk, viewed from behind. They are working on laptops. In front of them is a large wall-mounted screen displaying a 'Welcome!' message. Above the screen, a text box explains that the SSO system authenticates users and grants access based on role permissions. The screen itself shows a login form with fields for 'Full Name', 'Email Address', and 'City/State', and a 'Welcome logo' button. The overall color scheme is purple and pink. Illustration of two employees working at a desk with a large screen displaying a 'Welcome!' message and login options.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "Companies deploy IAM systems to control employee access to critical data. These systems verify identities and enforce permissions based on job roles.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "When employees log into the company intranet, SSO systems authenticate their credentials. The IAM framework then grants access to specific resources based on predetermined role permissions.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of a modern office environment. Two people, a man and a woman, are seated at a long desk, viewed from behind. They are working on laptops. In front of them is a large wall-mounted screen displaying a 'Welcome!' message. Above the screen, a text box explains that the SSO system authenticates users and grants access based on role permissions. The screen itself shows a login form with fields for 'Full Name', 'Email Address', and 'City/State', and a 'Welcome logo' button. The overall color scheme is purple and pink. Illustration of two employees working at a desk with a large screen displaying a 'Welcome!' message and login options.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "A photograph of a computer monitor and a smartphone on a desk. The monitor displays a login interface with a dark background and a light blue cloud-like shape. It has fields for 'Username' and 'Password', a 'Remember me' checkbox, and a 'Login' button. The smartphone displays a 'One-time code' of '1224456' and a 'Confirm' button. The background is softly blurred, showing a lamp and some indoor plants. A computer monitor displaying a login screen with fields for username, password, and a 'Login' button. A smartphone next to it displays a one-time code for multi-factor authentication. IAM in Action Online Banking How IAM Works Banks use multi-factor authentication (MFA) to secure customer logins. Real-World Example Customers access their accounts by entering a password and confirming their identity via a one-time code sent to their mobile devices.",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "A photograph of a computer monitor and a smartphone on a desk. The monitor displays a login interface with a dark background and a light blue cloud-like shape. It has fields for 'Username' and 'Password', a 'Remember me' checkbox, and a 'Login' button. The smartphone displays a 'One-time code' of '1224456' and a 'Confirm' button. The background is softly blurred, showing a lamp and some indoor plants. A computer monitor displaying a login screen with fields for username, password, and a 'Login' button. A smartphone next to it displays a one-time code for multi-factor authentication.",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "Customers access their accounts by entering a password and confirming their identity via a one-time code sent to their mobile devices.",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "IAM in ActionCloud Applications How IAM Works Cloud platforms like AWS use IAM to control access to virtual resources. Real-World Example Developers are given specific permissions to view logs, while administrators can create and delete virtual servers. The diagram illustrates IAM roles in a cloud environment. It features a central cloud with a double-headed vertical arrow. To the left, a cloud contains a server icon with the text 'Developers: View Logs'. To the right, a cloud contains a person icon with the text 'Administrators: Create/Delete Servers'. Below the central cloud, there are three server icons on a cloud, with an arrow pointing left to the text 'Developers: View Logs' and an arrow pointing down to the text 'Administrators: Create/Delete Servers'. The background is a gradient of purple and blue with stylized clouds. Diagram illustrating IAM roles in a cloud environment.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "Developers are given specific permissions to view logs, while administrators can create and delete virtual servers.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates IAM roles in a cloud environment. It features a central cloud with a double-headed vertical arrow. To the left, a cloud contains a server icon with the text 'Developers: View Logs'. To the right, a cloud contains a person icon with the text 'Administrators: Create/Delete Servers'. Below the central cloud, there are three server icons on a cloud, with an arrow pointing left to the text 'Developers: View Logs' and an arrow pointing down to the text 'Administrators: Create/Delete Servers'. The background is a gradient of purple and blue with stylized clouds. Diagram illustrating IAM roles in a cloud environment.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up photograph of a laptop screen displaying a web application interface for 'Secure e-Commerce'. The interface includes a 'Log in as Login' section with a 'Get more MFA' link and a prominent blue 'Forget password' button. Below this is a link to 'Enable your two factor authentication on the account'. To the right, there is a section titled 'Enable multi-factor authentication on your account' featuring a padlock icon and the acronym 'MFA'. The background of the interface is a vibrant purple and pink gradient with abstract shapes. IAM in ActionE-Commerce and Customer Accounts How IAM Works E-commerce sites use IAM to protect user accounts and transactions. Real-World Example Shoppers can reset passwords and enable MFA for additional security when accessing their profiles and payment information.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up photograph of a laptop screen displaying a web application interface for 'Secure e-Commerce'. The interface includes a 'Log in as Login' section with a 'Get more MFA' link and a prominent blue 'Forget password' button. Below this is a link to 'Enable your two factor authentication on the account'. To the right, there is a section titled 'Enable multi-factor authentication on your account' featuring a padlock icon and the acronym 'MFA'. The background of the interface is a vibrant purple and pink gradient with abstract shapes.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "Shoppers can reset passwords and enable MFA for additional security when accessing their profiles and payment information.",
+    "page": 19
+  },
+  {
+    "section": "Personal Security Habits Poll",
+    "content": "Personal Security Habits Poll How Secure Are Your Personal Accounts? Raise your hand if you use: Multi-Factor Authentication (MFA) Password Managers Biometrics (fingerprint/face scan) Same password across multiple sites Discussion: • Who uses MFA everywhere? • Who still reuses passwords? • Who writes passwords down?",
+    "page": 20
+  },
+  {
+    "section": "Personal Security Habits Poll",
+    "content": "Multi-Factor Authentication (MFA) Password Managers Biometrics (fingerprint/face scan) Same password across multiple sites",
+    "page": 20
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "Importance of IAM Icon representing protection of sensitive data, showing a shield with a lock inside a circular frame with a digital background. Protects Sensitive Data IAM prevents unauthorized access to critical information. Healthcare providers use it to ensure only assigned medical staff can view patient records. Icon representing regulatory compliance, showing a document with 'GDPR' and 'HIPAA' labels in a circular frame with a digital background. Enhances Regulatory Compliance IAM helps meet standards like GDPR and HIPAA. Organizations restrict access to financial records, simplifying audits and reducing risks. Icon representing operational efficiency, showing a network diagram with user and role nodes in a circular frame with a digital background. Boosts Operational Efficiency Automated provisioning streamlines employee access management. New staff gain immediate access to necessary tools based on their roles. Icon representing secure scalability, showing a cloud with 'aws' and a lock icon in a circular frame with a digital background. Enables Secure Scalability IAM manages access across hybrid environments. Companies transitioning to cloud platforms maintain consistent security across multiple services. Icon representing cybersecurity risk reduction, showing a silhouette of a person and various security icons in a circular frame with a digital background. Reduce Cybersecurity Risks By implementing features like MFA, SSO, and activity monitoring, IAM mitigates the risks of phishing attacks, brute force attempts, and insider misuse.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "Icon representing protection of sensitive data, showing a shield with a lock inside a circular frame with a digital background.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "IAM prevents unauthorized access to critical information. Healthcare providers use it to ensure only assigned medical staff can view patient records.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "Icon representing regulatory compliance, showing a document with 'GDPR' and 'HIPAA' labels in a circular frame with a digital background.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "IAM helps meet standards like GDPR and HIPAA. Organizations restrict access to financial records, simplifying audits and reducing risks.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "Icon representing operational efficiency, showing a network diagram with user and role nodes in a circular frame with a digital background.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "Automated provisioning streamlines employee access management. New staff gain immediate access to necessary tools based on their roles.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "Icon representing secure scalability, showing a cloud with 'aws' and a lock icon in a circular frame with a digital background.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "IAM manages access across hybrid environments. Companies transitioning to cloud platforms maintain consistent security across multiple services.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "Icon representing cybersecurity risk reduction, showing a silhouette of a person and various security icons in a circular frame with a digital background.",
+    "page": 21
+  },
+  {
+    "section": "Importance of IAM",
+    "content": "By implementing features like MFA, SSO, and activity monitoring, IAM mitigates the risks of phishing attacks, brute force attempts, and insider misuse.",
+    "page": 21
+  },
+  {
+    "section": "IAM Challenges",
+    "content": "IAM Challenges Even robust IAM systems face significant implementation hurdles that require strategic solutions. A person sitting at a desk with a computer monitor, illustrating a user interacting with a system. Balancing Security & Usability Strict authentication frustrates users. Solution: Implement SSO and adaptive authentication. A row of server racks with glowing blue lights, representing cloud or on-premise infrastructure. Managing Hybrid Environments Inconsistent cloud/on-premise policies. Solution: Deploy federated identity systems. A large, open envelope with many small, colorful pieces of paper flying out, symbolizing identity sprawl. Addressing Identity Sprawl Dormant ex-employee accounts. Solution: Automate provisioning/deprovisioning processes. A group of people walking through a modern, brightly lit office space, representing dynamic identities. Handling Dynamic Identities Temporary contractor access needs. Solution: Implement RBAC/ABAC controls. A magnifying glass resting on a document, symbolizing compliance and auditing. Ensuring Compliance Policy violations of GDPR/HIPAA. Solution: Use IAM audit and reporting tools. A person lifting a heavy barbell, representing the weight of cost and complexity. Cost and Complexity SMBs struggling with enterprise solutions. Solution: Adopt open-source tools and phased implementation. A person in a hoodie holding a glowing blue sphere, representing insider threats. Mitigating Insider Threats Privilege abuse for data access. Enforce least-privilege and regular reviews.",
+    "page": 22
+  },
+  {
+    "section": "IAM Challenges",
+    "content": "A large, open envelope with many small, colorful pieces of paper flying out, symbolizing identity sprawl.",
+    "page": 22
+  },
+  {
+    "section": "IAM Challenges",
+    "content": "A group of people walking through a modern, brightly lit office space, representing dynamic identities.",
+    "page": 22
+  },
+  {
+    "section": "IAM : IGA vs. AM",
+    "content": "IAM : IGA vs. AM Identity Governance & Administration (IGA) Controls the lifecycle of identities and their access rights. Icon representing Identity Lifecycle Identity Lifecycle Manages onboarding, transfers, and offboarding processes. Icon representing Access Certification Access Certification Periodic reviews of access rights to prevent privilege creep. Icon representing Automated Provisioning Automated Provisioning Streamlines account creation across multiple systems. Icon representing Policy Management Policy Management Defines and enforces compliance with access policies. Icon representing Reporting & Analytics Reporting & Analytics Provides insights into access patterns and anomalies. Access Management (AM) Authenticates users and enforces access controls in real-time. Icon representing Authentication Authentication Verifies user identities through various methods. Icon representing Authorization Authorization Controls what resources authenticated users can access. Icon representing MFA MFA Requires multiple verification factors for enhanced security. Icon representing Single Sign-On Single Sign-On Enables access to multiple applications with one login. Icon representing Session Management Session Management Monitors and controls user sessions across applications.",
+    "page": 23
+  },
+  {
+    "section": "IGA vs AM",
+    "content": "IGA vs AM The diagram illustrates the relationship between Identity Management (IGA) and Access Management (AM) across three phases: Before, During (runtime), and After. Identity Management (IGA) is associated with the Before phase. It involves managing identity, designing policies, approving access, and modeling roles. Authentication and Authorization are associated with the During (runtime) phase. This phase involves enforcing access decisions. Accounting is associated with the After phase. It involves reviewing logs, certifying access, and generating audit reports. The diagram shows that IGA is primarily concerned with the Before phase, while AM is primarily concerned with the During (runtime) phase. Accounting is a cross-cutting concern that spans across all three phases. Diagram comparing Identity Management (IGA) and Access Management (AM) across three phases: Before, During (runtime), and After.",
+    "page": 24
+  },
+  {
+    "section": "IGA vs AM",
+    "content": "The diagram illustrates the relationship between Identity Management (IGA) and Access Management (AM) across three phases: Before, During (runtime), and After. Identity Management (IGA) is associated with the Before phase. It involves managing identity, designing policies, approving access, and modeling roles. Authentication and Authorization are associated with the During (runtime) phase. This phase involves enforcing access decisions. Accounting is associated with the After phase. It involves reviewing logs, certifying access, and generating audit reports. The diagram shows that IGA is primarily concerned with the Before phase, while AM is primarily concerned with the During (runtime) phase. Accounting is a cross-cutting concern that spans across all three phases. Diagram comparing Identity Management (IGA) and Access Management (AM) across three phases: Before, During (runtime), and After.",
+    "page": 24
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "Key IAM Vendors Identity Governance & Administration • SailPoint Technologies - AI-driven identity security • Saviynt - Cloud-based governance with automation • One Identity - Unified identity security • ManageEngine - Active Directory specialists • Oracle - scalable IGA solution The logo for SailPoint, featuring a stylized blue and purple triangle to the left of the word \"SailPoint.\" in a bold, sans-serif font. SailPoint logo The logo for Saviynt, consisting of the word \"Saviynt\" in a bold, black, sans-serif font. Saviynt logo The logo for One Identity by Quest, featuring a blue circular icon with a white \"O\" inside, followed by the text \"ONE IDENTITY\" in blue and \"by Quest\" in red below it. One Identity by Quest logo The logo for ManageEngine, featuring the word \"ManageEngine\" in a black, sans-serif font, with a small colorful circular icon to the right. ManageEngine logo The logo for Oracle, featuring the word \"ORACLE\" in a bold, red, sans-serif font. Oracle logo Access Management • Okta - Leading IAM provider • Microsoft Entra ID - Formerly Azure AD • Ping Identity - Secure authentication solutions • CyberArk - Privileged access management • ForgeRock - Comprehensive IAM platform The logo for Okta, featuring the word \"okta\" in a bold, black, sans-serif font. Okta logo The logo for Microsoft Entra ID, featuring a blue and white geometric design consisting of two overlapping triangles. Microsoft Entra ID logo Microsoft Entra ID The logo for Ping Identity, featuring the word \"Ping\" in white on a red background, with \"Identity.\" in white below it. Ping Identity logo The logo for CyberArk, featuring a blue and white geometric design consisting of a cube-like shape, with the word \"CYBERARK\" in blue below it. CyberArk logo www.gartner.com/reviews/market/identity-governance-administration www.gartner.com/reviews/market/access-management",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "• SailPoint Technologies - AI-driven identity security • Saviynt - Cloud-based governance with automation • One Identity - Unified identity security • ManageEngine - Active Directory specialists • Oracle - scalable IGA solution",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "The logo for SailPoint, featuring a stylized blue and purple triangle to the left of the word \"SailPoint.\" in a bold, sans-serif font. SailPoint logo",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "The logo for Saviynt, consisting of the word \"Saviynt\" in a bold, black, sans-serif font. Saviynt logo",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "The logo for One Identity by Quest, featuring a blue circular icon with a white \"O\" inside, followed by the text \"ONE IDENTITY\" in blue and \"by Quest\" in red below it. One Identity by Quest logo",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "The logo for ManageEngine, featuring the word \"ManageEngine\" in a black, sans-serif font, with a small colorful circular icon to the right. ManageEngine logo",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "• Okta - Leading IAM provider • Microsoft Entra ID - Formerly Azure AD • Ping Identity - Secure authentication solutions • CyberArk - Privileged access management • ForgeRock - Comprehensive IAM platform",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "The logo for Microsoft Entra ID, featuring a blue and white geometric design consisting of two overlapping triangles. Microsoft Entra ID logo",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "The logo for Ping Identity, featuring the word \"Ping\" in white on a red background, with \"Identity.\" in white below it. Ping Identity logo",
+    "page": 25
+  },
+  {
+    "section": "Key IAM Vendors",
+    "content": "The logo for CyberArk, featuring a blue and white geometric design consisting of a cube-like shape, with the word \"CYBERARK\" in blue below it. CyberArk logo",
+    "page": 25
+  },
+  {
+    "section": "Gartner Magic Quadrant Access Management",
+    "content": "Gartner Magic Quadrant Access Management product quality customer experience operations 2024 This Magic Quadrant chart for Access Management as of October 2024 plots various vendors based on their 'Completeness of Vision' (x-axis) and 'Ability to Execute' (y-axis). The chart is divided into four quadrants: CHALLENGERS (top-left), LEADERS (top-right), NICHE PLAYERS (bottom-left), and VISIONARIES (bottom-right). Microsoft is the top leader, followed by Okta and Ping Identity. CyberArk and IBM are in the Challengers quadrant, while RSA and One Identity are in the Niche Players quadrant. OpenText and Thales are also present in the lower half of the chart. Vendor Completeness of Vision Ability to Execute Quadrant Microsoft High High Leaders Okta High High Leaders Ping Identity High High Leaders CyberArk Medium High Challengers Entrust Medium Medium Challengers IBM Medium Medium Challengers OpenText Low Medium Niche Players One Identity Low Medium Niche Players RSA Low Low Niche Players Thales Medium Low Visionaries As of October 2024 © Gartner, Inc Gartner Magic Quadrant Access Management 2024 2025 This Magic Quadrant chart for Access Management as of September 2025 shows the progression of vendors. Microsoft remains the top leader, with Ping Identity and Okta following closely. CyberArk has moved from the Challengers quadrant into the Leaders quadrant. IBM and Thales have also moved into the Leaders quadrant. RSA and One Identity have moved from the Niche Players quadrant into the Visionaries quadrant. OpenText and Alibaba Cloud remain in the Niche Players quadrant. Vendor Completeness of Vision Ability to Execute Quadrant Microsoft High High Leaders Ping Identity High High Leaders Okta High High Leaders CyberArk Medium High Leaders Transmit Security Medium High Leaders Entrust Medium Medium Challengers IBM Medium Medium Leaders Thales Medium Low Leaders OpenText Low Medium Niche Players One Identity Low Medium Visionaries RSA Low Medium Visionaries Alibaba Cloud Low Low Niche Players As of September 2025 © Gartner, Inc Gartner Magic Quadrant Access Management 2025 Strategy Innovation roadmap",
+    "page": 26
+  },
+  {
+    "section": "Gartner Magic Quadrant Access Management",
+    "content": "This Magic Quadrant chart for Access Management as of October 2024 plots various vendors based on their 'Completeness of Vision' (x-axis) and 'Ability to Execute' (y-axis). The chart is divided into four quadrants: CHALLENGERS (top-left), LEADERS (top-right), NICHE PLAYERS (bottom-left), and VISIONARIES (bottom-right). Microsoft is the top leader, followed by Okta and Ping Identity. CyberArk and IBM are in the Challengers quadrant, while RSA and One Identity are in the Niche Players quadrant. OpenText and Thales are also present in the lower half of the chart. Vendor Completeness of Vision Ability to Execute Quadrant Microsoft High High Leaders Okta High High Leaders Ping Identity High High Leaders CyberArk Medium High Challengers Entrust Medium Medium Challengers IBM Medium Medium Challengers OpenText Low Medium Niche Players One Identity Low Medium Niche Players RSA Low Low Niche Players Thales Medium Low Visionaries As of October 2024 © Gartner, Inc Gartner Magic Quadrant Access Management 2024",
+    "page": 26
+  },
+  {
+    "section": "Gartner Magic Quadrant Access Management",
+    "content": "This Magic Quadrant chart for Access Management as of September 2025 shows the progression of vendors. Microsoft remains the top leader, with Ping Identity and Okta following closely. CyberArk has moved from the Challengers quadrant into the Leaders quadrant. IBM and Thales have also moved into the Leaders quadrant. RSA and One Identity have moved from the Niche Players quadrant into the Visionaries quadrant. OpenText and Alibaba Cloud remain in the Niche Players quadrant. Vendor Completeness of Vision Ability to Execute Quadrant Microsoft High High Leaders Ping Identity High High Leaders Okta High High Leaders CyberArk Medium High Leaders Transmit Security Medium High Leaders Entrust Medium Medium Challengers IBM Medium Medium Leaders Thales Medium Low Leaders OpenText Low Medium Niche Players One Identity Low Medium Visionaries RSA Low Medium Visionaries Alibaba Cloud Low Low Niche Players As of September 2025 © Gartner, Inc Gartner Magic Quadrant Access Management 2025",
+    "page": 26
+  },
+  {
+    "section": "IAM Trends (1/2)",
+    "content": "IAM Trends (1/2) Shield icon representing Zero-Trust Security Model Zero-Trust Security Model A framework where no entity is trusted by default, requiring continuous verification and strict access controls. NFT icon representing Decentralized Identity Decentralized Identity Users own and control digital identities without central authorities, using blockchain for secure, self-sovereign identity systems. Cloud icon representing Identity-as-a-Service (IDaaS) Identity-as-a-Service (IDaaS) Cloud-based IAM services providing on-demand identity management capabilities, simplifying deployment for businesses. Adaptive authentication icon representing Adaptive Authentication Adaptive Authentication Risk-based approach adjusting security requirements based on context, enhancing user experience while maintaining security. A futuristic, isometric illustration of Identity and Access Management (IAM) trends. The scene is dominated by a large, glowing purple and blue stack of rectangular blocks. On the left side of the stack, a white label reads 'ADAPTIVE AUTHENTICATION'. In the center, a large, glowing purple padlock icon is positioned on top of the stack. To the right of the padlock, a vertical stack of four rectangular blocks is visible, each with a label: 'ZERO-TRUST SECURITY', 'ADAPTIVE', 'DIGITAL', and 'IDENTITY'. Above the padlock, a blue banner with a white shield icon and the text 'IDaaS SERVICE' is visible. The background is a soft, hazy purple and blue gradient, suggesting a digital or cloud environment. Illustration of IAM trends including Zero-Trust Security, Decentralized Identity, IDaaS, and Adaptive Authentication.",
+    "page": 27
+  },
+  {
+    "section": "IAM Trends (1/2)",
+    "content": "A framework where no entity is trusted by default, requiring continuous verification and strict access controls.",
+    "page": 27
+  },
+  {
+    "section": "IAM Trends (1/2)",
+    "content": "Users own and control digital identities without central authorities, using blockchain for secure, self-sovereign identity systems.",
+    "page": 27
+  },
+  {
+    "section": "IAM Trends (1/2)",
+    "content": "Cloud-based IAM services providing on-demand identity management capabilities, simplifying deployment for businesses.",
+    "page": 27
+  },
+  {
+    "section": "IAM Trends (1/2)",
+    "content": "Risk-based approach adjusting security requirements based on context, enhancing user experience while maintaining security.",
+    "page": 27
+  },
+  {
+    "section": "IAM Trends (1/2)",
+    "content": "A futuristic, isometric illustration of Identity and Access Management (IAM) trends. The scene is dominated by a large, glowing purple and blue stack of rectangular blocks. On the left side of the stack, a white label reads 'ADAPTIVE AUTHENTICATION'. In the center, a large, glowing purple padlock icon is positioned on top of the stack. To the right of the padlock, a vertical stack of four rectangular blocks is visible, each with a label: 'ZERO-TRUST SECURITY', 'ADAPTIVE', 'DIGITAL', and 'IDENTITY'. Above the padlock, a blue banner with a white shield icon and the text 'IDaaS SERVICE' is visible. The background is a soft, hazy purple and blue gradient, suggesting a digital or cloud environment. Illustration of IAM trends including Zero-Trust Security, Decentralized Identity, IDaaS, and Adaptive Authentication.",
+    "page": 27
+  },
+  {
+    "section": "IAM Trends (2/2)",
+    "content": "An illustration on a light blue background showing three main components of Identity and Access Management (IAM). On the left is a yellow and black device with a large fingerprint sensor, labeled 'IOT DEVNERPRINT SYSTEM'. In the center is a large yellow padlock with a blue handle, labeled 'IAM'. To the right of the padlock is a yellow key with a blue handle, labeled 'PRIVILEGED & ACCESS MANAGEMENT'. In the background, there is a glowing yellow lightbulb on a pink and yellow base, and a small yellow padlock on the far left. Illustration of IAM components: IOT Devnerprint System, IAM, and Privileged & Access Management. IAM Trends (2/2) Biometric Authentication Leverages unique physical attributes like fingerprints or facial features for verification. A small icon of a fingerprint, consisting of a series of curved lines representing ridges and valleys. Fingerprint icon • Enhances security through non-replicable identity markers • Reduces friction in user authentication workflows IAM for IoT Devices Extends identity management to billions of connected devices. A small icon representing the Internet of Things (IoT), showing a stylized 'i' and 't' with a signal wave above them. IoT icon • Authenticates machine identities across ecosystems • Manages secure device-to-device communication IAM-PAM Convergence Merges identity management with privileged access controls. A small icon representing Privileged Access Management (PAM), showing a shield with a keyhole and a key. PAM icon • Provides enhanced monitoring for high-risk accounts • Implements just-in-time administrative access",
+    "page": 28
+  },
+  {
+    "section": "IAM Trends (2/2)",
+    "content": "An illustration on a light blue background showing three main components of Identity and Access Management (IAM). On the left is a yellow and black device with a large fingerprint sensor, labeled 'IOT DEVNERPRINT SYSTEM'. In the center is a large yellow padlock with a blue handle, labeled 'IAM'. To the right of the padlock is a yellow key with a blue handle, labeled 'PRIVILEGED & ACCESS MANAGEMENT'. In the background, there is a glowing yellow lightbulb on a pink and yellow base, and a small yellow padlock on the far left. Illustration of IAM components: IOT Devnerprint System, IAM, and Privileged & Access Management.",
+    "page": 28
+  },
+  {
+    "section": "IAM Trends (2/2)",
+    "content": "A small icon of a fingerprint, consisting of a series of curved lines representing ridges and valleys. Fingerprint icon",
+    "page": 28
+  },
+  {
+    "section": "IAM Trends (2/2)",
+    "content": "• Enhances security through non-replicable identity markers • Reduces friction in user authentication workflows",
+    "page": 28
+  },
+  {
+    "section": "IAM Trends (2/2)",
+    "content": "A small icon representing the Internet of Things (IoT), showing a stylized 'i' and 't' with a signal wave above them. IoT icon",
+    "page": 28
+  },
+  {
+    "section": "IAM Trends (2/2)",
+    "content": "A small icon representing Privileged Access Management (PAM), showing a shield with a keyhole and a key. PAM icon",
+    "page": 28
+  },
+  {
+    "section": "IAM Trends (2/2)",
+    "content": "• Provides enhanced monitoring for high-risk accounts • Implements just-in-time administrative access",
+    "page": 28
+  },
+  {
+    "section": "IAM in the Broader Cybersecurity Landscape :The 8 Domains of CISSP",
+    "content": "IAM in the Broader Cybersecurity Landscape :The 8 Domains of CISSP Certified Information Systems Security Professional Shield icon representing Security & Risk Management Security & Risk Management CIA triad, governance, compliance, ethics Person icon representing Security Architecture Security Architecture Design models, cryptography, vulnerability countermeasures Key icon representing Identity & Access Management Identity & Access Management Access controls, authentication, federated identity Gear icon representing Security Operations Security Operations Incident response, monitoring, forensics Database icon representing Asset Security Asset Security Data classification, lifecycle, privacy protection Network icon representing Communication & Network Communication & Network Secure architecture, protocols, attack prevention Magnifying glass icon representing Security Assessment Security Assessment Testing strategies, vulnerability assessment, audits Code icon representing Software Development Security Software Development Security Secure coding, threat modeling, OWASP Top 10 30",
+    "page": 29
+  },
+  {
+    "section": "Mini-Quiz 1",
+    "content": "Mini-Quiz 1 What does IAM stand for? A) Internal Audit Management B) Identity and Access Management C) Information Architecture Model D) Internet Account Manager Answer: B) Identity and Access Management",
+    "page": 30
+  },
+  {
+    "section": "Mini-Quiz 1",
+    "content": "A) Internal Audit Management B) Identity and Access Management C) Information Architecture Model D) Internet Account Manager",
+    "page": 30
+  },
+  {
+    "section": "Mini-Quiz 2",
+    "content": "Mini-Quiz 2 Which of the following is an example of Authentication? A) Checking user permissions for a resource B) Entering a password to verify identity C) Reviewing user activity logs D) Assigning a user to an admin group Answer: B) Entering a password to verify identity",
+    "page": 31
+  },
+  {
+    "section": "Mini-Quiz 2",
+    "content": "A) Checking user permissions for a resource B) Entering a password to verify identity C) Reviewing user activity logs D) Assigning a user to an admin group",
+    "page": 31
+  },
+  {
+    "section": "Mini-Quiz 3",
+    "content": "Mini-Quiz 3 Which risk is associated with poor offboarding processes? A) Faster user access to new resources B) Reduced licensing costs C) Former employees retaining access to sensitive systems D) Improved password strength Answer: C) Former employees retaining access to sensitive systems",
+    "page": 32
+  },
+  {
+    "section": "Mini-Quiz 3",
+    "content": "A) Faster user access to new resources B) Reduced licensing costs C) Former employees retaining access to sensitive systems D) Improved password strength",
+    "page": 32
+  },
+  {
+    "section": "Mini-Quiz 4",
+    "content": "Mini-Quiz 4 Which is NOT a benefit of implementing IAM? A) Improved security B) Reduced compliance efforts C) Increased user productivity D) Greater insider threat risks Answer: D) Greater insider threat risks",
+    "page": 33
+  },
+  {
+    "section": "Mini-Quiz 4",
+    "content": "A) Improved security B) Reduced compliance efforts C) Increased user productivity D) Greater insider threat risks",
+    "page": 33
+  },
+  {
+    "section": "Mini-Quiz 5",
+    "content": "Mini-Quiz 5 Which IAM principle focuses on giving users the minimum access they need? A) Zero Trust B) Least Privilege C) Role Explosion D) Access Recertification Answer: B) Least Privilege",
+    "page": 34
+  },
+  {
+    "section": "IAM Concepts: Key Takeaways",
+    "content": "IAM Concepts: Key Takeaways Icon representing a question or definition, showing a smiley face inside a square frame. What is IAM? Framework of technologies, policies, and processes managing digital identities and access control. Icon representing components or structure, showing three interlocking puzzle pieces. Key Components Identity, authentication, authorization and governance form the essential structure. Icon representing importance or a warning, showing an exclamation mark inside a circle. Importance Enhances security, improves regulatory compliance, and boosts operational efficiency. Icon representing challenges or goals, showing a five-pointed star. Challenges Balancing usability with security while managing identity sprawl and insider threats. Icon representing tools or settings, showing a gear. Tools & Trends Solutions like SailPoint, or Okta support implementations alongside Zero-Trust and adaptive authentication.",
+    "page": 35
+  },
+  {
+    "section": "IAM Concepts: Key Takeaways",
+    "content": "Solutions like SailPoint, or Okta support implementations alongside Zero-Trust and adaptive authentication.",
+    "page": 35
+  },
+  {
+    "section": "Practice",
+    "content": "Practice Objective: Apply the theoretical knowledge gained by setting up a basic enterprise IAM Architecture (IGA + LDAP + AM)",
+    "page": 36
+  },
+  {
+    "section": "Practice",
+    "content": "Apply the theoretical knowledge gained by setting up a basic enterprise IAM Architecture (IGA + LDAP + AM)",
+    "page": 36
+  },
+  {
+    "section": "Practice Overview",
+    "content": "Practice Overview Goal: Understand separation of responsibilities The diagram illustrates the separation of responsibilities in an IAM system. It features three main components: MidPoint (IGA), Keycloak (AM), and an LDAP Directory, with an additional LDAP Admin UI. MidPoint (IGA) : Contains an Identity Store and Business Roles. It is associated with a PostgreSQL database. Keycloak (AM) : Contains Authentication, LDAP Federation, OIDC Tokens, and Session Management. It is also associated with a PostgreSQL database. LDAP Directory : A central directory containing User Accounts and Groups (admins, managers, users). LDAP Admin : A UI for LDAP management. Interactions are shown as follows: A large blue arrow labeled \"LDAP Resource Provisioning\" points from MidPoint (IGA) to the LDAP Directory. A blue arrow labeled \"LDAP Federation\" points from the LDAP Directory to Keycloak (AM). A small blue arrow points from the LDAP Directory to the LDAP Admin UI. Diagram illustrating the separation of responsibilities in an IAM system.",
+    "page": 37
+  },
+  {
+    "section": "Practice Overview",
+    "content": "The diagram illustrates the separation of responsibilities in an IAM system. It features three main components: MidPoint (IGA), Keycloak (AM), and an LDAP Directory, with an additional LDAP Admin UI. MidPoint (IGA) : Contains an Identity Store and Business Roles. It is associated with a PostgreSQL database. Keycloak (AM) : Contains Authentication, LDAP Federation, OIDC Tokens, and Session Management. It is also associated with a PostgreSQL database. LDAP Directory : A central directory containing User Accounts and Groups (admins, managers, users). LDAP Admin : A UI for LDAP management. Interactions are shown as follows: A large blue arrow labeled \"LDAP Resource Provisioning\" points from MidPoint (IGA) to the LDAP Directory. A blue arrow labeled \"LDAP Federation\" points from the LDAP Directory to Keycloak (AM). A small blue arrow points from the LDAP Directory to the LDAP Admin UI. Diagram illustrating the separation of responsibilities in an IAM system.",
+    "page": 37
+  },
+  {
+    "section": "Unknown",
+    "content": "midPoint Open Source IGA The diagram illustrates the architecture of midPoint, an Open Source Identity Governance (IGA) solution. At the top, an administrator (represented by a stick figure) interacts with the GUI (Graphical User Interface). The GUI is part of the midPoint core, which is represented by a large green block. Inside this core, the IDM logic (Identity Management logic) is shown as a central component. The midPoint core is connected to four external systems via connectors: HR connector : Connects midPoint to the HR (Human Resources) system. AD connector : Connects midPoint to the Active Directory (AD). DB connector : Connects midPoint to a Database (DB) and an Application . DMS connector : Connects midPoint to a DMS application (Document Management System). The connectors are shown as white boxes with labels, and the external systems are represented by various icons (blue rectangles for HR and DMS application, a blue cylinder for Active Directory, and a blue cylinder and rectangle for the Database and Application). Architecture diagram of midPoint showing its components and connections.",
+    "page": 38
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the architecture of midPoint, an Open Source Identity Governance (IGA) solution. At the top, an administrator (represented by a stick figure) interacts with the GUI (Graphical User Interface). The GUI is part of the midPoint core, which is represented by a large green block. Inside this core, the IDM logic (Identity Management logic) is shown as a central component. The midPoint core is connected to four external systems via connectors: HR connector : Connects midPoint to the HR (Human Resources) system. AD connector : Connects midPoint to the Active Directory (AD). DB connector : Connects midPoint to a Database (DB) and an Application . DMS connector : Connects midPoint to a DMS application (Document Management System). The connectors are shown as white boxes with labels, and the external systems are represented by various icons (blue rectangles for HR and DMS application, a blue cylinder for Active Directory, and a blue cylinder and rectangle for the Database and Application). Architecture diagram of midPoint showing its components and connections.",
+    "page": 38
+  },
+  {
+    "section": "Unknown",
+    "content": "Keycloak Open Source AM The diagram illustrates the Keycloak architecture and its interactions. At the center is the KEYCLOAK component, which contains internal entities: Users , Groups , and Roles . These entities are interconnected with double-headed arrows. Below the Keycloak component, User Federation is shown, connecting to two external data stores: AD and LDAP . To the left, a User (represented by a cartoon person at a computer) interacts with Applications (represented by a server icon) via SSO (Single Sign-On). A large double-headed arrow labeled Authentication connects the User and Applications to the Keycloak component. To the right, Identity Brokering is shown, connecting Keycloak to Social login options: Sign in with Google , Sign in with GitHub , and Sign in with Facebook . Keycloak Architecture Diagram",
+    "page": 39
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the Keycloak architecture and its interactions. At the center is the KEYCLOAK component, which contains internal entities: Users , Groups , and Roles . These entities are interconnected with double-headed arrows. Below the Keycloak component, User Federation is shown, connecting to two external data stores: AD and LDAP . To the left, a User (represented by a cartoon person at a computer) interacts with Applications (represented by a server icon) via SSO (Single Sign-On). A large double-headed arrow labeled Authentication connects the User and Applications to the Keycloak component. To the right, Identity Brokering is shown, connecting Keycloak to Social login options: Sign in with Google , Sign in with GitHub , and Sign in with Facebook . Keycloak Architecture Diagram",
+    "page": 39
+  },
+  {
+    "section": "Unknown",
+    "content": "OpenLDAP Open Source directory service OpenLDAP logo featuring a green caterpillar and the text 'OpenLDAP™' with the URL 'http://www.OpenLDAP.org' below it. graph TD; Root(( )) --- cGB((c=GB)); Root --- cUS((c=US)); cUS --- stCalifornia((st=California)); stCalifornia --- oAcme((o=Acme)); oAcme --- ouSales((ou=Sales)); oAcme --- ouMarketing((ou=Marketing)); ouSales --- cnBarbaraJensen((cn=Barbara Jensen)); The diagram illustrates a hierarchical LDAP directory structure. At the top is a root node (represented by a triangle) which branches into two nodes: 'c=GB' and 'c=US'. The 'c=US' node branches into 'st=California'. The 'st=California' node branches into 'o=Acme'. The 'o=Acme' node is labeled 'The Organization' and branches into 'ou=Sales' and 'ou=Marketing'. The 'ou=Sales' node is labeled 'Organizational Unit' and branches into 'cn=Barbara Jensen'. The 'cn=Barbara Jensen' node is labeled 'Person'. A hierarchical diagram of an LDAP directory structure. At the top is a root node branching into 'c=GB' and 'c=US'. 'c=US' branches into 'st=California'. 'st=California' branches into 'o=Acme'. 'o=Acme' is labeled 'The Organization' and branches into 'ou=Sales' and 'ou=Marketing'. 'ou=Sales' is labeled 'Organizational Unit' and branches into 'cn=Barbara Jensen'. 'cn=Barbara Jensen' is labeled 'Person'.",
+    "page": 40
+  },
+  {
+    "section": "Unknown",
+    "content": "OpenLDAP logo featuring a green caterpillar and the text 'OpenLDAP™' with the URL 'http://www.OpenLDAP.org' below it.",
+    "page": 40
+  },
+  {
+    "section": "Unknown",
+    "content": "graph TD; Root(( )) --- cGB((c=GB)); Root --- cUS((c=US)); cUS --- stCalifornia((st=California)); stCalifornia --- oAcme((o=Acme)); oAcme --- ouSales((ou=Sales)); oAcme --- ouMarketing((ou=Marketing)); ouSales --- cnBarbaraJensen((cn=Barbara Jensen)); The diagram illustrates a hierarchical LDAP directory structure. At the top is a root node (represented by a triangle) which branches into two nodes: 'c=GB' and 'c=US'. The 'c=US' node branches into 'st=California'. The 'st=California' node branches into 'o=Acme'. The 'o=Acme' node is labeled 'The Organization' and branches into 'ou=Sales' and 'ou=Marketing'. The 'ou=Sales' node is labeled 'Organizational Unit' and branches into 'cn=Barbara Jensen'. The 'cn=Barbara Jensen' node is labeled 'Person'. A hierarchical diagram of an LDAP directory structure. At the top is a root node branching into 'c=GB' and 'c=US'. 'c=US' branches into 'st=California'. 'st=California' branches into 'o=Acme'. 'o=Acme' is labeled 'The Organization' and branches into 'ou=Sales' and 'ou=Marketing'. 'ou=Sales' is labeled 'Organizational Unit' and branches into 'cn=Barbara Jensen'. 'cn=Barbara Jensen' is labeled 'Person'.",
+    "page": 40
+  },
+  {
+    "section": "Practice: What You Will Demonstrate",
+    "content": "A black and white icon of a bone, positioned to the left of the main title. Bone icon Practice: What You Will Demonstrate By the end of this lab you will: • Create a digital identity in MidPoint • Provision technical accounts in LDAP • Map business roles to LDAP groups • Federate LDAP into Keycloak • Authenticate using LDAP-backed identity A small icon of a target with a red bullseye and a green arrow, positioned to the left of the Real-world Scenario text. Target icon Real-world Scenario: You are building the first version of your company's IAM system!",
+    "page": 41
+  },
+  {
+    "section": "Practice: What You Will Demonstrate",
+    "content": "• Create a digital identity in MidPoint • Provision technical accounts in LDAP • Map business roles to LDAP groups • Federate LDAP into Keycloak • Authenticate using LDAP-backed identity",
+    "page": 41
+  },
+  {
+    "section": "Practice: What You Will Demonstrate",
+    "content": "A small icon of a target with a red bullseye and a green arrow, positioned to the left of the Real-world Scenario text. Target icon",
+    "page": 41
+  },
+  {
+    "section": "Next Steps",
+    "content": "Next Steps Before the next class, you are encouraged to: Review your midPoint/Keycloak/OpenLDAP Setup: • Log in as different users • Test access restrictions • Try changing a user's roles and observing the impact Explore Keycloak Documentation: • Visit • https://docs.evolveum.com/ (midPoint) • https://www.keycloak.org/documentation • https://www.openldap.org/ • In Keycloak, focus especially on Authentication Flows and User Management sections Think about Authentication Security: • How would you add MFA (Multi-Factor Authentication) to your current system? • What second factors (OTP, SMS, Mobile App) would you propose? Optional: • Watch a short video on IAM basics (recommendation: YouTube, official Keycloak channel, or Cybersecurity courses) Bonus: Prepare 1–2 questions about Keycloak or IAM concepts you want clarified next time.",
+    "page": 42
+  },
+  {
+    "section": "Next Steps",
+    "content": "• Log in as different users • Test access restrictions • Try changing a user's roles and observing the impact",
+    "page": 42
+  },
+  {
+    "section": "Next Steps",
+    "content": "• Visit • https://docs.evolveum.com/ (midPoint) • https://www.keycloak.org/documentation • https://www.openldap.org/ • In Keycloak, focus especially on Authentication Flows and User Management sections",
+    "page": 42
+  },
+  {
+    "section": "Next Steps",
+    "content": "• How would you add MFA (Multi-Factor Authentication) to your current system? • What second factors (OTP, SMS, Mobile App) would you propose?",
+    "page": 42
+  },
+  {
+    "section": "Next Steps",
+    "content": "• Watch a short video on IAM basics (recommendation: YouTube, official Keycloak channel, or Cybersecurity courses)",
+    "page": 42
+  }
+]

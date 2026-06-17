@@ -1,0 +1,567 @@
+[
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "Identity and Access Management Fundamentals A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a network of glowing blue lines and dots, resembling a circuit board or a digital network. The key itself has a bright yellow glow, and the base of the key is surrounded by a circular blue glow. A glowing key icon on a circuit board background. Session 5 Federated Identity and Single Sign-On (SSO) Zixiong Wang",
+    "page": 0
+  },
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a network of glowing blue lines and dots, resembling a circuit board or a digital network. The key itself has a bright yellow glow, and the base of the key is surrounded by a circular blue glow. A glowing key icon on a circuit board background.",
+    "page": 0
+  },
+  {
+    "section": "Unknown",
+    "content": "A large, stylized key with a three-loop head and a glowing purple light at its tip, set against a background of a network diagram with blue lines and nodes. Learning Objectives By the end of this session, you will be able to: Explain the concept and value of federated identity Define federated identity and describe how it addresses cross-domain authentication needs. Illustrate its benefits in user experience, security, and governance. Understand Single Sign-On (SSO) and how it works Explain what SSO is, how it reduces login friction, and how it relates to federated identity. Compare SSO-enabling protocols and their use cases Describe the structure and flows of SAML , OAuth2 , and OpenID Connect . Map each protocol to appropriate real-world scenarios. Apply concepts through practical hands-on configuration Use Keycloak to implement OIDC SSO across multiple applications. Federate Keycloak with an external IdP (e.g., Google). Outcome: You will understand the motivations behind federated identity and SSO, master the associated protocols, and gain hands-on experience configuring secure, scalable identity federation systems.",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "A large, stylized key with a three-loop head and a glowing purple light at its tip, set against a background of a network diagram with blue lines and nodes.",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "Outcome: You will understand the motivations behind federated identity and SSO, master the associated protocols, and gain hands-on experience configuring secure, scalable identity federation systems.",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "Quick Question: How many different systems did you log into today? Options: • 1 • 2-3 • 4-5 • 6+ What if you could use just one login?\" A person is seated in a modern, light-colored chair, looking towards a large, futuristic, glowing purple interface. The interface is composed of various icons and text elements, including a large 'Login' button, a 'Logout' button, and several smaller icons representing different systems or applications. The interface is set against a dark background, and the overall aesthetic is high-tech and digital. A person sitting in a chair, looking at a large, futuristic, glowing purple interface with various login options and icons, illustrating the concept of a single login system.",
+    "page": 2
+  },
+  {
+    "section": "Unknown",
+    "content": "A person is seated in a modern, light-colored chair, looking towards a large, futuristic, glowing purple interface. The interface is composed of various icons and text elements, including a large 'Login' button, a 'Logout' button, and several smaller icons representing different systems or applications. The interface is set against a dark background, and the overall aesthetic is high-tech and digital. A person sitting in a chair, looking at a large, futuristic, glowing purple interface with various login options and icons, illustrating the concept of a single login system.",
+    "page": 2
+  },
+  {
+    "section": "Why Federated Identity and SSO?",
+    "content": "Why Federated Identity and SSO? Multiple Logins for Each Application Users must authenticate separately for each system (email, HR, CRM...) Interrupts productivity and frustrates users Identity Silos Across Organizations No trust or linkage between identity systems (e.g., partners, cloud services) Requires duplicate accounts or complex syncs Inconsistent User Experience and Security MFA, password strength, and session policies vary by application Hard to enforce centrally and uniformly THE KEY TO POTENTIAL A large, 3D-rendered blue padlock is the central focus, with a blue key inserted into its keyhole. The padlock is set against a vibrant, multi-colored background of blue, green, and yellow. Several small, translucent blue spheres of varying sizes float around the padlock. At the bottom, there are stylized, wavy blue shapes that resemble clouds or water. The overall aesthetic is clean, modern, and futuristic.",
+    "page": 3
+  },
+  {
+    "section": "Why Federated Identity and SSO?",
+    "content": "A large, 3D-rendered blue padlock is the central focus, with a blue key inserted into its keyhole. The padlock is set against a vibrant, multi-colored background of blue, green, and yellow. Several small, translucent blue spheres of varying sizes float around the padlock. At the bottom, there are stylized, wavy blue shapes that resemble clouds or water. The overall aesthetic is clean, modern, and futuristic.",
+    "page": 3
+  },
+  {
+    "section": "Unknown",
+    "content": "Federated Identity – \"Who you are and how your identity is trusted across domains\" Federated Identity is a model of identity management where multiple distinct identity systems (e.g., from different organizations or domains) establish mutual trust to allow a user to authenticate in one domain and access resources in another without re-registering or managing separate credentials. Key Characteristics: • Based on trust relationships between Identity Providers (IdPs) and Service Providers (SPs). • The user's identity is managed by one domain but accepted by others. • Often uses standards like SAML, OIDC , or WS-Federation to transfer identity claims. • Identity Federation is the process of setting up and managing this trust. Examples: • Logging into a university library system using your university's central account. • An enterprise using Microsoft Entra ID (Azure AD) to access partner tools from another vendor.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "Federated Identity is a model of identity management where multiple distinct identity systems (e.g., from different organizations or domains) establish mutual trust to allow a user to authenticate in one domain and access resources in another without re-registering or managing separate credentials.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "• Based on trust relationships between Identity Providers (IdPs) and Service Providers (SPs). • The user's identity is managed by one domain but accepted by others. • Often uses standards like SAML, OIDC , or WS-Federation to transfer identity claims. • Identity Federation is the process of setting up and managing this trust.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "• Logging into a university library system using your university's central account. • An enterprise using Microsoft Entra ID (Azure AD) to access partner tools from another vendor.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "A detailed illustration of a digital landscape. On the left, a dense cluster of people and computers represents a complex, fragmented system. A central, winding path leads from this area towards the right, where a more organized server room with blue racks is shown. Three document icons are placed along this path, symbolizing a streamlined process. People are depicted interacting with the environment, some sitting at desks and others standing near server racks. Illustration of a complex digital landscape with people, servers, and data flows. How Federated Identity and SSO Help Problem Multiple Logins for Each Application Identity Silos Across Organizations Inconsistent UX and Security Policies Solution ✓ Single Sign-On (SSO): Log in once, access everything ✓ Federated Identity: Share identities across trusted domains ✓ Centralized Control: Unified login flow, MFA, and policies via IdP",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "A detailed illustration of a digital landscape. On the left, a dense cluster of people and computers represents a complex, fragmented system. A central, winding path leads from this area towards the right, where a more organized server room with blue racks is shown. Three document icons are placed along this path, symbolizing a streamlined process. People are depicted interacting with the environment, some sitting at desks and others standing near server racks. Illustration of a complex digital landscape with people, servers, and data flows.",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "You're designing access for a new platform... Your company is merging with another. Employees from Company B need to access your internal HR portal without creating new accounts. What do you do? Brainstorm: A) Create new accounts in your system B) Sync directories C) Use federated identity Application The diagram illustrates a data processing pipeline for an application, structured into four main stages: Data Ingestion, Processing, Analysis, and Reporting. These stages are represented by overlapping circles, each containing several icons representing different data sources or processing steps. Data Ingestion: The top-left circle, containing icons for a server, a document, a folder, and a person. Processing: The bottom-left circle, containing icons for a server, a document, a folder, and a person. Analysis: The top-right circle, containing icons for a server, a document, a folder, and a person. Reporting: The bottom-right circle, containing icons for a server, a document, a folder, and a person. The circles overlap, indicating a continuous and integrated workflow. A thick purple line connects the circles, emphasizing the flow of data through the pipeline. A diagram illustrating the data processing pipeline for an application, showing the flow from Data Ingestion to Processing, Analysis, and Reporting.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "Your company is merging with another. Employees from Company B need to access your internal HR portal without creating new accounts. What do you do?",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates a data processing pipeline for an application, structured into four main stages: Data Ingestion, Processing, Analysis, and Reporting. These stages are represented by overlapping circles, each containing several icons representing different data sources or processing steps. Data Ingestion: The top-left circle, containing icons for a server, a document, a folder, and a person. Processing: The bottom-left circle, containing icons for a server, a document, a folder, and a person. Analysis: The top-right circle, containing icons for a server, a document, a folder, and a person. Reporting: The bottom-right circle, containing icons for a server, a document, a folder, and a person. The circles overlap, indicating a continuous and integrated workflow. A thick purple line connects the circles, emphasizing the flow of data through the pipeline. A diagram illustrating the data processing pipeline for an application, showing the flow from Data Ingestion to Processing, Analysis, and Reporting.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "Single Sign-On (SSO) – \"How many times you have to authenticate\" Definition: Single Sign-On is an authentication mechanism that allows a user to log in once and gain access to multiple applications or services without needing to log in again during the session. Key Characteristics: • SSO may operate within a single domain or across federated domains . • The goal is to minimize repeated login prompts while maintaining secure sessions. • Achieved through session tokens, cookies, or authentication assertions . • Commonly implemented using protocols like SAML, OIDC, Kerberos , etc.",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "Single Sign-On is an authentication mechanism that allows a user to log in once and gain access to multiple applications or services without needing to log in again during the session.",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "• SSO may operate within a single domain or across federated domains . • The goal is to minimize repeated login prompts while maintaining secure sessions. • Achieved through session tokens, cookies, or authentication assertions . • Commonly implemented using protocols like SAML, OIDC, Kerberos , etc.",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "Relationship between the two concepts Aspect Federated Identity Single Sign-On (SSO) Focus Identity exchange and trust across domains User convenience and authentication flow Scope Cross-organizational / cross-domain Single or multiple systems (can be intra-org) Involves Multiple IdPs/SPs and trust relationships One IdP, multiple SPs Protocols Used SAML, OIDC, WS-Federation SAML, OIDC, Kerberos Outcome Same user identity recognized across domains One-time authentication, access to many systems Can Exist Alone? Yes, without SSO (e.g., one-time federation) Yes, without federation (e.g., within an intranet) Intersection Federated Identity enables cross-domain SSO SSO relies on federated identity when spanning domains",
+    "page": 8
+  },
+  {
+    "section": "Unknown",
+    "content": "Aspect Federated Identity Single Sign-On (SSO) Focus Identity exchange and trust across domains User convenience and authentication flow Scope Cross-organizational / cross-domain Single or multiple systems (can be intra-org) Involves Multiple IdPs/SPs and trust relationships One IdP, multiple SPs Protocols Used SAML, OIDC, WS-Federation SAML, OIDC, Kerberos Outcome Same user identity recognized across domains One-time authentication, access to many systems Can Exist Alone? Yes, without SSO (e.g., one-time federation) Yes, without federation (e.g., within an intranet) Intersection Federated Identity enables cross-domain SSO SSO relies on federated identity when spanning domains",
+    "page": 8
+  },
+  {
+    "section": "Federation Protocols Enabling SSO",
+    "content": "Federation Protocols Enabling SSO Protocol Focus Area Common Use Cases Strengths SAML Authentication & Authorization Enterprise systems and internal portals Strong support for enterprise workflows OAuth2 Authorization API access for third-party applications Flexible and widely adopted OpenID Connect Authentication Consumer apps with federated login Combines authentication with authorization SSO relies on specific protocols to facilitate secure and seamless authentication across systems. These protocols define how identity information is shared between identity providers (IdPs) and service providers (SPs).",
+    "page": 9
+  },
+  {
+    "section": "Federation Protocols Enabling SSO",
+    "content": "Protocol Focus Area Common Use Cases Strengths SAML Authentication & Authorization Enterprise systems and internal portals Strong support for enterprise workflows OAuth2 Authorization API access for third-party applications Flexible and widely adopted OpenID Connect Authentication Consumer apps with federated login Combines authentication with authorization",
+    "page": 9
+  },
+  {
+    "section": "Federation Protocols Enabling SSO",
+    "content": "SSO relies on specific protocols to facilitate secure and seamless authentication across systems. These protocols define how identity information is shared between identity providers (IdPs) and service providers (SPs).",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "SAML Flow (SP-Initiated): 1. Bob wants a beer 1. Bob goes first to the Beer Tent (Service Provider) . 2. Beer Tent says: \"Go get a wristband!\" and redirects Bob to the Wristband Tent with a note (SAML request). 2. Bob goes to the Wristband Tent (Identity Provider) 1. Bob shows his ID (logs in). 2. If approved, he receives a wristband (SAML assertion). 3. Bob is redirected back to the Beer Tent . 3. At the Beer Tent 1. The Beer Tent sees the wristband. 2. It checks: 1. Is it valid? 2. Is it signed by the trusted Wristband Tent? 3. If yes, Bob is served beer (granted access). The diagram illustrates the SAML Flow (SP-Initiated) process between a Service Provider (Beer Tent) and an Identity Provider (Wristband Tent). Service Provider (Beer Tent): Represented by a tent with a sign that reads \"COLD BEERS & GOOD VIBES\". Identity Provider (Wristband Tent): Represented by a tent with a sign that reads \"Event pass\". Bob: Represented by a man in a green shirt and blue pants. Flow: 1. Bob goes to the Beer Tent and says \"I want a beer\". 2. The Beer Tent says \"Go get a wristband!\" and redirects Bob to the Wristband Tent with a note (SAML request). 3. Bob shows his ID (logs in) at the Wristband Tent. 4. If approved, he receives a wristband (SAML assertion). 5. Bob is redirected back to the Beer Tent. 6. The Beer Tent sees the wristband and checks it. 7. If yes, Bob is served beer (granted access). Diagram of the SAML Flow (SP-Initiated) process. Alternative Flow: IdP-Initiated (first start at Wristband Tent)",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "1. Bob goes first to the Beer Tent (Service Provider) . 2. Beer Tent says: \"Go get a wristband!\" and redirects Bob to the Wristband Tent with a note (SAML request).",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "1. Bob shows his ID (logs in). 2. If approved, he receives a wristband (SAML assertion). 3. Bob is redirected back to the Beer Tent .",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "1. The Beer Tent sees the wristband. 2. It checks: 1. Is it valid? 2. Is it signed by the trusted Wristband Tent? 3. If yes, Bob is served beer (granted access).",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the SAML Flow (SP-Initiated) process between a Service Provider (Beer Tent) and an Identity Provider (Wristband Tent). Service Provider (Beer Tent): Represented by a tent with a sign that reads \"COLD BEERS & GOOD VIBES\". Identity Provider (Wristband Tent): Represented by a tent with a sign that reads \"Event pass\". Bob: Represented by a man in a green shirt and blue pants. Flow: 1. Bob goes to the Beer Tent and says \"I want a beer\". 2. The Beer Tent says \"Go get a wristband!\" and redirects Bob to the Wristband Tent with a note (SAML request). 3. Bob shows his ID (logs in) at the Wristband Tent. 4. If approved, he receives a wristband (SAML assertion). 5. Bob is redirected back to the Beer Tent. 6. The Beer Tent sees the wristband and checks it. 7. If yes, Bob is served beer (granted access). Diagram of the SAML Flow (SP-Initiated) process.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "SP-Initiated Authentication Flow The diagram illustrates the SP-Initiated Authentication Flow involving three main entities: User, Service Provider, and Identity Provider. Flow Steps: ① Request access to resource (Service Provider to User) ② redirected to SAML IdP with SAML Request (Service Provider to Identity Provider) ③ Ask authentication (Identity Provider to User) ④ Provide credentials (User to Identity Provider) ⑤ SAML assertion (Identity Provider to Service Provider) ⑥ Verify assertion (Service Provider to Identity Provider) ⑦ Deliver resource to user (Service Provider to User) Service Provider Verification Questions: Signature → Can I trust it? Issuer → Who created it? Audience → Who is it for? Subject → How/where is it used? Time → Is it still valid? Replay → Is it reused? Decryption → Can I read it securely? Diagram of SP-Initiated Authentication Flow showing interactions between User, Service Provider, and Identity Provider.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the SP-Initiated Authentication Flow involving three main entities: User, Service Provider, and Identity Provider. Flow Steps: ① Request access to resource (Service Provider to User) ② redirected to SAML IdP with SAML Request (Service Provider to Identity Provider) ③ Ask authentication (Identity Provider to User) ④ Provide credentials (User to Identity Provider) ⑤ SAML assertion (Identity Provider to Service Provider) ⑥ Verify assertion (Service Provider to Identity Provider) ⑦ Deliver resource to user (Service Provider to User) Service Provider Verification Questions: Signature → Can I trust it? Issuer → Who created it? Audience → Who is it for? Subject → How/where is it used? Time → Is it still valid? Replay → Is it reused? Decryption → Can I read it securely? Diagram of SP-Initiated Authentication Flow showing interactions between User, Service Provider, and Identity Provider.",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "SAML Key Components of SAML: Assertions Data packets sent by the IdP to the SP to provide information about the user's identity and permissions. Types include Authentication Assertion, Attribute Assertion, and Authorization Decision Assertion. Identity Provider (IdP) Authenticates users and generates SAML assertions. Example: A corporate identity server or an external provider like Okta. Service Provider (SP) Receives the SAML assertion from the IdP and grants the user access to its services. Example: A web application or software service. SAML Advantages: 🔒 Centralized Authentication Users authenticate once with the IdP, streamlining the login process. ♥ Security Credentials are not shared with the SPs, reducing exposure to potential breaches. 📦 Scalability Supports seamless authentication across multiple SPs in enterprise environments.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "Data packets sent by the IdP to the SP to provide information about the user's identity and permissions. Types include Authentication Assertion, Attribute Assertion, and Authorization Decision Assertion.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "Authenticates users and generates SAML assertions. Example: A corporate identity server or an external provider like Okta.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "Receives the SAML assertion from the IdP and grants the user access to its services. Example: A web application or software service.",
+    "page": 12
+  },
+  {
+    "section": "OAuth2 Protocol",
+    "content": "OAuth2 Protocol The diagram illustrates the OAuth2 Protocol flow. A central user icon (a person with a thumbs up) is connected to four main components: the Client Application, the Resource Server, the Authorization Server, and the Resource Owner. The Client Application is shown as a laptop with a document icon. The Resource Server is shown as a server rack with a document icon. The Authorization Server is shown as a server rack with a document icon. The Resource Owner is shown as a server rack with a document icon. The flow is as follows: 1. The Client Application requests access from the Resource Owner. 2. The Resource Owner issues an access token to the Client Application. 3. The Client Application uses the access token to request access from the Resource Server. 4. The Resource Server grants access to the Client Application. 5. The Client Application also interacts with the Authorization Server, which verifies the user's identity and issues access tokens to the client application. Diagram of the OAuth2 Protocol flow OAuth2 - Delegated access OAuth2 is a token-based authorization protocol that enables secure access to resources on behalf of a user without exposing their credentials. Key Concepts of OAuth2: • Resource Owner: The user who owns the data or resources being accessed. • Client Application: The third-party application requesting access to the resource owner's data. • Authorization Server: Verifies the user's identity and issues access tokens to the client application. • Resource Server: Hosts the protected data or resources that the client application wants to access. Token types • Access Token: Used by the client application to access protected resources. • Refresh Token: Used to obtain a new access token without requiring user reauthentication. Advantages of OAuth2: Shield icon representing security Secure Authorization: User credentials are never exposed to client applications. Gears icon representing granular permissions Granular Permissions: Users can control the scope of access granted to client applications. Globe icon representing wide adoption Wide Adoption: Supported by many APIs and platforms like Google, Facebook, and GitHub.",
+    "page": 13
+  },
+  {
+    "section": "OAuth2 Protocol",
+    "content": "The diagram illustrates the OAuth2 Protocol flow. A central user icon (a person with a thumbs up) is connected to four main components: the Client Application, the Resource Server, the Authorization Server, and the Resource Owner. The Client Application is shown as a laptop with a document icon. The Resource Server is shown as a server rack with a document icon. The Authorization Server is shown as a server rack with a document icon. The Resource Owner is shown as a server rack with a document icon. The flow is as follows: 1. The Client Application requests access from the Resource Owner. 2. The Resource Owner issues an access token to the Client Application. 3. The Client Application uses the access token to request access from the Resource Server. 4. The Resource Server grants access to the Client Application. 5. The Client Application also interacts with the Authorization Server, which verifies the user's identity and issues access tokens to the client application. Diagram of the OAuth2 Protocol flow",
+    "page": 13
+  },
+  {
+    "section": "OAuth2 Protocol",
+    "content": "OAuth2 is a token-based authorization protocol that enables secure access to resources on behalf of a user without exposing their credentials.",
+    "page": 13
+  },
+  {
+    "section": "OAuth2 Protocol",
+    "content": "• Resource Owner: The user who owns the data or resources being accessed. • Client Application: The third-party application requesting access to the resource owner's data. • Authorization Server: Verifies the user's identity and issues access tokens to the client application. • Resource Server: Hosts the protected data or resources that the client application wants to access.",
+    "page": 13
+  },
+  {
+    "section": "OAuth2 Protocol",
+    "content": "• Access Token: Used by the client application to access protected resources. • Refresh Token: Used to obtain a new access token without requiring user reauthentication.",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "How OAuth2 Supports Federation and Delegated Access The Simplest Guide To OAuth 2.0. For the past three years, I've repeated... | by Takahiko Kawasaki | Medium https://darutk.medium.com/the-simplest-guide-to-oauth-2-0-8c71bd9a15bb Another useful doc: https://auth0.com/resources/ebooks/oauth-openid-connect-professional-guide",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "The Simplest Guide To OAuth 2.0. For the past three years, I've repeated... | by Takahiko Kawasaki | Medium",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "How OAuth2 Supports Federation and Delegated Access OAuth2 is a token-based authorization protocol that enables secure access to resources on behalf of a user without exposing their credentials. Bob owns a vault at the bank. (1) Fran is a lawyer Bob wants to act on his behalf. (2) Bob contacts the Authorization Desk (Auth Server) and says: \"Allow Fran to access my vault, but only to see documents, not withdraw cash.\" (3) The desk gives Fran an access slip (access token). (4) Fran goes to the Vault Clerk (Resource Server) and shows the slip. Clerk checks: • Is this slip valid? • Is Fran allowed to view (not edit)? • Is it for Bob's vault? (5) If all pass → access granted ✅. (Actually, Fran gets an authorization code first, then she exchange it for an access token ) The diagram illustrates the OAuth2 flow for delegated access between three main entities: Bob, Fran (Client), and the Bank's services (Authorization Desk and Vault Clerk). Bob (Owner) is represented by a person icon. Fran (Client) (Lawyer) is represented by a person icon. Authorization Desk (Auth Server) is represented by a person at a desk with a \"BANK\" sign. Vault Clerk (Resource Server) is represented by a vault door icon. The flow is numbered 1 through 5: (1) Fran asks Bob: \"Can I access docs?\" (2) Bob sends a request to the Authorization Desk: \"Allow Fran to access my vault, but only to see documents, not withdraw cash.\" (3) The Authorization Desk sends an \"access slip\" (access token) to Fran. (4) Fran sends the access slip to the Vault Clerk. (5) The Vault Clerk grants access to Fran, returning documents to her. Diagram illustrating the OAuth2 flow for delegated access.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "OAuth2 is a token-based authorization protocol that enables secure access to resources on behalf of a user without exposing their credentials.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "(2) Bob contacts the Authorization Desk (Auth Server) and says: \"Allow Fran to access my vault, but only to see documents, not withdraw cash.\"",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the OAuth2 flow for delegated access between three main entities: Bob, Fran (Client), and the Bank's services (Authorization Desk and Vault Clerk). Bob (Owner) is represented by a person icon. Fran (Client) (Lawyer) is represented by a person icon. Authorization Desk (Auth Server) is represented by a person at a desk with a \"BANK\" sign. Vault Clerk (Resource Server) is represented by a vault door icon. The flow is numbered 1 through 5: (1) Fran asks Bob: \"Can I access docs?\" (2) Bob sends a request to the Authorization Desk: \"Allow Fran to access my vault, but only to see documents, not withdraw cash.\" (3) The Authorization Desk sends an \"access slip\" (access token) to Fran. (4) Fran sends the access slip to the Vault Clerk. (5) The Vault Clerk grants access to Fran, returning documents to her. Diagram illustrating the OAuth2 flow for delegated access.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "Authorization Code Grant The diagram illustrates the Authorization Code Grant flow between four components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. The flow is as follows: 1. The Resource Owner (Browser) clicks \"Login\". 2. The Client App redirects the Resource Owner (Browser) to the Auth Server. 3. The Resource Owner (Browser) is redirected to the Auth Server login page. 4. The Auth Server returns a login form to the Resource Owner (Browser). 5. The Resource Owner (Browser) enters their credentials and submits them to the Auth Server. 6. The Auth Server authenticates the user and redirects back to the Client App with an authorization code. 7. The Client App requests an access token from the Auth Server using the authorization code. 8. The Auth Server validates the code and returns an access token to the Client App. 9. The Client App makes an API request to the Resource Server using the access token. 10. The Resource Server validates the token and returns an API response to the Client App. 11. The Client App receives the API response from the Resource Server. Key events and data flows: Code: The authorization code is passed from the Auth Server to the Client App (Step 6). Access token: The access token is returned from the Auth Server to the Client App (Step 8) and used by the Client App to request data from the Resource Server (Step 9). Sequence diagram of the Authorization Code Grant flow. Authorization Code Grant (Recommended for Most Apps)",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the Authorization Code Grant flow between four components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. The flow is as follows: 1. The Resource Owner (Browser) clicks \"Login\". 2. The Client App redirects the Resource Owner (Browser) to the Auth Server. 3. The Resource Owner (Browser) is redirected to the Auth Server login page. 4. The Auth Server returns a login form to the Resource Owner (Browser). 5. The Resource Owner (Browser) enters their credentials and submits them to the Auth Server. 6. The Auth Server authenticates the user and redirects back to the Client App with an authorization code. 7. The Client App requests an access token from the Auth Server using the authorization code. 8. The Auth Server validates the code and returns an access token to the Client App. 9. The Client App makes an API request to the Resource Server using the access token. 10. The Resource Server validates the token and returns an API response to the Client App. 11. The Client App receives the API response from the Resource Server. Key events and data flows: Code: The authorization code is passed from the Auth Server to the Client App (Step 6). Access token: The access token is returned from the Auth Server to the Client App (Step 8) and used by the Client App to request data from the Resource Server (Step 9). Sequence diagram of the Authorization Code Grant flow.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "Access Token Claim Meaning iss Issuer of the token (Authorization Server) sub Subject (user or client identity, not formally defined ) aud Intended API / Resource Server exp Expiration time iat Issued-at time scope Permissions granted client_id Client application identifier jti Unique token identifier roles / groups Optional authorization information scp Scope list (provider-specific) Example in JSON: {\n \"iss\": \"https://idp.example.com\",\n \"sub\": \"user123\",\n \"aud\": \"finance-api\",\n \"exp\": 1716200000,\n \"scope\": \"read write\",\n \"client_id\": \"expense-app\"\n} The API validates: • signature • expiration • audience • scopes/permissions before granting access.",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "Claim Meaning iss Issuer of the token (Authorization Server) sub Subject (user or client identity, not formally defined ) aud Intended API / Resource Server exp Expiration time iat Issued-at time scope Permissions granted client_id Client application identifier jti Unique token identifier roles / groups Optional authorization information scp Scope list (provider-specific)",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "{\n \"iss\": \"https://idp.example.com\",\n \"sub\": \"user123\",\n \"aud\": \"finance-api\",\n \"exp\": 1716200000,\n \"scope\": \"read write\",\n \"client_id\": \"expense-app\"\n}",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "OAuth 2.1 vs OAuth 2.0 Criteria OAuth 2.0 OAuth 2.1 PKCE Optional (public clients) Mandatory for all Implicit Grant Available Removed ROPC (Password Grant) Available Removed Redirect URI Matching Wildcards allowed Exact matching required Refresh Token Rotation Optional Strongly recommended Tokens in URLs Allowed Forbidden Client Authentication (token endpoint) client_secret_basic by default basic and post supported Documentation 15+ separate RFCs Unified document https://www.adunéo.com/acces/oauth-2-0-vs-oauth-2-1-ce-qui-change-pour-les-equipes-iam",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "Criteria OAuth 2.0 OAuth 2.1 PKCE Optional (public clients) Mandatory for all Implicit Grant Available Removed ROPC (Password Grant) Available Removed Redirect URI Matching Wildcards allowed Exact matching required Refresh Token Rotation Optional Strongly recommended Tokens in URLs Allowed Forbidden Client Authentication (token endpoint) client_secret_basic by default basic and post supported Documentation 15+ separate RFCs Unified document",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "Proof Key for Code Exchange (PKCE) An additional security layer on top of the authorization code grant flow, ensuring that the application that starts the authentication flow is the same one that finishes it Problem of authorization code flow : Code interception The diagram illustrates the Authorization Code Grant flow with PKCE, highlighting a security vulnerability. It features four main components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. Flow Steps: 1. Resource Owner (Browser) Clicks Login. 2. Redirect to Client App. 3. To auth server login. 4. The auth server returns login form. 5. The user enters their credentials and submits them to the auth server. 6. Auth user and redirect with code. 7. To app with code. 8. Code (intercepted by Malicious app). 9. Validates and return access token. 10. Access token. 11. Validate token, API response. Security Vulnerability: A Malicious app is shown intercepting the Code (Step 8) and the Access token (Step 10) before they reach the Client App. This is labeled as \"Code interception\". Flow Labels: Click Login Redirect To auth server login The user enters their credentials and submits them to the auth server To app with code Code Access token Validate token, API response Client App Actions: Redirect Validates and return access token Auth Server Actions: The auth server returns login form Auth user and redirect with code Validates and return access token Resource Server Action: Validate token, API response Authorization Code Grant (Recommended for Most Apps) Diagram of the Authorization Code Grant flow with PKCE, showing a malicious app intercepting the code.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "An additional security layer on top of the authorization code grant flow, ensuring that the application that starts the authentication flow is the same one that finishes it",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the Authorization Code Grant flow with PKCE, highlighting a security vulnerability. It features four main components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. Flow Steps: 1. Resource Owner (Browser) Clicks Login. 2. Redirect to Client App. 3. To auth server login. 4. The auth server returns login form. 5. The user enters their credentials and submits them to the auth server. 6. Auth user and redirect with code. 7. To app with code. 8. Code (intercepted by Malicious app). 9. Validates and return access token. 10. Access token. 11. Validate token, API response. Security Vulnerability: A Malicious app is shown intercepting the Code (Step 8) and the Access token (Step 10) before they reach the Client App. This is labeled as \"Code interception\". Flow Labels: Click Login Redirect To auth server login The user enters their credentials and submits them to the auth server To app with code Code Access token Validate token, API response Client App Actions: Redirect Validates and return access token Auth Server Actions: The auth server returns login form Auth user and redirect with code Validates and return access token Resource Server Action: Validate token, API response Authorization Code Grant (Recommended for Most Apps) Diagram of the Authorization Code Grant flow with PKCE, showing a malicious app intercepting the code.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "Proof Key for Code Exchange (PKCE) The diagram illustrates the Authorization Code Grant flow with PKCE across four components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. The flow is numbered 1 through 11. 1: Resource Owner (Browser) Clicks Login. 2: Client App Redirects to the Resource Owner (Browser) with the URL secret+algo=hash . 3: Resource Owner (Browser) sends To auth server login. 4: Auth Server returns login form to the Resource Owner (Browser). 5: Resource Owner (Browser) sends The user enters their credentials and submits them to the auth server. 6: Auth Server returns Code to the Client App. 7: Client App sends To app with code to the Resource Owner (Browser). 8: Client App requests access token from the Auth Server with secret+Code . 9: Auth Server validates and returns access token to the Client App with secret+algo=hash? . 10: Client App sends API request with token to the Resource Server. 11: Resource Server validates token and returns API response to the Client App. Additional details from the diagram: Step 4: The auth server returns login form. Step 6: Auth user and redirect with code. Step 9: Validates and return access token. Step 11: Validate token, API response. Sequence diagram of the Authorization Code Grant flow with PKCE. Authorization Code Grant (Recommended for Most Apps)",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the Authorization Code Grant flow with PKCE across four components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. The flow is numbered 1 through 11. 1: Resource Owner (Browser) Clicks Login. 2: Client App Redirects to the Resource Owner (Browser) with the URL secret+algo=hash . 3: Resource Owner (Browser) sends To auth server login. 4: Auth Server returns login form to the Resource Owner (Browser). 5: Resource Owner (Browser) sends The user enters their credentials and submits them to the auth server. 6: Auth Server returns Code to the Client App. 7: Client App sends To app with code to the Resource Owner (Browser). 8: Client App requests access token from the Auth Server with secret+Code . 9: Auth Server validates and returns access token to the Client App with secret+algo=hash? . 10: Client App sends API request with token to the Resource Server. 11: Resource Server validates token and returns API response to the Client App. Additional details from the diagram: Step 4: The auth server returns login form. Step 6: Auth user and redirect with code. Step 9: Validates and return access token. Step 11: Validate token, API response. Sequence diagram of the Authorization Code Grant flow with PKCE.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "OpenId Connect OpenId Connect = OAuth2 (authorization) + Authentication sequenceDiagram\n participant Client\n participant EndUser as End user\n participant IdentityServer as Identity Server\n Client->>IdentityServer: 1 Authentication Request\n IdentityServer->>EndUser: 2 Authenticates and Authorizes\n IdentityServer-->>Client: 3 Authentication Response Id token + access token\n Client->>IdentityServer: 4 UserInfo Request\n IdentityServer-->>Client: 5 UserInfo Response The diagram illustrates the OpenId Connect authentication flow between a Client, an End user, and an Identity Server. The process is as follows: Authentication Request: The Client sends an Authentication Request (1) to the Identity Server. Authenticates and Authorizes: The Identity Server sends a request to the End user to authenticate and authorize (2). Authentication Response: The Identity Server returns an Authentication Response (3) to the Client, containing an Id token and an access token. UserInfo Request: The Client sends a UserInfo Request (4) to the Identity Server. UserInfo Response: The Identity Server returns a UserInfo Response (5) to the Client. Sequence diagram of the OpenId Connect authentication flow between a Client, End user, and Identity Server.",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "sequenceDiagram\n participant Client\n participant EndUser as End user\n participant IdentityServer as Identity Server\n Client->>IdentityServer: 1 Authentication Request\n IdentityServer->>EndUser: 2 Authenticates and Authorizes\n IdentityServer-->>Client: 3 Authentication Response Id token + access token\n Client->>IdentityServer: 4 UserInfo Request\n IdentityServer-->>Client: 5 UserInfo Response The diagram illustrates the OpenId Connect authentication flow between a Client, an End user, and an Identity Server. The process is as follows: Authentication Request: The Client sends an Authentication Request (1) to the Identity Server. Authenticates and Authorizes: The Identity Server sends a request to the End user to authenticate and authorize (2). Authentication Response: The Identity Server returns an Authentication Response (3) to the Client, containing an Id token and an access token. UserInfo Request: The Client sends a UserInfo Request (4) to the Identity Server. UserInfo Response: The Identity Server returns a UserInfo Response (5) to the Client. Sequence diagram of the OpenId Connect authentication flow between a Client, End user, and Identity Server.",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "OIDC: Authorization Code Flow The diagram illustrates the OIDC Authorization Code Flow, showing the interactions between four main components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. The flow is numbered 1 through 11. Resource Owner (Browser): 1. Click Login 2. Redirect 3. To auth server login 4. The auth server returns login form 5. The user enters their credentials and submits them to the auth server 6. Code 7. To app with code Client App: 8. Request access token 9. Id token + Access token 10. API request with token Auth Server: 4. The auth server returns login form 5. Auth user and redirect with code 6. Code 7. Id token + Access token 8. Access token 9. Validate token, return access token 10. Access token 11. Validate token, API response Resource Server: 11. Validate token, API response The flow is as follows: Resource Owner (Browser) clicks Login. Resource Owner (Browser) is Redirected to the Auth Server. Resource Owner (Browser) goes To auth server login. Auth Server returns login form to Resource Owner (Browser). Resource Owner (Browser) enters credentials and submits them to the Auth Server. Auth Server returns Code to Resource Owner (Browser). Resource Owner (Browser) goes To app with code. Client App requests access token from Auth Server. Auth Server returns Id token + Access token to Client App. Client App makes API request with token to Resource Server. Resource Server validates token and returns API response to Client App. Diagram of the OIDC Authorization Code Flow showing interactions between Resource Owner (Browser), Client App, Auth Server, and Resource Server. Authorization Code Grant (Recommended for Most Apps)",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the OIDC Authorization Code Flow, showing the interactions between four main components: Resource Owner (Browser), Client App, Auth Server, and Resource Server. The flow is numbered 1 through 11. Resource Owner (Browser): 1. Click Login 2. Redirect 3. To auth server login 4. The auth server returns login form 5. The user enters their credentials and submits them to the auth server 6. Code 7. To app with code Client App: 8. Request access token 9. Id token + Access token 10. API request with token Auth Server: 4. The auth server returns login form 5. Auth user and redirect with code 6. Code 7. Id token + Access token 8. Access token 9. Validate token, return access token 10. Access token 11. Validate token, API response Resource Server: 11. Validate token, API response The flow is as follows: Resource Owner (Browser) clicks Login. Resource Owner (Browser) is Redirected to the Auth Server. Resource Owner (Browser) goes To auth server login. Auth Server returns login form to Resource Owner (Browser). Resource Owner (Browser) enters credentials and submits them to the Auth Server. Auth Server returns Code to Resource Owner (Browser). Resource Owner (Browser) goes To app with code. Client App requests access token from Auth Server. Auth Server returns Id token + Access token to Client App. Client App makes API request with token to Resource Server. Resource Server validates token and returns API response to Client App. Diagram of the OIDC Authorization Code Flow showing interactions between Resource Owner (Browser), Client App, Auth Server, and Resource Server.",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "Id Token Claim Meaning iss Issuer (Identity Provider) sub Unique identifier of the authenticated user aud Intended client application exp Expiration time iat Issued-at time auth_time Time when authentication occurred nonce Protection against replay/token substitution acr Authentication assurance level amr Authentication methods used (password, MFA, etc.) azp Authorized party (in some flows) email User email (optional) name User display name (optional) preferred_username Login name (optional) Example: {\n \"iss\": \"https://idp.example.com\",\n \"sub\": \"248289761001\",\n \"aud\": \"expense-app\",\n \"exp\": 1716200000,\n \"iat\": 1716196400,\n \"auth_time\": 1716196300,\n \"nonce\": \"n-0S6_WzA2Mj\",\n \"acr\": \"urn:mfa\",\n \"amr\": [\"pwd\", \"otp\"],\n \"email\": \"alice@example.com\",\n \"name\": \"Alice Martin\"\n} The client validates: • signature • issuer (iss) • audience (aud) • expiration (exp) • nonce • authentication requirements (acr, amr)",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "Claim Meaning iss Issuer (Identity Provider) sub Unique identifier of the authenticated user aud Intended client application exp Expiration time iat Issued-at time auth_time Time when authentication occurred nonce Protection against replay/token substitution acr Authentication assurance level amr Authentication methods used (password, MFA, etc.) azp Authorized party (in some flows) email User email (optional) name User display name (optional) preferred_username Login name (optional)",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "{\n \"iss\": \"https://idp.example.com\",\n \"sub\": \"248289761001\",\n \"aud\": \"expense-app\",\n \"exp\": 1716200000,\n \"iat\": 1716196400,\n \"auth_time\": 1716196300,\n \"nonce\": \"n-0S6_WzA2Mj\",\n \"acr\": \"urn:mfa\",\n \"amr\": [\"pwd\", \"otp\"],\n \"email\": \"alice@example.com\",\n \"name\": \"Alice Martin\"\n}",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "• signature • issuer (iss) • audience (aud) • expiration (exp) • nonce • authentication requirements (acr, amr)",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "Access token vs Id token Token Intended For Purpose ID Token Client Application Authentication Access Token Resource Server / API Authorization",
+    "page": 24
+  },
+  {
+    "section": "Unknown",
+    "content": "Token Intended For Purpose ID Token Client Application Authentication Access Token Resource Server / API Authorization",
+    "page": 24
+  },
+  {
+    "section": "Unknown",
+    "content": "How OpenID Connect Enables Federated Authentication Bob owns a vault at the bank. (1) Fran is a lawyer Bob wants to act on his behalf. (2) Bob contacts the Authorization Desk (Identity Provider) and says: \"Authorize Fran to access my vault records, and issue a signed ID card to prove I approved this.\" (3) The Bank Access Desk ask Bob's Id (authentication). (4) After verification, the desk gives Fran an access slip (access token) and an Id Token proves Bob's identity and consent. (5) Fran goes to the Vault Clerk (Resource Server) and shows the slip (access token). Clerk checks: • Is this slip valid? • Is Fran allowed to view (not edit)? • Is it for Bob's vault? (6) If all pass → access granted ✓. ①②③④⑤⑥⑦⑧⑨ The diagram illustrates the OpenID Connect federated authentication process involving four main entities: Bob, Fran (Relying Party), the Authorization Desk (Identity Provider), and the Vault Clerk (Resource Server). Bob is represented by a man in a green shirt. Fran (Relying Party) is represented by a woman in an orange shirt. Authorization Desk (Identity Provider) is represented by a man in a blue suit at a desk with a \"BANK\" sign. Vault Clerk (Resource Server) is represented by a vault door. The process follows these steps: (1) Fran asks Bob, \"Can I access docs?\" (2) Bob contacts the Authorization Desk, requesting authorization for Fran to access his vault records and a signed ID card. (3) The Authorization Desk asks Bob for authentication (ID verification). (4) After verification, the Authorization Desk issues Fran an access slip (access token) and an Id Token (proving Bob's identity and consent). (5) Fran goes to the Vault Clerk and shows the access slip. (6) The Vault Clerk checks the slip and grants access if all checks pass. Visual elements in the diagram include: a folder icon representing vault records, a \"BANK\" sign on the Authorization Desk, and a vault door icon for the Vault Clerk. Arrows indicate the flow of requests, tokens, and access grants between the entities. Diagram illustrating the OpenID Connect federated authentication process between Bob, Fran, the Authorization Desk, and the Vault Clerk.",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "(2) Bob contacts the Authorization Desk (Identity Provider) and says: \"Authorize Fran to access my vault records, and issue a signed ID card to prove I approved this.\"",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "(4) After verification, the desk gives Fran an access slip (access token) and an Id Token proves Bob's identity and consent.",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the OpenID Connect federated authentication process involving four main entities: Bob, Fran (Relying Party), the Authorization Desk (Identity Provider), and the Vault Clerk (Resource Server). Bob is represented by a man in a green shirt. Fran (Relying Party) is represented by a woman in an orange shirt. Authorization Desk (Identity Provider) is represented by a man in a blue suit at a desk with a \"BANK\" sign. Vault Clerk (Resource Server) is represented by a vault door. The process follows these steps: (1) Fran asks Bob, \"Can I access docs?\" (2) Bob contacts the Authorization Desk, requesting authorization for Fran to access his vault records and a signed ID card. (3) The Authorization Desk asks Bob for authentication (ID verification). (4) After verification, the Authorization Desk issues Fran an access slip (access token) and an Id Token (proving Bob's identity and consent). (5) Fran goes to the Vault Clerk and shows the access slip. (6) The Vault Clerk checks the slip and grants access if all checks pass. Visual elements in the diagram include: a folder icon representing vault records, a \"BANK\" sign on the Authorization Desk, and a vault door icon for the Vault Clerk. Arrows indicate the flow of requests, tokens, and access grants between the entities. Diagram illustrating the OpenID Connect federated authentication process between Bob, Fran, the Authorization Desk, and the Vault Clerk.",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "How OpenID Connect Enables SSO Bob owns 2 vaults at the bank. • Vault A: Financial records (used by Fran) • Vault B: Insurance policies (used by Alice) All vaults are managed by different Vault Clerks (Resource Servers). They all trust the same Bank Access Desk (Identity Provider). (1) Fran is a lawyer: \"Can I access your financial vault? And prove it's really you who approved this?\" Bob contacts the Authorization Desk (Identity Provider) and says: \"Authorize Fran to access my vault A records, and issue a signed ID card to prove I approved this.\" The Bank Access Desk asks Bob's Id (authentication). After verification, the desk gives Fran an access slip (access token) and an Id Token proves Bob's identity and consent. (5) Fran goes to the Vault Clerk A (Resource Server A) and shows the slip. (6) Clerk checks the slip: If all pass → access granted ✅. So far, same steps as before (steps 2-4 are not shown anymore for clarity of the diagram) (7) Alice (Bob's insurance agent): \"I need to see your insurance vault.\" (8) Bob is redirected again to the same Bank Access Desk (9) Since he is already authenticated, the Bank Access Desk immediately issues a new authorization code for Vault B. (10) – (11) Alice exchanges it and accesses Vault B — without Bob logging in again This is Single Sign-On — Bob logs in once, and that authentication is reused across multiple trusted services. The diagram illustrates the SSO process using OpenID Connect. It features several entities: Bob, Fran, Alice, the Authorization Desk (Identity Provider), and two Vault Clerks (Resource Servers). Bob is the user who owns two vaults: Vault A (Financial records) and Vault B (Insurance policies). Fran is a lawyer who wants to access Vault A. Bob contacts the Authorization Desk (Identity Provider) to authorize Fran. The desk issues an access token (ID card) to Fran. Fran shows the token to Vault Clerk A , who grants access to Vault A. Alice (Bob's insurance agent) wants to access Vault B. Bob is redirected to the Authorization Desk , which issues a new authorization code for Vault B. Alice exchanges the code and accesses Vault B without Bob logging in again. Numbered steps in the diagram: Bob contacts the Authorization Desk to authorize Fran. Fran requests access to Vault A. Authorization Desk issues an access token to Fran. Fran shows the token to Vault Clerk A. Vault Clerk A grants access to Vault A. Alice requests access to Vault B. Bob is redirected to the Authorization Desk. Authorization Desk issues a new authorization code for Vault B. Alice exchanges the code and accesses Vault B. Diagram illustrating Single Sign-On (SSO) using OpenID Connect. Bob owns two vaults: Vault A (Financial records) and Vault B (Insurance policies). Fran (a lawyer) wants to access Vault A. Bob contacts the Authorization Desk (Identity Provider) to authorize Fran. The Authorization Desk issues an access token (ID card) to Fran. Fran shows the token to Vault Clerk A, who grants access. Later, Alice (Bob's insurance agent) wants to access Vault B. Bob is redirected to the Authorization Desk, which issues a new authorization code for Vault B. Alice exchanges the code and accesses Vault B without Bob logging in again.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "All vaults are managed by different Vault Clerks (Resource Servers). They all trust the same Bank Access Desk (Identity Provider).",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "(1) Fran is a lawyer: \"Can I access your financial vault? And prove it's really you who approved this?\"",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "Bob contacts the Authorization Desk (Identity Provider) and says: \"Authorize Fran to access my vault A records, and issue a signed ID card to prove I approved this.\"",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "After verification, the desk gives Fran an access slip (access token) and an Id Token proves Bob's identity and consent.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "(9) Since he is already authenticated, the Bank Access Desk immediately issues a new authorization code for Vault B.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "This is Single Sign-On — Bob logs in once, and that authentication is reused across multiple trusted services.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates the SSO process using OpenID Connect. It features several entities: Bob, Fran, Alice, the Authorization Desk (Identity Provider), and two Vault Clerks (Resource Servers). Bob is the user who owns two vaults: Vault A (Financial records) and Vault B (Insurance policies). Fran is a lawyer who wants to access Vault A. Bob contacts the Authorization Desk (Identity Provider) to authorize Fran. The desk issues an access token (ID card) to Fran. Fran shows the token to Vault Clerk A , who grants access to Vault A. Alice (Bob's insurance agent) wants to access Vault B. Bob is redirected to the Authorization Desk , which issues a new authorization code for Vault B. Alice exchanges the code and accesses Vault B without Bob logging in again. Numbered steps in the diagram: Bob contacts the Authorization Desk to authorize Fran. Fran requests access to Vault A. Authorization Desk issues an access token to Fran. Fran shows the token to Vault Clerk A. Vault Clerk A grants access to Vault A. Alice requests access to Vault B. Bob is redirected to the Authorization Desk. Authorization Desk issues a new authorization code for Vault B. Alice exchanges the code and accesses Vault B. Diagram illustrating Single Sign-On (SSO) using OpenID Connect. Bob owns two vaults: Vault A (Financial records) and Vault B (Insurance policies). Fran (a lawyer) wants to access Vault A. Bob contacts the Authorization Desk (Identity Provider) to authorize Fran. The Authorization Desk issues an access token (ID card) to Fran. Fran shows the token to Vault Clerk A, who grants access. Later, Alice (Bob's insurance agent) wants to access Vault B. Bob is redirected to the Authorization Desk, which issues a new authorization code for Vault B. Alice exchanges the code and accesses Vault B without Bob logging in again.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "OIDC Authentication Flows Authentication Flows Description Authorization Code Flow Exchanges an authorization code for tokens via the backend — secure and recommended. Implicit Flow (deprecated) Returns tokens directly in the browser — now deprecated due to security risks. Hybrid Flow Combines frontchannel and backchannel token delivery for flexible response patterns Device Authorization Flow (Device Code Flow) Authenticates users on devices without browsers via a second device Client-Initiated Backchannel Authentication (CIBA) Authenticates the user on a separate trusted channel without user interaction on the client.",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "Authentication Flows Description Authorization Code Flow Exchanges an authorization code for tokens via the backend — secure and recommended. Implicit Flow (deprecated) Returns tokens directly in the browser — now deprecated due to security risks. Hybrid Flow Combines frontchannel and backchannel token delivery for flexible response patterns Device Authorization Flow (Device Code Flow) Authenticates users on devices without browsers via a second device Client-Initiated Backchannel Authentication (CIBA) Authenticates the user on a separate trusted channel without user interaction on the client.",
+    "page": 27
+  },
+  {
+    "section": "Match the Protocol to the Use Case",
+    "content": "A blurred image of a document or form with various fields and text, suggesting a form or checklist. Match the Protocol to the Use Case Use Case Protocol Login to Google to access third-party service ? OpenID Connect Enterprise internal access to HR system ? SAML API access between machines ? OAuth2 (Client Credentials Flow)",
+    "page": 28
+  },
+  {
+    "section": "Match the Protocol to the Use Case",
+    "content": "Use Case Protocol Login to Google to access third-party service ? OpenID Connect Enterprise internal access to HR system ? SAML API access between machines ? OAuth2 (Client Credentials Flow)",
+    "page": 28
+  },
+  {
+    "section": "Challenges with Federated Identity (and SSO)",
+    "content": "An abstract graphic at the top of the slide featuring a network of colorful lines (purple, blue, green, red) and dots, suggesting a complex system or data flow. Abstract graphic of colorful lines and dots forming a network-like structure. Challenges with Federated Identity (and SSO) Security Risks • Token theft • Misconfiguration • IdP compromise Operational Complexity • Trust and metadata exchange • IdP availability and redundancy • Compatibility between SPs and IdPs Governance & Compliance • Logging and traceability • Managing access policies across domains • Data protection (e.g., GDPR) User Experience Issues • Inconsistent session handling • Confusing consent flows",
+    "page": 29
+  },
+  {
+    "section": "Challenges with Federated Identity (and SSO)",
+    "content": "An abstract graphic at the top of the slide featuring a network of colorful lines (purple, blue, green, red) and dots, suggesting a complex system or data flow. Abstract graphic of colorful lines and dots forming a network-like structure.",
+    "page": 29
+  },
+  {
+    "section": "Challenges with Federated Identity (and SSO)",
+    "content": "Security Risks • Token theft • Misconfiguration • IdP compromise Operational Complexity • Trust and metadata exchange • IdP availability and redundancy • Compatibility between SPs and IdPs Governance & Compliance • Logging and traceability • Managing access policies across domains • Data protection (e.g., GDPR) User Experience Issues • Inconsistent session handling • Confusing consent flows",
+    "page": 29
+  },
+  {
+    "section": "Unknown",
+    "content": "A digital illustration featuring several glowing blue padlocks and translucent blue cubes. White, glowing lines representing data or network connections flow through the scene against a dark, starry background. Security Challenge: What Could Go Wrong? \"You've set up SSO using Google as IdP. A token is intercepted during transmission. What are the potential consequences?\" Replay attacks Access without MFA Lack of token expiration",
+    "page": 30
+  },
+  {
+    "section": "Unknown",
+    "content": "A digital illustration featuring several glowing blue padlocks and translucent blue cubes. White, glowing lines representing data or network connections flow through the scene against a dark, starry background.",
+    "page": 30
+  },
+  {
+    "section": "Unknown",
+    "content": "\"You've set up SSO using Google as IdP. A token is intercepted during transmission. What are the potential consequences?\"",
+    "page": 30
+  },
+  {
+    "section": "Unknown",
+    "content": "Real-World Use Cases Federated identity and SSO are widely adopted in various domains, enhancing user experiences and streamlining access across systems. These technologies are integral to modern authentication and access management solutions. 1. Consumer Applications • Example: A user logs into services like Spotify, Airbnb, and Medium with their Google account. • Outcome: Simplifies user onboarding and improves retention by reducing barriers to access. 3. Government Services • Example: A citizen uses their government-issued digital ID to file taxes, renew a passport, and access healthcare services. (France Connect) • Outcome: Improves service delivery and simplifies interactions between citizens and government agencies. 5. E-Commerce and Payment Systems • Example: A shopper uses their PayPal account to log into various online stores and make payments. • Outcome: Improves customer satisfaction and fosters trust in e-commerce platforms. 2. Healthcare Systems • Example: A doctor logs into a hospital portal to view electronic health records (EHR) and access lab results using a single set of credentials. • Outcome: Enhances efficiency and ensures compliance with data protection regulations like HIPAA. 4. Educational Institutions • Example: A student logs into a university portal to access course materials, submit assignments, and register for classes. • Outcome: Enhances the educational experience and streamlines resource management for administrators.",
+    "page": 31
+  },
+  {
+    "section": "Unknown",
+    "content": "Federated identity and SSO are widely adopted in various domains, enhancing user experiences and streamlining access across systems. These technologies are integral to modern authentication and access management solutions.",
+    "page": 31
+  },
+  {
+    "section": "Unknown",
+    "content": "• Example: A user logs into services like Spotify, Airbnb, and Medium with their Google account. • Outcome: Simplifies user onboarding and improves retention by reducing barriers to access.",
+    "page": 31
+  },
+  {
+    "section": "Unknown",
+    "content": "• Example: A citizen uses their government-issued digital ID to file taxes, renew a passport, and access healthcare services. (France Connect) • Outcome: Improves service delivery and simplifies interactions between citizens and government agencies.",
+    "page": 31
+  },
+  {
+    "section": "Unknown",
+    "content": "• Example: A shopper uses their PayPal account to log into various online stores and make payments. • Outcome: Improves customer satisfaction and fosters trust in e-commerce platforms.",
+    "page": 31
+  },
+  {
+    "section": "Unknown",
+    "content": "• Example: A doctor logs into a hospital portal to view electronic health records (EHR) and access lab results using a single set of credentials. • Outcome: Enhances efficiency and ensures compliance with data protection regulations like HIPAA.",
+    "page": 31
+  },
+  {
+    "section": "Unknown",
+    "content": "• Example: A student logs into a university portal to access course materials, submit assignments, and register for classes. • Outcome: Enhances the educational experience and streamlines resource management for administrators.",
+    "page": 31
+  },
+  {
+    "section": "Recap of Concepts",
+    "content": "Recap of Concepts This session covered federated identity management and Single Sign-On (SSO) fundamentals, their protocols, and applications. 1. Key Concepts: • Federated Identity: • System for sharing identity information between trusted domains • Enables seamless access across systems • Single Sign-On (SSO): • One-time authentication for multiple application access • Improves convenience and security 2. Core Protocols: • SAML: • XML-based authentication and authorization • Best for enterprise environments • OAuth2: • Token-based authorization for third-party apps • Supports API access and integrations • OpenID Connect (OIDC): • OAuth2 extension providing authentication with identity tokens • Used for consumer and enterprise SSO Federated Identity Management & SSO Fundamentals An abstract graphic featuring a central sphere with a purple-to-blue gradient. The sphere is surrounded by a network of white lines and dots, resembling a molecular structure or a data network. Below the sphere, there are glowing, swirling lines in shades of purple and blue, suggesting motion or data flow. The background is dark with faint, glowing lines and dots, creating a sense of depth and technology. Abstract graphic of a globe with orbital lines and data points, symbolizing global connectivity and identity management.",
+    "page": 32
+  },
+  {
+    "section": "Recap of Concepts",
+    "content": "This session covered federated identity management and Single Sign-On (SSO) fundamentals, their protocols, and applications.",
+    "page": 32
+  },
+  {
+    "section": "Recap of Concepts",
+    "content": "• Federated Identity: • System for sharing identity information between trusted domains • Enables seamless access across systems • Single Sign-On (SSO): • One-time authentication for multiple application access • Improves convenience and security",
+    "page": 32
+  },
+  {
+    "section": "Recap of Concepts",
+    "content": "• SAML: • XML-based authentication and authorization • Best for enterprise environments • OAuth2: • Token-based authorization for third-party apps • Supports API access and integrations • OpenID Connect (OIDC): • OAuth2 extension providing authentication with identity tokens • Used for consumer and enterprise SSO",
+    "page": 32
+  },
+  {
+    "section": "Recap of Concepts",
+    "content": "An abstract graphic featuring a central sphere with a purple-to-blue gradient. The sphere is surrounded by a network of white lines and dots, resembling a molecular structure or a data network. Below the sphere, there are glowing, swirling lines in shades of purple and blue, suggesting motion or data flow. The background is dark with faint, glowing lines and dots, creating a sense of depth and technology. Abstract graphic of a globe with orbital lines and data points, symbolizing global connectivity and identity management.",
+    "page": 32
+  },
+  {
+    "section": "Teaser of next session: Identity and access governance",
+    "content": "Teaser of next session: Identity and access governance How do we control access over time and prove it's appropriate? • Access Reviews & Certification • Policy Enforcement & Audit Trails • Regulatory Compliance (GDPR, CNIL...) Why It Matters • Prevent privilege creep • Pass audits with confidence • Align access with business and legal requirements Get ready to govern access — not just manage it. Hands-On Preview • Implement governance workflows using midPoint • Simulate access reviews and enforce policies • Analyze admin event logs and test compliance scenarios An illustration of a woman with dark hair in a bun, wearing glasses and a light blue shirt, sitting at a desk. She is looking at a document in her hands. In front of her are two computer monitors. The left monitor displays a dashboard with charts and a large padlock icon. The right monitor shows a list of items. The background features a large, colorful, semi-circular graphic with a rainbow gradient and some floating geometric shapes. Illustration of a woman working at a desk with multiple monitors displaying data and a document.",
+    "page": 33
+  },
+  {
+    "section": "Teaser of next session: Identity and access governance",
+    "content": "• Access Reviews & Certification • Policy Enforcement & Audit Trails • Regulatory Compliance (GDPR, CNIL...)",
+    "page": 33
+  },
+  {
+    "section": "Teaser of next session: Identity and access governance",
+    "content": "• Prevent privilege creep • Pass audits with confidence • Align access with business and legal requirements",
+    "page": 33
+  },
+  {
+    "section": "Teaser of next session: Identity and access governance",
+    "content": "• Implement governance workflows using midPoint • Simulate access reviews and enforce policies • Analyze admin event logs and test compliance scenarios",
+    "page": 33
+  },
+  {
+    "section": "Teaser of next session: Identity and access governance",
+    "content": "An illustration of a woman with dark hair in a bun, wearing glasses and a light blue shirt, sitting at a desk. She is looking at a document in her hands. In front of her are two computer monitors. The left monitor displays a dashboard with charts and a large padlock icon. The right monitor shows a list of items. The background features a large, colorful, semi-circular graphic with a rainbow gradient and some floating geometric shapes. Illustration of a woman working at a desk with multiple monitors displaying data and a document.",
+    "page": 33
+  },
+  {
+    "section": "Practice",
+    "content": "A futuristic digital cityscape with glowing blue light trails and floating labels like 'SECURE NETWORK' and 'NETWORK'. The scene features a central tall building with a bright light source at the top, surrounded by other structures and floating circular platforms. The overall aesthetic is high-tech and cybernetic. A futuristic digital cityscape with glowing blue light trails and floating labels like 'SECURE NETWORK' and 'NETWORK'. Practice This session's practices provide a practical walkthrough of federated identity and SSO using Keycloak and a sample OIDC client application. It consists of three exercises: 1. Configuring OIDC with Keycloak. 2. Federating Keycloak with Google as an external Identity Provider. 3. Implementing OIDC-based SSO between two client application instances.",
+    "page": 34
+  },
+  {
+    "section": "Practice",
+    "content": "A futuristic digital cityscape with glowing blue light trails and floating labels like 'SECURE NETWORK' and 'NETWORK'. The scene features a central tall building with a bright light source at the top, surrounded by other structures and floating circular platforms. The overall aesthetic is high-tech and cybernetic. A futuristic digital cityscape with glowing blue light trails and floating labels like 'SECURE NETWORK' and 'NETWORK'.",
+    "page": 34
+  },
+  {
+    "section": "Practice",
+    "content": "This session's practices provide a practical walkthrough of federated identity and SSO using Keycloak and a sample OIDC client application. It consists of three exercises:",
+    "page": 34
+  },
+  {
+    "section": "Practice",
+    "content": "1. Configuring OIDC with Keycloak. 2. Federating Keycloak with Google as an external Identity Provider. 3. Implementing OIDC-based SSO between two client application instances.",
+    "page": 34
+  }
+]

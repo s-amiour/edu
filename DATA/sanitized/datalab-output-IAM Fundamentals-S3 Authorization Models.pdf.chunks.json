@@ -1,0 +1,397 @@
+[
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a bright blue circular glow. Below the key, a glowing blue ring sits on a surface that looks like a circuit board with glowing orange and blue lines. The background is filled with a pattern of glowing blue and orange dots, resembling a digital or network environment. A glowing key icon on a circuit board background. Identity and Access Management Fundamentals Session 3 Authorization Models Zixiong Wang",
+    "page": 0
+  },
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing yellow key icon is centered on a dark blue background. The key is surrounded by a bright blue circular glow. Below the key, a glowing blue ring sits on a surface that looks like a circuit board with glowing orange and blue lines. The background is filled with a pattern of glowing blue and orange dots, resembling a digital or network environment. A glowing key icon on a circuit board background.",
+    "page": 0
+  },
+  {
+    "section": "Unknown",
+    "content": "Learning Objectives 1 Explain the purpose of access control models Understand why direct user-to-permission mapping fails at scale 2 Compare key access control models (RBAC, ABAC, PBAC) Identify use cases, strengths, and limitations of each 3 Describe the components of policy-based access control architecture Define the roles of PEP, PDP, PAP, and PIP in decision workflows 4 Understand the regulatory importance of authorization in Europe Connect IAM practices to GDPR, CNIL, and ISO 27001 compliance 5 Recognize the role of PAM in securing privileged accounts Identify best practices and tools for controlling high-risk access 6 Implement role-based access controls using Keycloak Define roles, assign them to users, and test protected resource access An abstract digital graphic. In the center is a glowing purple and blue sphere with a wireframe mesh. From this sphere, numerous thin, glowing lines radiate outwards, creating a sense of a network or data flow. The background is a gradient of light blue and purple. On the left side, the word 'SECURE' is written in a large, white, outlined font. On the right side, the word 'NETWORK' is partially visible in a similar font. The overall aesthetic is futuristic and high-tech. Abstract graphic featuring a central glowing sphere with network lines radiating outwards, overlaid with the words 'SECURE' and 'NETWORK'.",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "1 Explain the purpose of access control models Understand why direct user-to-permission mapping fails at scale 2 Compare key access control models (RBAC, ABAC, PBAC) Identify use cases, strengths, and limitations of each 3 Describe the components of policy-based access control architecture Define the roles of PEP, PDP, PAP, and PIP in decision workflows 4 Understand the regulatory importance of authorization in Europe Connect IAM practices to GDPR, CNIL, and ISO 27001 compliance 5 Recognize the role of PAM in securing privileged accounts Identify best practices and tools for controlling high-risk access 6 Implement role-based access controls using Keycloak Define roles, assign them to users, and test protected resource access",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "An abstract digital graphic. In the center is a glowing purple and blue sphere with a wireframe mesh. From this sphere, numerous thin, glowing lines radiate outwards, creating a sense of a network or data flow. The background is a gradient of light blue and purple. On the left side, the word 'SECURE' is written in a large, white, outlined font. On the right side, the word 'NETWORK' is partially visible in a similar font. The overall aesthetic is futuristic and high-tech. Abstract graphic featuring a central glowing sphere with network lines radiating outwards, overlaid with the words 'SECURE' and 'NETWORK'.",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "A glowing blue key with a circuit-like design is shown in a dark, futuristic environment, positioned as if it is about to unlock a door. The key is illuminated with a bright blue light, and the surrounding walls and floor are also lit with blue lines, creating a high-tech, digital atmosphere. Identity Moments 1 Can you recall a moment when access to something digital felt too easy – or too hard? 2 Describe a time when: You got into a system you probably shouldn't have. You were locked out when you urgently needed access.",
+    "page": 2
+  },
+  {
+    "section": "Unknown",
+    "content": "A glowing blue key with a circuit-like design is shown in a dark, futuristic environment, positioned as if it is about to unlock a door. The key is illuminated with a bright blue light, and the surrounding walls and floor are also lit with blue lines, creating a high-tech, digital atmosphere.",
+    "page": 2
+  },
+  {
+    "section": "Unknown",
+    "content": "1 Can you recall a moment when access to something digital felt too easy – or too hard? 2 Describe a time when:",
+    "page": 2
+  },
+  {
+    "section": "Unknown",
+    "content": "Authorization in real life: Airport Check-in: Authentication An illustration of an airport check-in counter. A female passenger with a brown bag is handing her ID card to a female airline employee in a blue uniform. The counter has a sign that says \"AIRLINE\" with a logo. In the background, other passengers and airport staff are visible. A speech bubble above the employee says \"Your journey starts here\". Illustration of a passenger checking in at an airline counter. Boarding: Authorization • The right flight • Pilot -> cockpit • Passengers -> cabin A photograph of a passenger boarding an airplane. A female passenger in a dark blue uniform is smiling and looking at her smartphone. In the background, a long line of passengers is waiting to board a white airplane. A sign above the boarding area says \"Boarding 7\". Photograph of a passenger boarding an airplane. Another example?",
+    "page": 3
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of an airport check-in counter. A female passenger with a brown bag is handing her ID card to a female airline employee in a blue uniform. The counter has a sign that says \"AIRLINE\" with a logo. In the background, other passengers and airport staff are visible. A speech bubble above the employee says \"Your journey starts here\". Illustration of a passenger checking in at an airline counter.",
+    "page": 3
+  },
+  {
+    "section": "Unknown",
+    "content": "A photograph of a passenger boarding an airplane. A female passenger in a dark blue uniform is smiling and looking at her smartphone. In the background, a long line of passengers is waiting to board a white airplane. A sign above the boarding area says \"Boarding 7\". Photograph of a passenger boarding an airplane.",
+    "page": 3
+  },
+  {
+    "section": "Unknown",
+    "content": "A decorative header image featuring a central padlock icon within a blue shield-like shape. The background is light purple with a network of glowing nodes and lines, suggesting a digital or security theme. What is Authorization? Authorization is the process of determining whether a user has the right to access a resource or perform an action, based on rules, roles, or policies. In IAM context: Happens after authentication (proving identity) Focuses on what you can do once you're in Examples: Can a user access a file, database, or service? Can an employee approve expenses or modify records? Driven by: Access control models: RBAC, ABAC, PBAC Business roles, policies, and compliance needs",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "A decorative header image featuring a central padlock icon within a blue shield-like shape. The background is light purple with a network of glowing nodes and lines, suggesting a digital or security theme.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "Authorization is the process of determining whether a user has the right to access a resource or perform an action, based on rules, roles, or policies.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "Access Request Flow A purple login card on a light blue background. It has two input fields labeled 'Username' and 'Password', each with a small eye icon for toggling visibility. Below the fields is a 'Login' button and a 'Forgot password?' link. A 'Remember me' checkbox is at the bottom right. Illustration of a login form with fields for Username, Password, and a Login button. User logs in (Authentication) Initial authentication step. A white screen with a blue header containing navigation links: 'Home', 'Products', 'Search', 'Support', and a 'Log In' button. The main content area has the heading 'Protected resource access' and a sub-heading 'You are not authorized to access this resource.' Below this is a large blue shield icon with a white checkmark inside. Illustration of a protected resource access screen showing a shield icon and the text 'Protected resource access'. Requests a resource The user seeks to access a specific resource. A dark, futuristic illustration featuring a globe with horizontal lines and glowing blue and purple light effects. The text 'Policy integrity verified' is written in white on the left side. Illustration of a globe with the text 'Policy integrity verified'. IAM evaluates policies (Policy Decision Point, or PDP) IAM checks if the request complies with security policies. A green rectangular card with a large green checkmark inside a white circle. Above the checkmark is the text 'Access Granted'. Below the checkmark are two blue rectangular buttons with white text. Illustration of a green checkmark inside a circle with the text 'Access Granted'. Access decision is enforced (Policy Enforcement Point, PEP) The system either grants or denies access.",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "A purple login card on a light blue background. It has two input fields labeled 'Username' and 'Password', each with a small eye icon for toggling visibility. Below the fields is a 'Login' button and a 'Forgot password?' link. A 'Remember me' checkbox is at the bottom right. Illustration of a login form with fields for Username, Password, and a Login button.",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "A white screen with a blue header containing navigation links: 'Home', 'Products', 'Search', 'Support', and a 'Log In' button. The main content area has the heading 'Protected resource access' and a sub-heading 'You are not authorized to access this resource.' Below this is a large blue shield icon with a white checkmark inside. Illustration of a protected resource access screen showing a shield icon and the text 'Protected resource access'.",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "A dark, futuristic illustration featuring a globe with horizontal lines and glowing blue and purple light effects. The text 'Policy integrity verified' is written in white on the left side. Illustration of a globe with the text 'Policy integrity verified'.",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "A green rectangular card with a large green checkmark inside a white circle. Above the checkmark is the text 'Access Granted'. Below the checkmark are two blue rectangular buttons with white text. Illustration of a green checkmark inside a circle with the text 'Access Granted'.",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "A diagram illustrating a complex network of permissions. A large, tangled orange cable is the central element. Numerous small, rounded square icons, each containing a person's headshot and a name, are connected to the cable by thin lines. The names of the people are: Pooptoli, Pughini, Paghnebt, Dardnadi, Pangrololi, Paghnetoli, Pastbomal, Auszhik, Paghlock, Pechbift, and Pechonnet. The background is light blue with faint, abstract shapes. Assign Permissions by Hand? Imagine this situation: Your company has 350 employees and 12 internal applications . Each person needs access to a specific combination of systems based on their role. ? Would you assign access to every employee one by one ? Discussion Questions (2 min): • What could go wrong? • How would you keep things consistent? • What happens when someone changes jobs or leaves? 💬 Turn to your neighbor and brainstorm: how would you handle this challenge efficiently? ✅ Then we'll look at how access control models solve this exact problem.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "A diagram illustrating a complex network of permissions. A large, tangled orange cable is the central element. Numerous small, rounded square icons, each containing a person's headshot and a name, are connected to the cable by thin lines. The names of the people are: Pooptoli, Pughini, Paghnebt, Dardnadi, Pangrololi, Paghnetoli, Pastbomal, Auszhik, Paghlock, Pechbift, and Pechonnet. The background is light blue with faint, abstract shapes.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "Your company has 350 employees and 12 internal applications . Each person needs access to a specific combination of systems based on their role.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "• What could go wrong? • How would you keep things consistent? • What happens when someone changes jobs or leaves?",
+    "page": 6
+  },
+  {
+    "section": "Access Control Model",
+    "content": "A cluster of brass padlocks of various sizes, with a single ornate key hanging from the bottom center. The background is a blue and purple gradient with glowing light rays and circular patterns, suggesting a digital or network environment. Access Control Model Definition An Access Control Model is a structured framework that defines how permissions are assigned and enforced to control access to digital resources. Mechanism Rather than assigning permissions directly to individual users, an access control model uses rules, roles, attributes, or policies to determine: • Who can access • What resources • Under what conditions",
+    "page": 7
+  },
+  {
+    "section": "Access Control Model",
+    "content": "A cluster of brass padlocks of various sizes, with a single ornate key hanging from the bottom center. The background is a blue and purple gradient with glowing light rays and circular patterns, suggesting a digital or network environment.",
+    "page": 7
+  },
+  {
+    "section": "Access Control Model",
+    "content": "An Access Control Model is a structured framework that defines how permissions are assigned and enforced to control access to digital resources.",
+    "page": 7
+  },
+  {
+    "section": "Access Control Model",
+    "content": "Rather than assigning permissions directly to individual users, an access control model uses rules, roles, attributes, or policies to determine:",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "Main Access Control Models Shield icon representing Role-Based Access Control (RBAC) RBAC (Role-Based Access Control) Permissions grant by role Key icon representing Attribute-Based Access Control (ABAC) ABAC (Attribute-Based Access Control) Permissions grant by attribute value User icon representing Discretionary Access Control (DAC) DAC (Discretionary Access Control) User-controlled permissions Lock icon representing Mandatory Access Control (MAC) MAC (Mandatory Access Control) System-enforced classifications Hierarchy icon representing Relationship-Based Access Control (ReBAC) ReBAC (Relationship-Based Access Control) Based on relationships (e.g., doctor-patient) Clock icon representing Context-aware Access Control Context-aware Time, location, device, etc.",
+    "page": 8
+  },
+  {
+    "section": "Unknown",
+    "content": "Why Use Access Control Models? What if you assigned permissions directly to every user? Without Models (Chaotic) A diagram illustrating a chaotic access control model. On the left, four users are listed: John (blue person icon), Alice (yellow person icon), Marc (purple person icon), and Gilles (green person icon). On the right, three resources are shown: a document icon, a database icon, and an application icon labeled 'APP' with a magnifying glass. Every user has a direct arrow pointing to every resource, representing a many-to-many direct assignment of permissions. Diagram showing direct permissions for four users to three resources. ✗ Hard to scale ✗ No visibility ✗ Prone to errors ✗ Painful updates With Models (Structured) A diagram illustrating a structured access control model. On the left, the same four users are listed: John (blue), Alice (yellow), Marc (purple), and Gilles (green). In the center, two roles are defined: 'Developer' (represented by a hard hat icon) and 'HR' (represented by a police-style hat icon). On the right, the same three resources are shown: a document icon, a database icon, and an application icon labeled 'APP' with a magnifying glass. Arrows show John and Alice assigned to the 'Developer' role, and Marc and Gilles assigned to the 'HR' role. Further arrows show the 'Developer' role having permissions for the document and database, while the 'HR' role has permissions for the database and the 'APP'. Diagram showing roles assigned to users and permissions assigned to roles. ✓ Predictable ✓ Auditable ✓ Secure ✓ Easy to manage 💡 Access control models simplify identity-to-resource relationships through logic, not manual links.",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "A diagram illustrating a chaotic access control model. On the left, four users are listed: John (blue person icon), Alice (yellow person icon), Marc (purple person icon), and Gilles (green person icon). On the right, three resources are shown: a document icon, a database icon, and an application icon labeled 'APP' with a magnifying glass. Every user has a direct arrow pointing to every resource, representing a many-to-many direct assignment of permissions. Diagram showing direct permissions for four users to three resources.",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "A diagram illustrating a structured access control model. On the left, the same four users are listed: John (blue), Alice (yellow), Marc (purple), and Gilles (green). In the center, two roles are defined: 'Developer' (represented by a hard hat icon) and 'HR' (represented by a police-style hat icon). On the right, the same three resources are shown: a document icon, a database icon, and an application icon labeled 'APP' with a magnifying glass. Arrows show John and Alice assigned to the 'Developer' role, and Marc and Gilles assigned to the 'HR' role. Further arrows show the 'Developer' role having permissions for the document and database, while the 'HR' role has permissions for the database and the 'APP'. Diagram showing roles assigned to users and permissions assigned to roles.",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "RBAC: Role-Based Access Control • Permissions assigned to roles • Users inherit permissions via roles • Simplifies management but can lead to role explosion Role hierarchy The diagram illustrates a Role-Based Access Control (RBAC) system. On the left, three users are listed: John (blue icon), Alice (yellow icon), and Philip (purple icon). In the center, a role hierarchy is shown with three roles: Project Manager (hat icon), Developer (cap icon), and Tester (fedor icon). Arrows indicate the assignment of roles to users: John is assigned the Project Manager role, Alice is assigned the Developer role, and Philip is assigned the Tester role. On the right, three resources are shown: a document icon, a database icon, and an application icon labeled 'APP' with a magnifying glass. Arrows indicate the permissions assigned to the roles: the Project Manager role has permissions for the document and database; the Developer role has permissions for the database and the application; and the Tester role has permission for the application. graph LR; John --> PM[Project Manager]; Alice --> Dev[Developer]; Philip --> Test[Tester]; PM --> Doc[Document]; PM --> DB[(Database)]; Dev --> DB; Dev --> App[APP]; Test --> App; Diagram illustrating Role-Based Access Control (RBAC) with a role hierarchy and permissions.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "• Permissions assigned to roles • Users inherit permissions via roles • Simplifies management but can lead to role explosion",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "Role hierarchy The diagram illustrates a Role-Based Access Control (RBAC) system. On the left, three users are listed: John (blue icon), Alice (yellow icon), and Philip (purple icon). In the center, a role hierarchy is shown with three roles: Project Manager (hat icon), Developer (cap icon), and Tester (fedor icon). Arrows indicate the assignment of roles to users: John is assigned the Project Manager role, Alice is assigned the Developer role, and Philip is assigned the Tester role. On the right, three resources are shown: a document icon, a database icon, and an application icon labeled 'APP' with a magnifying glass. Arrows indicate the permissions assigned to the roles: the Project Manager role has permissions for the document and database; the Developer role has permissions for the database and the application; and the Tester role has permission for the application. graph LR; John --> PM[Project Manager]; Alice --> Dev[Developer]; Philip --> Test[Tester]; PM --> Doc[Document]; PM --> DB[(Database)]; Dev --> DB; Dev --> App[APP]; Test --> App; Diagram illustrating Role-Based Access Control (RBAC) with a role hierarchy and permissions.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "ABAC: Attribute-Based Access Control • Access based on user/resource/context attributes • Allows dynamic, fine-grained decisions • Can be complex to manage",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "• Access based on user/resource/context attributes • Allows dynamic, fine-grained decisions • Can be complex to manage",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Mini Quiz: Which Model? Which model best fits each scenario? • Alice can access only files tagged with her department. ABAC • Bob is allowed to view HR records because he's in the HR role. RBAC • Carol's access changes depending on time of day and location. Context Aware A futuristic, glowing purple and blue digital interface. It features a central funnel-shaped visualization composed of concentric circles and lines, suggesting data flow or analysis. The background is dark with floating, glowing data points and lines. The overall aesthetic is high-tech and digital. A futuristic, glowing purple and blue digital interface with a funnel-shaped data visualization and floating data points.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "• Alice can access only files tagged with her department. ABAC • Bob is allowed to view HR records because he's in the HR role. RBAC • Carol's access changes depending on time of day and location. Context Aware",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "A futuristic, glowing purple and blue digital interface. It features a central funnel-shaped visualization composed of concentric circles and lines, suggesting data flow or analysis. The background is dark with floating, glowing data points and lines. The overall aesthetic is high-tech and digital. A futuristic, glowing purple and blue digital interface with a funnel-shaped data visualization and floating data points.",
+    "page": 12
+  },
+  {
+    "section": "Policy-Based Access Enforcement",
+    "content": "A decorative header image featuring a close-up of interlocking metallic gears. The gears are rendered in a 3D style with metallic textures. Behind the gears, there are abstract, flowing purple and blue wave-like patterns that create a sense of motion and depth. The overall color palette is cool, dominated by purples, blues, and greys. Decorative header image featuring interlocking gears and abstract purple wave patterns. Policy-Based Access Enforcement Key Principles Uses rules to evaluate access dynamically Implementation Implements RBAC/ABAC through policy engines Tools Example tools: Keycloak, Open Policy Agent",
+    "page": 13
+  },
+  {
+    "section": "Policy-Based Access Enforcement",
+    "content": "A decorative header image featuring a close-up of interlocking metallic gears. The gears are rendered in a 3D style with metallic textures. Behind the gears, there are abstract, flowing purple and blue wave-like patterns that create a sense of motion and depth. The overall color palette is cool, dominated by purples, blues, and greys. Decorative header image featuring interlocking gears and abstract purple wave patterns.",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "Other Examples of Policy-Based Access Enforcement A blue outline icon of a clock face with a single hour hand pointing towards the top-right. Clock icon representing time-based access. Time-Based Access: Access allowed only during working hours (8am–6pm) A blue outline icon of a location pin, consisting of a circle with a vertical line extending downwards to a point. Location pin icon representing location-based access. Location-Based Access: Access denied if user is outside EU region (Geo-IP filtering) A blue outline icon of a mobile phone with three curved lines above it representing signal waves. Mobile device with signal waves icon representing device trust level. Device Trust Level: Require MFA if logging in from an untrusted device A blue outline icon of a shield with a small notch at the bottom center. Shield icon representing risk score enforcement. Risk Score Enforcement: Block access if risk score exceeds threshold (e.g., login from new country + failed attempts)",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue outline icon of a clock face with a single hour hand pointing towards the top-right. Clock icon representing time-based access.",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue outline icon of a location pin, consisting of a circle with a vertical line extending downwards to a point. Location pin icon representing location-based access.",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue outline icon of a mobile phone with three curved lines above it representing signal waves. Mobile device with signal waves icon representing device trust level.",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue outline icon of a shield with a small notch at the bottom center. Shield icon representing risk score enforcement.",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "PBAC architectures 1 PEP – Policy Enforcement Point Intercepts user requests and enforces access decisions 2 PDP – Policy Decision Point Evaluates access requests against policies and returns allow/deny 3 PAP – Policy Administration Point The interface or tool where policies are created, managed, and stored 4 PIP – Policy Information Point Provides external attributes or context needed for decisions graph TD\n User((user)) -- \"request access\" --> PEP[PEP Enforce Policies]\n PEP --> Resource[Resource]\n PEP -- \"can this user Access Resource?\" --> PDP[PDP Evaluate Policies]\n PDP -- \"YES/NO\" --> PEP\n SecurityAdmin((Security Admin)) -- \"create policy\" --> PAP[PAP Manage Policies]\n PAP --> PDP\n PDP --> PIP[PIP Retrieve additional Attributes]\n PIP --> PDP\n PIP --- Context[Context: Org Chart, Cloud, DB] The diagram illustrates the PBAC architecture components and their interactions. A user requests access to a resource, which is intercepted by the PEP (Policy Enforcement Point). The PEP then asks the PDP (Policy Decision Point) if the user can access the resource. The PDP evaluates the request and returns a YES/NO decision to the PEP. The PEP then enforces the decision and either grants access to the resource or denies it. The PDP is also responsible for managing policies, which are created by the PAP (Policy Administration Point). The PAP is managed by a Security Admin. The PDP also interacts with the PIP (Policy Information Point) to retrieve additional attributes needed for decisions. The PIP is connected to various data sources, including an organization chart, a cloud, and a database. Diagram of PBAC architecture showing the flow between PEP, PDP, PAP, and PIP. Critical for Zero Trust and modern IAM",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "graph TD\n User((user)) -- \"request access\" --> PEP[PEP Enforce Policies]\n PEP --> Resource[Resource]\n PEP -- \"can this user Access Resource?\" --> PDP[PDP Evaluate Policies]\n PDP -- \"YES/NO\" --> PEP\n SecurityAdmin((Security Admin)) -- \"create policy\" --> PAP[PAP Manage Policies]\n PAP --> PDP\n PDP --> PIP[PIP Retrieve additional Attributes]\n PIP --> PDP\n PIP --- Context[Context: Org Chart, Cloud, DB] The diagram illustrates the PBAC architecture components and their interactions. A user requests access to a resource, which is intercepted by the PEP (Policy Enforcement Point). The PEP then asks the PDP (Policy Decision Point) if the user can access the resource. The PDP evaluates the request and returns a YES/NO decision to the PEP. The PEP then enforces the decision and either grants access to the resource or denies it. The PDP is also responsible for managing policies, which are created by the PAP (Policy Administration Point). The PAP is managed by a Security Admin. The PDP also interacts with the PIP (Policy Information Point) to retrieve additional attributes needed for decisions. The PIP is connected to various data sources, including an organization chart, a cloud, and a database. Diagram of PBAC architecture showing the flow between PEP, PDP, PAP, and PIP.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "Who Decides? Who Enforces? Match each example to the PDP and PEP: • Keycloak Authorization Services evaluates a JavaScript policy. • A React frontend app shows/hides buttons based on user roles. • An API Gateway allows or denies access to endpoints. • An OPA engine checks whether access should be granted to a file. ► Which are PDPs? Which are PEPs? ► Discuss with your neighbor: Why is separating these concerns important?",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "• Keycloak Authorization Services evaluates a JavaScript policy. • A React frontend app shows/hides buttons based on user roles. • An API Gateway allows or denies access to endpoints. • An OPA engine checks whether access should be granted to a file.",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up image of a silver padlock with the word 'SECURE' visible on its body. The background is a blurred green screen displaying binary code (0s and 1s) and horizontal light streaks, suggesting a digital or cybersecurity theme. Icon of a magnifying glass, symbolizing investigation or search. Case Study: Over-Permissioning Icon of a document with a checkmark, representing a problem or issue. The Problem A contractor still had admin access 3 months after their project ended. Icon of a question mark, representing questions or uncertainty. The Questions • What went wrong? • Was this RBAC or ABAC related? • How would you fix it? Icon of a speech bubble, representing a solution or discussion. The Solution → Discuss in pairs and propose a policy improvement.",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "A close-up image of a silver padlock with the word 'SECURE' visible on its body. The background is a blurred green screen displaying binary code (0s and 1s) and horizontal light streaks, suggesting a digital or cybersecurity theme.",
+    "page": 17
+  },
+  {
+    "section": "Additional Access Control Models",
+    "content": "Additional Access Control Models 1 DAC – Discretionary Access Control Permissions are set by the resource owner. → Users decide who can access their files or resources. 2 MAC – Mandatory Access Control Permissions are based on system-enforced rules and classifications. → Users can't change access rights (common in military or government systems). 3 ReBAC – Relationship-Based Access Control Access is determined by the relationship between entities. → Example: A doctor can access a patient's records if assigned to them. 4 Context-Aware Access Control Access decisions include contextual factors. → Time, location, device type, risk score, etc.",
+    "page": 18
+  },
+  {
+    "section": "Privileged Access Management (PAM)",
+    "content": "Yellow padlock icon with a keyhole. Privileged Access Management (PAM) What is PAM? Privileged Access Management focuses on securing, controlling, and monitoring elevated access. Blue person icon. Who needs PAM? 1. System Administrators (root, admin) 2. Database Administrators (DBAs) 3. DevOps and Cloud Engineers Blue warning triangle icon with an exclamation mark. Why is it critical? 1. Privileged accounts have broad access to sensitive data and systems. 2. Misuse can lead to breaches, insider threats, and audit failures.",
+    "page": 19
+  },
+  {
+    "section": "Privileged Access Management (PAM)",
+    "content": "1. System Administrators (root, admin) 2. Database Administrators (DBAs) 3. DevOps and Cloud Engineers",
+    "page": 19
+  },
+  {
+    "section": "Privileged Access Management (PAM)",
+    "content": "1. Privileged accounts have broad access to sensitive data and systems. 2. Misuse can lead to breaches, insider threats, and audit failures.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "PAM Controls and Best Practices The diagram illustrates a PAM architecture. On the left, three input categories are shown: 'Audit-Risk Compliance' (with a dollar sign icon), 'Privileged Users' (with a plus icon), and 'Third parties' (with a person icon). Arrows from these categories point to a central 'ACCESS MANAGER' box. Above the 'ACCESS MANAGER' is the 'BASTION Privileged Access Management' logo. An arrow labeled 'Authenticate' points from the 'ACCESS MANAGER' to a 'SESSION MANAGER' box. The 'SESSION MANAGER' box lists features: 'Single Sign-On', 'Access policies', 'Session recording', and 'Pattern detection'. Below the 'SESSION MANAGER' is a 'PASSWORD VAULT' box. Below the 'PASSWORD VAULT' is a 'PASSWORD MANAGER' box. The 'PASSWORD MANAGER' box lists features: 'Access policy', 'Extensible change management', 'Generation complexity', 'Check-out/check-in workflow', and 'Password Visualization'. Arrows connect the 'SESSION MANAGER', 'PASSWORD VAULT', and 'PASSWORD MANAGER' boxes to a central column of application icons: 'Applications', 'Windows Server', 'Web Console', and 'Linux/Unix Server'. To the right of this column are three circular icons: 'WALLIX Discovery' (with a magnifying glass icon), 'Cloud Availability' (with a cloud icon), and 'SIEM Log Management' (with a document icon). Arrows point from the application column to these three icons. The 'WALLIX Discovery' icon is labeled 'Uncover privileged accounts'. Diagram of a Privileged Access Management (PAM) architecture showing the flow from authentication to session management and password vaulting, leading to various applications and servers, and finally to discovery and log management. Core PAM Practices: • Just-In-Time (JIT) Access • Session Monitoring and Recording • Credential Vaulting • Access Approval Workflows • Audit Logging and Alerts Example Tools: • CyberArk, BeyondTrust, Thycotic, Wallix (FR) • Limited support in Keycloak (role scoping, not full PAM) ✅ PAM complements IAM by protecting the most sensitive accounts and actions.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "The diagram illustrates a PAM architecture. On the left, three input categories are shown: 'Audit-Risk Compliance' (with a dollar sign icon), 'Privileged Users' (with a plus icon), and 'Third parties' (with a person icon). Arrows from these categories point to a central 'ACCESS MANAGER' box. Above the 'ACCESS MANAGER' is the 'BASTION Privileged Access Management' logo. An arrow labeled 'Authenticate' points from the 'ACCESS MANAGER' to a 'SESSION MANAGER' box. The 'SESSION MANAGER' box lists features: 'Single Sign-On', 'Access policies', 'Session recording', and 'Pattern detection'. Below the 'SESSION MANAGER' is a 'PASSWORD VAULT' box. Below the 'PASSWORD VAULT' is a 'PASSWORD MANAGER' box. The 'PASSWORD MANAGER' box lists features: 'Access policy', 'Extensible change management', 'Generation complexity', 'Check-out/check-in workflow', and 'Password Visualization'. Arrows connect the 'SESSION MANAGER', 'PASSWORD VAULT', and 'PASSWORD MANAGER' boxes to a central column of application icons: 'Applications', 'Windows Server', 'Web Console', and 'Linux/Unix Server'. To the right of this column are three circular icons: 'WALLIX Discovery' (with a magnifying glass icon), 'Cloud Availability' (with a cloud icon), and 'SIEM Log Management' (with a document icon). Arrows point from the application column to these three icons. The 'WALLIX Discovery' icon is labeled 'Uncover privileged accounts'. Diagram of a Privileged Access Management (PAM) architecture showing the flow from authentication to session management and password vaulting, leading to various applications and servers, and finally to discovery and log management.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "• Just-In-Time (JIT) Access • Session Monitoring and Recording • Credential Vaulting • Access Approval Workflows • Audit Logging and Alerts",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "• CyberArk, BeyondTrust, Thycotic, Wallix (FR) • Limited support in Keycloak (role scoping, not full PAM) ✅ PAM complements IAM by protecting the most sensitive accounts and actions.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "Why Authorization Matters: The European Compliance Lens • GDPR (Art. 32) – Risk-based access control required • CNIL – Documented roles & access reviews • ISO/IEC 27001 – Authorization policies & SoD controls • Auditor's Question → \"Who had access? Why? Was it reviewed?\" IAM Flow User Role Policy or Rule Access Decision Audit Justification Dev RBAC ✓ Access justified ✗ Manual, ad-hoc permissions = untraceable ✓ Structured authorization model = compliant & auditable \"Your authorization model is your compliance defense.\"",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "• GDPR (Art. 32) – Risk-based access control required • CNIL – Documented roles & access reviews • ISO/IEC 27001 – Authorization policies & SoD controls • Auditor's Question → \"Who had access? Why? Was it reviewed?\"",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "A golden balance scale is shown against a background of a green-to-blue gradient. The left pan holds a golden shield, and the right pan holds a large, metallic gear. The scale is balanced, suggesting a trade-off or equilibrium between the two concepts. The entire image is reflected on a glossy surface below it. A golden balance scale with a shield on the left pan and a gear on the right pan, symbolizing the balance between security and operations. AMOR LABORATORY Common Pitfalls and Best Practices A blue outline icon of a warning sign, consisting of an exclamation mark inside a triangle. Warning icon: exclamation mark inside a triangle. Pitfalls Role explosion SoD violations Over-permissioning A blue outline icon of a checkmark inside a circle, representing a best practice or success. Checkmark icon: checkmark inside a circle. Best Practices Use hierarchical roles Reviews Least privilege",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "A golden balance scale is shown against a background of a green-to-blue gradient. The left pan holds a golden shield, and the right pan holds a large, metallic gear. The scale is balanced, suggesting a trade-off or equilibrium between the two concepts. The entire image is reflected on a glossy surface below it. A golden balance scale with a shield on the left pan and a gear on the right pan, symbolizing the balance between security and operations.",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue outline icon of a warning sign, consisting of an exclamation mark inside a triangle. Warning icon: exclamation mark inside a triangle.",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue outline icon of a checkmark inside a circle, representing a best practice or success. Checkmark icon: checkmark inside a circle.",
+    "page": 22
+  },
+  {
+    "section": "Design Activity: Pick a Model",
+    "content": "A group of five business professionals in an office setting. A man in a light blue shirt and glasses is on the left, gesturing with his hands. A woman in a grey blazer and glasses is next to him, also gesturing. In the center, a man in a light purple blazer is holding a tablet and gesturing towards it. To his right, a man in a grey blazer and glasses is smiling and looking at the tablet. On the far right, a woman in a dark blue blazer is looking towards the group. The background is a blurred office environment with colorful sticky notes on a wall. Design Activity: Pick a Model Scenario You're designing access for an online course platform. Users • Teachers manage course content • Students can view their enrolled courses • Admins can see all activities Questions → Which model(s) would you use? → RBAC, ABAC, or a mix? → Justify your choice to the class",
+    "page": 23
+  },
+  {
+    "section": "Design Activity: Pick a Model",
+    "content": "A group of five business professionals in an office setting. A man in a light blue shirt and glasses is on the left, gesturing with his hands. A woman in a grey blazer and glasses is next to him, also gesturing. In the center, a man in a light purple blazer is holding a tablet and gesturing towards it. To his right, a man in a grey blazer and glasses is smiling and looking at the tablet. On the far right, a woman in a dark blue blazer is looking towards the group. The background is a blurred office environment with colorful sticky notes on a wall.",
+    "page": 23
+  },
+  {
+    "section": "Design Activity: Pick a Model",
+    "content": "• Teachers manage course content • Students can view their enrolled courses • Admins can see all activities",
+    "page": 23
+  },
+  {
+    "section": "Summary",
+    "content": "Summary ✓ Access control models define how permissions are granted: - RBAC: Role-based, scalable and simple - ABAC: Attribute-based, more flexible - PBAC: Policy-based, context-aware and dynamic ✓ Authorization is a legal requirement in Europe: - GDPR, CNIL, ISO 27001 emphasize access control, role definition, and auditability ✓ Privileged Access Management (PAM): - Focuses on high-risk accounts with elevated permissions - Implements JIT access, session monitoring, vaulting ✓ Policy-Based Access Architecture (PEP, PDP, PAP, PIP): - PEP: Enforces decisions - PDP: Makes decisions - PAP: Defines policies - PIP: Provides identity and context information ✓ Best Practice: Choose access control models that align with business needs, compliance, and risk posture The diagram illustrates the relationship between three access control models: RBAC, ABAC, and PBAC. At the top is a box labeled 'RBAC' containing a shield icon with a balance scale. Below it are two boxes: 'ABAC' on the left, featuring a network of four colored circles (green, blue, blue, green) connected by lines, and 'PBAC' on the right, featuring a blue server rack icon with a green hand icon pointing towards it. Curved lines connect the 'RBAC' box to both the 'ABAC' and 'PBAC' boxes, indicating a hierarchical or comparative relationship. Diagram showing the relationship between RBAC, ABAC, and PBAC access control models.",
+    "page": 24
+  },
+  {
+    "section": "Summary",
+    "content": "✓ Access control models define how permissions are granted: - RBAC: Role-based, scalable and simple - ABAC: Attribute-based, more flexible - PBAC: Policy-based, context-aware and dynamic ✓ Authorization is a legal requirement in Europe: - GDPR, CNIL, ISO 27001 emphasize access control, role definition, and auditability ✓ Privileged Access Management (PAM): - Focuses on high-risk accounts with elevated permissions - Implements JIT access, session monitoring, vaulting ✓ Policy-Based Access Architecture (PEP, PDP, PAP, PIP): - PEP: Enforces decisions - PDP: Makes decisions - PAP: Defines policies - PIP: Provides identity and context information ✓ Best Practice: Choose access control models that align with business needs, compliance, and risk posture",
+    "page": 24
+  },
+  {
+    "section": "Summary",
+    "content": "The diagram illustrates the relationship between three access control models: RBAC, ABAC, and PBAC. At the top is a box labeled 'RBAC' containing a shield icon with a balance scale. Below it are two boxes: 'ABAC' on the left, featuring a network of four colored circles (green, blue, blue, green) connected by lines, and 'PBAC' on the right, featuring a blue server rack icon with a green hand icon pointing towards it. Curved lines connect the 'RBAC' box to both the 'ABAC' and 'PBAC' boxes, indicating a hierarchical or comparative relationship. Diagram showing the relationship between RBAC, ABAC, and PBAC access control models.",
+    "page": 24
+  },
+  {
+    "section": "Teaser: Next Session – Identity Lifecycle Management",
+    "content": "Teaser: Next Session – Identity Lifecycle Management 1 How do we create identities securely? 2 What happens when users move roles or departments? 3 How do we safely deactivate accounts? Topics Covered: • Joiner-Mover-Leaver process • Lifecycle triggers and risks • Automating provisioning and deprovisioning Identity Lifecycle Management An abstract graphic illustrating the Identity Lifecycle Management process. It features several stylized human icons in blue and purple, positioned along a series of overlapping, flowing, translucent paths that create a sense of movement and transition. The background is a gradient of light blue and purple, with the paths curving and swirling, suggesting a continuous and dynamic process. Abstract graphic illustrating Identity Lifecycle Management with flowing paths and user icons.",
+    "page": 25
+  },
+  {
+    "section": "Teaser: Next Session – Identity Lifecycle Management",
+    "content": "1 How do we create identities securely? 2 What happens when users move roles or departments? 3 How do we safely deactivate accounts?",
+    "page": 25
+  },
+  {
+    "section": "Teaser: Next Session – Identity Lifecycle Management",
+    "content": "• Joiner-Mover-Leaver process • Lifecycle triggers and risks • Automating provisioning and deprovisioning",
+    "page": 25
+  },
+  {
+    "section": "Teaser: Next Session – Identity Lifecycle Management",
+    "content": "An abstract graphic illustrating the Identity Lifecycle Management process. It features several stylized human icons in blue and purple, positioned along a series of overlapping, flowing, translucent paths that create a sense of movement and transition. The background is a gradient of light blue and purple, with the paths curving and swirling, suggesting a continuous and dynamic process. Abstract graphic illustrating Identity Lifecycle Management with flowing paths and user icons.",
+    "page": 25
+  },
+  {
+    "section": "Hands-On Practice:Role-Based Access in Keycloak",
+    "content": "Hands-On Practice:Role-Based Access in Keycloak Objective: Implement and test access control using roles Tasks: 1. Define realm roles: admin, user, viewer 2. Assign roles to test users 3. Protect resources using role mappings 4. Log in as different users and observe access differences Bonus: Explore Composite Roles for layered permissions A person is shown from the side, sitting at a desk and working on a laptop. The laptop screen displays lines of code in a dark-themed editor. The person is wearing a light blue sweater. On the desk, there is a small potted succulent plant. The background features a wall with vertical panels in shades of purple and blue, illuminated by ambient lighting. A person working on a laptop with code on the screen.",
+    "page": 26
+  },
+  {
+    "section": "Hands-On Practice:Role-Based Access in Keycloak",
+    "content": "1. Define realm roles: admin, user, viewer 2. Assign roles to test users 3. Protect resources using role mappings 4. Log in as different users and observe access differences",
+    "page": 26
+  },
+  {
+    "section": "Hands-On Practice:Role-Based Access in Keycloak",
+    "content": "A person is shown from the side, sitting at a desk and working on a laptop. The laptop screen displays lines of code in a dark-themed editor. The person is wearing a light blue sweater. On the desk, there is a small potted succulent plant. The background features a wall with vertical panels in shades of purple and blue, illuminated by ambient lighting. A person working on a laptop with code on the screen.",
+    "page": 26
+  }
+]

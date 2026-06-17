@@ -1,0 +1,562 @@
+[
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "Identity and Access Management Fundamentals Session 6 Identity and Access Governance Zixiong Wang A glowing key icon is centered on a dark blue background. The key is outlined in a bright yellow light. Below the key's head is a glowing blue ring. The background is filled with a network of blue circuit-like lines and numerous small, glowing orange dots, creating a digital or technological atmosphere. A glowing key icon surrounded by blue circuitry and orange dots, symbolizing digital identity or access management.",
+    "page": 0
+  },
+  {
+    "section": "Identity and Access Management Fundamentals",
+    "content": "A glowing key icon is centered on a dark blue background. The key is outlined in a bright yellow light. Below the key's head is a glowing blue ring. The background is filled with a network of blue circuit-like lines and numerous small, glowing orange dots, creating a digital or technological atmosphere. A glowing key icon surrounded by blue circuitry and orange dots, symbolizing digital identity or access management.",
+    "page": 0
+  },
+  {
+    "section": "Learning Objectives",
+    "content": "A stylized graphic of a shield with a blue and purple gradient, surrounded by a network of white dots and lines, symbolizing security and technology. A stylized graphic of a shield with a blue and purple gradient, surrounded by a network of white dots and lines, symbolizing security and technology. Learning Objectives By the end of this session, learners will be able to: 1 Explain the importance of IAM governance and its core components 2 Describe the lifecycle of policies and roles in IAM 3 Identify and evaluate Segregation of Duties (SoD) risks 4 Distinguish between access review, certification, and re-certification 5 Understand audit and logging practices for compliance 6 Explore governance capabilities and limitations in Keycloak",
+    "page": 1
+  },
+  {
+    "section": "Learning Objectives",
+    "content": "A stylized graphic of a shield with a blue and purple gradient, surrounded by a network of white dots and lines, symbolizing security and technology. A stylized graphic of a shield with a blue and purple gradient, surrounded by a network of white dots and lines, symbolizing security and technology.",
+    "page": 1
+  },
+  {
+    "section": "Learning Objectives",
+    "content": "1 Explain the importance of IAM governance and its core components 2 Describe the lifecycle of policies and roles in IAM 3 Identify and evaluate Segregation of Duties (SoD) risks 4 Distinguish between access review, certification, and re-certification 5 Understand audit and logging practices for compliance 6 Explore governance capabilities and limitations in Keycloak",
+    "page": 1
+  },
+  {
+    "section": "Unknown",
+    "content": "Why Governance? IAM Problems That Trigger It Common IAM Challenges: Icon of a single person, representing an orphaned account. Orphaned accounts after offboarding Icon of three people, representing users accumulating permissions. Users accumulating permissions over time Icon of an eye, representing visibility into access. No visibility into who has access to what Icon of a shield with a checkmark, representing audit justification. Inability to justify access during audits Icon of two hands shaking, representing conflicts of interest. Conflicts of interest (e.g., SoD violations) Discussion: Which of these have you seen or heard about in real life? These problems demand a governance solution – let's explore how.",
+    "page": 2
+  },
+  {
+    "section": "Identity Governance",
+    "content": "What is Governance in IAM? Governance = Oversight, accountability, and control Icon representing identity governance, showing two stylized human figures. Identity Governance • Who has an identity? • What roles are assigned? • How are identities created, changed, and removed? Tools: Lifecycle management, Role modeling, Joiner/Mover/Leaver processes Icon representing access governance, showing a padlock. Access Governance • Who has access to what? • Is the access appropriate? • Is there a conflict of duties? Tools: Access certification, Segregation of Duties (SoD), Policy enforcement, Audit reporting",
+    "page": 3
+  },
+  {
+    "section": "Identity Governance",
+    "content": "• Who has an identity? • What roles are assigned? • How are identities created, changed, and removed?",
+    "page": 3
+  },
+  {
+    "section": "Unknown",
+    "content": "Key Concepts in Governance 1 — Policy Lifecycle 2 — Role Lifecycle management 3 — Segregation of Duties (SoD) 4 — Access Review and Certification 5 — Audit and Logging 6 — Compliance A vertical timeline diagram with six numbered steps connected to governance concepts. The background features a large gear and several smaller interlocking gears in shades of purple and blue.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "1 — Policy Lifecycle 2 — Role Lifecycle management 3 — Segregation of Duties (SoD) 4 — Access Review and Certification 5 — Audit and Logging 6 — Compliance A vertical timeline diagram with six numbered steps connected to governance concepts. The background features a large gear and several smaller interlocking gears in shades of purple and blue.",
+    "page": 4
+  },
+  {
+    "section": "Unknown",
+    "content": "Governance Lifecycle Pre-Access Policy, roles definition During Access Policy enforcement, Monitoring, Logging Post-Access Audit, Review, recertification",
+    "page": 5
+  },
+  {
+    "section": "Unknown",
+    "content": "Policies in IAM A policy in IAM is a formal statement that defines what should happen regarding identities, access, or security. It's a governance directive , not just a technical rule. Policy Type Example Enforced via Access Policy \"Only HR staff can access payroll data\" Role mappings, ABAC SoD Policy \"No user can both approve and request expenses\" SoD matrix Authentication Policy \"MFA required for admins\" IAM config (e.g., Keycloak) Account Policy \"Inactive users are disabled after 90 days\" Lifecycle workflows Logging & Audit Policy \"All access must be logged and retained\" SIEM*, IAM audit logs Approval Policy \"High-risk roles need 2-level approval\" IGA workflow engine *SIEM: Security Information and Event Management",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "A policy in IAM is a formal statement that defines what should happen regarding identities, access, or security.",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "Policy Type Example Enforced via Access Policy \"Only HR staff can access payroll data\" Role mappings, ABAC SoD Policy \"No user can both approve and request expenses\" SoD matrix Authentication Policy \"MFA required for admins\" IAM config (e.g., Keycloak) Account Policy \"Inactive users are disabled after 90 days\" Lifecycle workflows Logging & Audit Policy \"All access must be logged and retained\" SIEM*, IAM audit logs Approval Policy \"High-risk roles need 2-level approval\" IGA workflow engine",
+    "page": 6
+  },
+  {
+    "section": "Unknown",
+    "content": "Policy Lifecycle graph TD; 1((1)) --> 2((2)); 2 --> 3((3)); 3 --> 1; Define Decide what the policy is and why (purpose, risk) Enforce Implement it in systems (e.g., rules, settings, workflows) Verify Monitor compliance (logs, reviews, audits) The diagram illustrates the Policy Lifecycle as a continuous loop of three stages. Stage 1, 'Define', is at the top and involves deciding the policy's purpose and risk. Stage 2, 'Enforce', is at the bottom right and involves implementing the policy in systems. Stage 3, 'Verify', is at the bottom left and involves monitoring compliance. Arrows indicate a clockwise flow from 1 to 2, 2 to 3, and 3 back to 1. A circular diagram showing the three stages of the Policy Lifecycle: Define, Enforce, and Verify.",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "graph TD; 1((1)) --> 2((2)); 2 --> 3((3)); 3 --> 1; Define Decide what the policy is and why (purpose, risk) Enforce Implement it in systems (e.g., rules, settings, workflows) Verify Monitor compliance (logs, reviews, audits) The diagram illustrates the Policy Lifecycle as a continuous loop of three stages. Stage 1, 'Define', is at the top and involves deciding the policy's purpose and risk. Stage 2, 'Enforce', is at the bottom right and involves implementing the policy in systems. Stage 3, 'Verify', is at the bottom left and involves monitoring compliance. Arrows indicate a clockwise flow from 1 to 2, 2 to 3, and 3 back to 1. A circular diagram showing the three stages of the Policy Lifecycle: Define, Enforce, and Verify.",
+    "page": 7
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of four business professionals (three men and one woman) in a modern office setting, gathered around a round table for a meeting. They are discussing documents and gesturing, with a large window in the background showing a city skyline. A whiteboard with diagrams is visible on the left. Illustration of four business professionals in a modern office setting, gathered around a round table for a meeting. They are discussing documents and gesturing, with a large window in the background showing a city skyline. A whiteboard with diagrams is visible on the left. Policy in Practice Choose a Policy Choose a common IAM policy (e.g., MFA required, role approval). Consider the Questions How would you: • Define it? • Enforce it? • Verify it is followed? Share and Discuss Discuss in small groups and share real-life implementations if possible.",
+    "page": 8
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of four business professionals (three men and one woman) in a modern office setting, gathered around a round table for a meeting. They are discussing documents and gesturing, with a large window in the background showing a city skyline. A whiteboard with diagrams is visible on the left. Illustration of four business professionals in a modern office setting, gathered around a round table for a meeting. They are discussing documents and gesturing, with a large window in the background showing a city skyline. A whiteboard with diagrams is visible on the left.",
+    "page": 8
+  },
+  {
+    "section": "Unknown",
+    "content": "Role Lifecycle Management 1. Role Mining ( Discovery ) Focus: Analyze existing access patterns Outcome: Identify logical groupings of permissions and candidate roles 2. Role Definition ( Design ) Focus: Define business-friendly role names and descriptions Outcome: Create structured RBAC models, assign appropriate permissions to each role 3. Role Assignment ( Deployment ) Focus: Map users or groups to roles Outcome: Operationalize access control 4. Role Review ( Governance ) Focus: Periodically evaluate roles: · Are they still needed? · Are permissions still appropriate? Outcome: Ensure roles stay valid & minimal",
+    "page": 9
+  },
+  {
+    "section": "Unknown",
+    "content": "Role Mining A network diagram with nodes and connections, overlaid on a background of concentric circles. Definition The process of discovering and designing roles based on existing user access patterns. Focus • Analyzing historical access data • Identifying common access combinations • Proposing logical roles to simplify and standardize permissions Purpose Create business-aligned roles from messy, individual entitlements Transition from ad hoc permissions to Role-Based Access Control (RBAC)",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "Role Mining A network diagram with nodes and connections, overlaid on a background of concentric circles.",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "• Analyzing historical access data • Identifying common access combinations • Proposing logical roles to simplify and standardize permissions",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "Create business-aligned roles from messy, individual entitlements Transition from ad hoc permissions to Role-Based Access Control (RBAC)",
+    "page": 10
+  },
+  {
+    "section": "Unknown",
+    "content": "Role Mining Examples • 80% of users in the \"Sales\" department access CRM + Shared Drive + Email → define a \"Sales_Rep\" role • Detect outlier access patterns that don't fit any role and need special handling Tools Used • Often supported by IGA platforms like SailPoint, Saviynt, or One Identity • Involves clustering, pattern recognition, and sometimes machine learning",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "• 80% of users in the \"Sales\" department access CRM + Shared Drive + Email → define a \"Sales_Rep\" role • Detect outlier access patterns that don't fit any role and need special handling",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "• Often supported by IGA platforms like SailPoint, Saviynt, or One Identity • Involves clustering, pattern recognition, and sometimes machine learning",
+    "page": 11
+  },
+  {
+    "section": "Unknown",
+    "content": "Exercise: Role Mining Challenge Objective: Identify common roles based on users' access patterns. Sample User Access Data: • Alice: SalesApp, CRM, Email • Bob: SalesApp, CRM, Email • Clara: HRApp, Payroll, Email • David: HRApp, Payroll, Email • Elsa: DevOps, CodeRepo, Monitoring Task: • Group users into logical roles based on access • Name each role (e.g., Sales_User, HR_Manager) • Identify any outliers or unclear patterns Debrief: • Share proposed roles and naming rationale • Discuss the difference between business and technical roles • Reflect on how tools (like IGA platforms) could automate this A group of four business professionals (three men and one woman) are seated around a conference table in a modern office, discussing a presentation. A large screen in the background displays a bar chart titled \"Project Zenith\" with a rising trend line and the number \"93.8\". The office has large windows overlooking a city skyline. A group of four business professionals (three men and one woman) are seated around a conference table in a modern office, discussing a presentation. A large screen in the background displays a bar chart titled 'Project Zenith' with a rising trend line and the number '93.8'.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "• Alice: SalesApp, CRM, Email • Bob: SalesApp, CRM, Email • Clara: HRApp, Payroll, Email • David: HRApp, Payroll, Email • Elsa: DevOps, CodeRepo, Monitoring",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "• Group users into logical roles based on access • Name each role (e.g., Sales_User, HR_Manager) • Identify any outliers or unclear patterns",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "• Share proposed roles and naming rationale • Discuss the difference between business and technical roles • Reflect on how tools (like IGA platforms) could automate this",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "A group of four business professionals (three men and one woman) are seated around a conference table in a modern office, discussing a presentation. A large screen in the background displays a bar chart titled \"Project Zenith\" with a rising trend line and the number \"93.8\". The office has large windows overlooking a city skyline. A group of four business professionals (three men and one woman) are seated around a conference table in a modern office, discussing a presentation. A large screen in the background displays a bar chart titled 'Project Zenith' with a rising trend line and the number '93.8'.",
+    "page": 12
+  },
+  {
+    "section": "Unknown",
+    "content": "Role Definition: Designing Effective Access Roles Goal: Create clear, manageable roles that align with business functions. What to Define: • Role Name: Clear and business-readable (e.g., HR_Manager, Finance_Analyst) • Description: What is the purpose of this role? • Permissions: What resources and actions are included? • Scope: Is it department-wide, app-specific, or global? Types of Roles: • Business Roles: Align with job functions (e.g., Sales_Associate) • Technical Roles: Map to system permissions (e.g., DB_ReadOnly) • Composite Roles: Combine multiple roles into one (Keycloak supports this) Best Practices: • Use least privilege principle: no more access than needed • Avoid 'role explosion' (too many overly specific roles) • Reuse roles across systems if possible • Document everything clearly (owners, change process) Governance Tip: Roles should be reviewed and updated periodically to remain relevant and secure. Roles and Permissions Network an Ueenr Aentstionn An abstract network diagram featuring a grid of interconnected nodes. The nodes are represented by semi-transparent, colored spheres in shades of purple, blue, and white. They are connected by a network of thin, translucent lines that form a complex, web-like structure. The lighting creates soft shadows and highlights, giving the nodes a three-dimensional appearance. The overall aesthetic is clean and modern, suggesting a digital or technological theme. Abstract network diagram with nodes and connections.",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "• Role Name: Clear and business-readable (e.g., HR_Manager, Finance_Analyst) • Description: What is the purpose of this role? • Permissions: What resources and actions are included? • Scope: Is it department-wide, app-specific, or global?",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "• Business Roles: Align with job functions (e.g., Sales_Associate) • Technical Roles: Map to system permissions (e.g., DB_ReadOnly) • Composite Roles: Combine multiple roles into one (Keycloak supports this)",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "• Use least privilege principle: no more access than needed • Avoid 'role explosion' (too many overly specific roles) • Reuse roles across systems if possible • Document everything clearly (owners, change process)",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "An abstract network diagram featuring a grid of interconnected nodes. The nodes are represented by semi-transparent, colored spheres in shades of purple, blue, and white. They are connected by a network of thin, translucent lines that form a complex, web-like structure. The lighting creates soft shadows and highlights, giving the nodes a three-dimensional appearance. The overall aesthetic is clean and modern, suggesting a digital or technological theme. Abstract network diagram with nodes and connections.",
+    "page": 13
+  },
+  {
+    "section": "Unknown",
+    "content": "Role Review Definition: A process to review and validate the structure and appropriateness of roles themselves. Interconnected SD Roles and Permissions Focus: • Role definitions • What permissions each role grants • Whether the role is too permissive or outdated Goal: Ensure roles are well-designed, aligned to business needs, and don't lead to over-permissioning. A simple line-art icon of a lightbulb, indicating a tip, idea, or example. Lightbulb icon representing an idea or example. Examples: The \"Manager\" role grants access to payroll and HR reports. Is this too much? The \"Project_Editor\" role includes delete permissions—should that be split out?",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "• Role definitions • What permissions each role grants • Whether the role is too permissive or outdated",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "Goal: Ensure roles are well-designed, aligned to business needs, and don't lead to over-permissioning.",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "A simple line-art icon of a lightbulb, indicating a tip, idea, or example. Lightbulb icon representing an idea or example.",
+    "page": 14
+  },
+  {
+    "section": "Unknown",
+    "content": "A large, stylized padlock with a blue and purple gradient. The word \"SECURE\" is written in white capital letters across the center of the padlock. The padlock is surrounded by concentric circles, suggesting a signal or a protective field. The background is a light blue gradient. A large, stylized padlock with the word 'SECURE' written on it, set against a background of concentric circles and a light blue gradient. What is Segregation of Duties (SoD)? Definition Segregation of Duties (SoD) is a security and governance principle that prevents a single individual from having excessive control that could lead to abuse, fraud, or error. A small icon consisting of three circles arranged in a triangle, representing a group of people or roles. Icon representing a group of people or roles. Examples of SoD Conflicts • A user can both create and approve purchase orders • A developer can validate UAT of his own code • An HR admin can both update payroll and approve their own bonuses A small icon of a magnifying glass, representing a search or investigation. Icon representing a magnifying glass or search. Outcome • Stronger control over sensitive actions • Reduced risk of internal threats and compliance violations A small icon of a checkmark inside a box, representing a checkmark or completion. Icon representing a checkmark or completion. Objective • Minimize risk by ensuring critical tasks are divided among multiple people • Prevent unauthorized or unreviewed actions (e.g., fraud, data tampering) A small icon consisting of three circles arranged in a triangle, representing a group of people or roles. Icon representing a group of people or roles. Governance Role • Identify and document SoD rules (conflict matrix) • Prevent users from accumulating conflicting access • Detect violations and apply compensating controls (e.g., peer review) A small icon of a shield, representing protection or defense. Icon representing a shield or protection.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A large, stylized padlock with a blue and purple gradient. The word \"SECURE\" is written in white capital letters across the center of the padlock. The padlock is surrounded by concentric circles, suggesting a signal or a protective field. The background is a light blue gradient. A large, stylized padlock with the word 'SECURE' written on it, set against a background of concentric circles and a light blue gradient.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "Segregation of Duties (SoD) is a security and governance principle that prevents a single individual from having excessive control that could lead to abuse, fraud, or error.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A small icon consisting of three circles arranged in a triangle, representing a group of people or roles. Icon representing a group of people or roles.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "• A user can both create and approve purchase orders • A developer can validate UAT of his own code • An HR admin can both update payroll and approve their own bonuses",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A small icon of a magnifying glass, representing a search or investigation. Icon representing a magnifying glass or search.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "• Stronger control over sensitive actions • Reduced risk of internal threats and compliance violations",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A small icon of a checkmark inside a box, representing a checkmark or completion. Icon representing a checkmark or completion.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "• Minimize risk by ensuring critical tasks are divided among multiple people • Prevent unauthorized or unreviewed actions (e.g., fraud, data tampering)",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A small icon consisting of three circles arranged in a triangle, representing a group of people or roles. Icon representing a group of people or roles.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "• Identify and document SoD rules (conflict matrix) • Prevent users from accumulating conflicting access • Detect violations and apply compensating controls (e.g., peer review)",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "A small icon of a shield, representing protection or defense. Icon representing a shield or protection.",
+    "page": 15
+  },
+  {
+    "section": "Unknown",
+    "content": "SoD in Role Lifecycle Management Lifecycle Stage SoD Integration Example Role Mining Detect patterns where users hold conflicting access Role Definition Avoid designing roles with inherent SoD conflicts Role Assignment Enforce SoD policies—block conflicting roles Role Review Audit whether assigned roles violate SoD policies",
+    "page": 16
+  },
+  {
+    "section": "Unknown",
+    "content": "SoD Detective Challenge User Access Rights Alice Create Invoices, Approve Invoices Bob Hire Employees, Approve Salaries Clara Manage Roles, Review Audit Logs David Create Users, Assign Admin Roles Elsa Submit Expenses, Approve Expenses Spot SoD conflicts and explain: • Why it's a conflict • What the risk is • How to remediate it",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "User Access Rights Alice Create Invoices, Approve Invoices Bob Hire Employees, Approve Salaries Clara Manage Roles, Review Audit Logs David Create Users, Assign Admin Roles Elsa Submit Expenses, Approve Expenses",
+    "page": 17
+  },
+  {
+    "section": "Unknown",
+    "content": "Access Review Definition: A periodic process to review and validate who has access to what . Focus: Users → Resources Individual permissions granted Ensuring access is still justified (based on job, project, etc.) Examples: Alice still has access to the HR system. Is this still necessary? Bob has admin access to finance data. Should this be revoked? Goal: Minimize privilege creep and prevent unauthorized or outdated access. A large, metallic padlock with a keyhole. The word \"Amor\" is written in a cursive script next to the keyhole. A key lies on the surface in front of the padlock. The background shows a window with light streaming in, creating a bright, airy atmosphere. A large, metallic padlock with a keyhole. The word 'Amor' is written in a cursive script next to the keyhole. A key lies on the surface in front of the padlock. The background shows a window with light streaming in, creating a bright, airy atmosphere.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "A large, metallic padlock with a keyhole. The word \"Amor\" is written in a cursive script next to the keyhole. A key lies on the surface in front of the padlock. The background shows a window with light streaming in, creating a bright, airy atmosphere. A large, metallic padlock with a keyhole. The word 'Amor' is written in a cursive script next to the keyhole. A key lies on the surface in front of the padlock. The background shows a window with light streaming in, creating a bright, airy atmosphere.",
+    "page": 18
+  },
+  {
+    "section": "Unknown",
+    "content": "Access Reviews Types • Periodic (quarterly, annual) • Event-triggered (role change) • On-demand (audit, incident) Access Review Process 1. Snapshot roles & access 2. Send to reviewers 3. Revoke unneeded rights 4. Log justifications A photograph showing two women in an office environment. They are both wearing glasses and light blue shirts. The woman in the foreground is pointing at a computer monitor. The monitor displays a web application with the heading 'Project Phoenix' and various data fields. The background is slightly blurred, showing other office workers and a modern office interior with a desk lamp. Two women in an office setting reviewing a computer screen displaying 'Project Phoenix'.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "A photograph showing two women in an office environment. They are both wearing glasses and light blue shirts. The woman in the foreground is pointing at a computer monitor. The monitor displays a web application with the heading 'Project Phoenix' and various data fields. The background is slightly blurred, showing other office workers and a modern office interior with a desk lamp. Two women in an office setting reviewing a computer screen displaying 'Project Phoenix'.",
+    "page": 19
+  },
+  {
+    "section": "Unknown",
+    "content": "What is Access Certification? Definition: Access Certification is a formal, recurring process where designated reviewers (e.g., managers or system owners) validate that users' access rights are appropriate and justified. Objective: Ensure that only authorized users retain access to systems and data Detect and remove outdated, excessive, or unauthorized access Meet regulatory and audit requirements (e.g., SOX, GDPR) Key Components: Review scope (users, systems, entitlements) Reviewers (managers, app owners, data owners) Attestation options (Approve, Revoke, Delegate) Justifications and comments Deadlines and escalation workflows Outcome: User System Access Reviewer Decision Justification Timestamp Alice HR System HR_Admin Bob Revoke No longer in HR 2025-06-03 10:15 AM Bob Finance Tool Viewer Clara Approve Needed for reporting 2025-06-03 10:18 AM Illustration of a woman in a business suit sitting at a desk, holding a tablet displaying a bar chart. In the background, there are large, glowing digital screens displaying various data visualizations and charts, suggesting a high-tech office environment.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "Access Certification is a formal, recurring process where designated reviewers (e.g., managers or system owners) validate that users' access rights are appropriate and justified.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "Ensure that only authorized users retain access to systems and data Detect and remove outdated, excessive, or unauthorized access Meet regulatory and audit requirements (e.g., SOX, GDPR)",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "Review scope (users, systems, entitlements) Reviewers (managers, app owners, data owners) Attestation options (Approve, Revoke, Delegate) Justifications and comments Deadlines and escalation workflows",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "User System Access Reviewer Decision Justification Timestamp Alice HR System HR_Admin Bob Revoke No longer in HR 2025-06-03 10:15 AM Bob Finance Tool Viewer Clara Approve Needed for reporting 2025-06-03 10:18 AM",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "Illustration of a woman in a business suit sitting at a desk, holding a tablet displaying a bar chart. In the background, there are large, glowing digital screens displaying various data visualizations and charts, suggesting a high-tech office environment.",
+    "page": 20
+  },
+  {
+    "section": "Unknown",
+    "content": "Access Certification Campaigns 1 Annual or biannual reviews 2 Prepare reports, reviewer workflows 3 Track completion & exceptions",
+    "page": 21
+  },
+  {
+    "section": "Unknown",
+    "content": "Access Certification Roleplay • Roles per team: • One acts as the Manager/Reviewer • One acts as the Compliance Observer • Optional: One as the User Defender (arguing why access is still needed) User Department Access Last Used Justification Risk Level Alice HR Payroll Admin 10 days ago \"Needed for processing payroll\" High Bob IT Production DB 200 days ago \"Might need it again\" Critical Clara Sales Finance App Never \"Just in case\" Medium For each entry, the \"Manager\" must decide: Approve Revoke Escalate",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "• Roles per team: • One acts as the Manager/Reviewer • One acts as the Compliance Observer • Optional: One as the User Defender (arguing why access is still needed)",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "User Department Access Last Used Justification Risk Level Alice HR Payroll Admin 10 days ago \"Needed for processing payroll\" High Bob IT Production DB 200 days ago \"Might need it again\" Critical Clara Sales Finance App Never \"Just in case\" Medium",
+    "page": 22
+  },
+  {
+    "section": "Unknown",
+    "content": "Access review vs Access Certification What's the difference ? Access Certification = formalized Access Review: auditable, repeatable, and accountable A blue arrow pointing downwards and to the left, indicating a flow from the central text to the first column of bullet points. Blue arrow pointing down and to the left • Review decisions are recorded with timestamp • Justifications are captured • Reviewer identity is tracked • Immutable audit trail • Reporting capability A blue arrow pointing straight down, indicating a flow from the central text to the second column of bullet points. Blue arrow pointing down • Defined campaign schedule • Defined scope • Standardized workflow • Automation • Consistent criteria A blue arrow pointing downwards and to the right, indicating a flow from the central text to the third column of bullet points. Blue arrow pointing down and to the right • Clear ownership • Reviews are explicitly assigned • Deadlines • Escalation mechanism • Decision responsibility • Completion tracking",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue arrow pointing downwards and to the left, indicating a flow from the central text to the first column of bullet points. Blue arrow pointing down and to the left",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "• Review decisions are recorded with timestamp • Justifications are captured • Reviewer identity is tracked • Immutable audit trail • Reporting capability",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue arrow pointing straight down, indicating a flow from the central text to the second column of bullet points. Blue arrow pointing down",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "• Defined campaign schedule • Defined scope • Standardized workflow • Automation • Consistent criteria",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "A blue arrow pointing downwards and to the right, indicating a flow from the central text to the third column of bullet points. Blue arrow pointing down and to the right",
+    "page": 23
+  },
+  {
+    "section": "Unknown",
+    "content": "• Clear ownership • Reviews are explicitly assigned • Deadlines • Escalation mechanism • Decision responsibility • Completion tracking",
+    "page": 23
+  },
+  {
+    "section": "Audit = Governance Process",
+    "content": "Audit = Governance Process Audit refers to the systematic evaluation of IAM activities, controls, and compliance. It uses various data sources to determine: • Are access controls effective? • Are policies enforced? • Are users only accessing what they should? Inputs to IAM Audits Include: • Access logs (login, privilege use) • Role and permission assignments • Access certification results • SoD violation reports • User lifecycle events (join, move, leave) • Approval and workflow histories Outcome: Findings, risk analysis, compliance reports, recommendations.",
+    "page": 24
+  },
+  {
+    "section": "Audit = Governance Process",
+    "content": "Audit refers to the systematic evaluation of IAM activities, controls, and compliance. It uses various data sources to determine:",
+    "page": 24
+  },
+  {
+    "section": "Audit = Governance Process",
+    "content": "• Are access controls effective? • Are policies enforced? • Are users only accessing what they should?",
+    "page": 24
+  },
+  {
+    "section": "Audit = Governance Process",
+    "content": "• Access logs (login, privilege use) • Role and permission assignments • Access certification results • SoD violation reports • User lifecycle events (join, move, leave) • Approval and workflow histories",
+    "page": 24
+  },
+  {
+    "section": "Unknown",
+    "content": "Exercise: Audit Log Review Challenge Objective Identify potential issues by analyzing IAM audit logs. Sample Log Entries • 2025-05-01 10:12:03 | User: Alice | Action: Role Assigned (Finance_Admin) • 2025-05-02 08:34:45 | User: Bob | Action: Failed Login (5 times) • 2025-05-03 14:20:17 | User: Clara | Action: User Deleted (HR) • 2025-05-03 14:21:05 | User: Clara | Action: User Created (HR) • 2025-05-03 14:22:11 | User: Clara | Action: Role Assigned (Payroll_Manager) Task • Identify any suspicious or risky activities • Suggest follow-up actions or controls • Consider if any policy violations may have occurred Debrief • What types of anomalies should be flagged? • How would you correlate these events? • What would you report to the compliance team?",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "• 2025-05-01 10:12:03 | User: Alice | Action: Role Assigned (Finance_Admin) • 2025-05-02 08:34:45 | User: Bob | Action: Failed Login (5 times) • 2025-05-03 14:20:17 | User: Clara | Action: User Deleted (HR) • 2025-05-03 14:21:05 | User: Clara | Action: User Created (HR) • 2025-05-03 14:22:11 | User: Clara | Action: Role Assigned (Payroll_Manager)",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "• Identify any suspicious or risky activities • Suggest follow-up actions or controls • Consider if any policy violations may have occurred",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "• What types of anomalies should be flagged? • How would you correlate these events? • What would you report to the compliance team?",
+    "page": 25
+  },
+  {
+    "section": "Unknown",
+    "content": "Debrief: Audit Log Review Challenge Types of Anomalies to Flag: • Privilege escalation (e.g., Alice → Finance_Admin) • Brute force login attempt (e.g., Bob → 5 failed logins) • Suspicious account manipulation (e.g., Clara deletes, recreates, reassigns roles quickly) How to Correlate Events: • Time correlation: Clara's events occur within minutes • User behavior correlation: Bob's failed logins may signal compromise • Role sensitivity: High-privilege roles need extra scrutiny Compliance Report Highlights: Flag suspicious actions by Clara as potential policy violation Report failed login trend for Bob for follow-up or monitoring Review whether Alice's role assignment had proper approval Recommend logging justifications and better access change audit trails An illustration of a white tablet with a black magnifying glass resting on it. The tablet screen displays a grid titled 'AUDIT LOG' containing various colored bars (blue, orange, green, grey) representing data points. The background is a dark blue with glowing purple and white lines, suggesting a digital or network environment. Illustration of a tablet displaying an 'AUDIT LOG' interface with a magnifying glass over the data.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "• Privilege escalation (e.g., Alice → Finance_Admin) • Brute force login attempt (e.g., Bob → 5 failed logins) • Suspicious account manipulation (e.g., Clara deletes, recreates, reassigns roles quickly)",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "• Time correlation: Clara's events occur within minutes • User behavior correlation: Bob's failed logins may signal compromise • Role sensitivity: High-privilege roles need extra scrutiny",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration of a white tablet with a black magnifying glass resting on it. The tablet screen displays a grid titled 'AUDIT LOG' containing various colored bars (blue, orange, green, grey) representing data points. The background is a dark blue with glowing purple and white lines, suggesting a digital or network environment. Illustration of a tablet displaying an 'AUDIT LOG' interface with a magnifying glass over the data.",
+    "page": 26
+  },
+  {
+    "section": "Unknown",
+    "content": "Compliances A simple line-art icon of a briefcase, symbolizing external regulations and audits. Briefcase icon representing external compliance. 1. External Compliance Regulations: SOX, GDPR, HIPAA, NIS2 (in Europe), etc. Audits: Conducted by external bodies, fines for non-compliance Compliance is not a control. It is a reason to have controls. IAM governance implements controls (like logging, reviews, role design) to meet compliance requirements and to demonstrate accountability. A line-art icon showing a person silhouette next to a shield, representing internal corporate policies and control objectives. User and shield icon representing internal compliance. 2. Internal Compliance Corporate policies: e.g., \"Admins must use MFA\" Control objectives: e.g., \"All access changes must be approved and logged\"",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "A simple line-art icon of a briefcase, symbolizing external regulations and audits. Briefcase icon representing external compliance.",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "IAM governance implements controls (like logging, reviews, role design) to meet compliance requirements and to demonstrate accountability.",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "A line-art icon showing a person silhouette next to a shield, representing internal corporate policies and control objectives. User and shield icon representing internal compliance.",
+    "page": 27
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration at the top of the slide featuring three objects: a magnifying glass on the left, a wooden gavel in the center, and a metal padlock on the right. The background is a light gray with a subtle, textured pattern of small dots. Illustration of a magnifying glass, a gavel, and a padlock, symbolizing investigation, law, and security. Discussion: Log Retention Dilemma You are designing IAM audit logging policies for a European company operating in financial services. Challenge: GDPR & SOX 1 GDPR requires data minimization and purposeful retention SOX requires access logs to be retained for 7 years Reconciling Requirements 2 What log types would you retain longer? How would you justify the retention legally? Would you anonymize or pseudonymize certain fields? High-risk audit logs (privileged access, role changes, approvals) Legal obligation and legitimate interest (audit, fraud prevention) Pseudonymization of sensitive fields and restrict access to logs, ensuring both compliance and accountability",
+    "page": 28
+  },
+  {
+    "section": "Unknown",
+    "content": "An illustration at the top of the slide featuring three objects: a magnifying glass on the left, a wooden gavel in the center, and a metal padlock on the right. The background is a light gray with a subtle, textured pattern of small dots. Illustration of a magnifying glass, a gavel, and a padlock, symbolizing investigation, law, and security.",
+    "page": 28
+  },
+  {
+    "section": "Unknown",
+    "content": "1 GDPR requires data minimization and purposeful retention SOX requires access logs to be retained for 7 years",
+    "page": 28
+  },
+  {
+    "section": "Unknown",
+    "content": "2 What log types would you retain longer? How would you justify the retention legally? Would you anonymize or pseudonymize certain fields? High-risk audit logs (privileged access, role changes, approvals) Legal obligation and legitimate interest (audit, fraud prevention) Pseudonymization of sensitive fields and restrict access to logs, ensuring both compliance and accountability",
+    "page": 28
+  },
+  {
+    "section": "Tools for Identity & Access Governance",
+    "content": "Tools for Identity & Access Governance Identity Governance Platforms: • SailPoint IdentityNow / IdentityIQ: Role modeling, access certification, SoD, lifecycle automation • Saviynt: Cloud-native IGA with strong analytics and compliance features • One Identity Manager: Deep integration with AD, SAP, and structured SoD controls • IBM Security Verify Governance: Large enterprise tool for attestation and audit Supporting Tools: • SIEMs (Splunk, ELK, Sentinel): Log collection and alerting • GRC Platforms (ServiceNow GRC, Archer): Policy management and compliance reporting ✅ Tip: Mature governance requires both IAM enforcement and IGA oversight. IAM Platforms with Some Governance Features: • midPoint: Lifecycle management, role-based access control, policy engine (incl. SoD), access certification campaigns, workflow/approvals, audit logging • Keycloak: Role-based access control, event logging, admin audit logs (manual governance) • Microsoft Entra (formerly Azure AD): Role assignments, PIM, access reviews • Okta + Workflows: Basic access reviews, limited SoD support A 3D illustration of a network of interlocking gears. A large central gear is surrounded by several smaller gears, all connected by a grid of lines. The gears are metallic and have a blue-green glow. The text \"Identity and Access Governance\" is written in white at the bottom right of the image. A 3D illustration of a network of interlocking gears. A large central gear is surrounded by several smaller gears, all connected by a grid of lines. The gears are metallic and have a blue-green glow. The text 'Identity and Access Governance' is written in white at the bottom right of the image.",
+    "page": 29
+  },
+  {
+    "section": "Tools for Identity & Access Governance",
+    "content": "• SailPoint IdentityNow / IdentityIQ: Role modeling, access certification, SoD, lifecycle automation • Saviynt: Cloud-native IGA with strong analytics and compliance features • One Identity Manager: Deep integration with AD, SAP, and structured SoD controls • IBM Security Verify Governance: Large enterprise tool for attestation and audit",
+    "page": 29
+  },
+  {
+    "section": "Tools for Identity & Access Governance",
+    "content": "• SIEMs (Splunk, ELK, Sentinel): Log collection and alerting • GRC Platforms (ServiceNow GRC, Archer): Policy management and compliance reporting",
+    "page": 29
+  },
+  {
+    "section": "Tools for Identity & Access Governance",
+    "content": "• midPoint: Lifecycle management, role-based access control, policy engine (incl. SoD), access certification campaigns, workflow/approvals, audit logging • Keycloak: Role-based access control, event logging, admin audit logs (manual governance) • Microsoft Entra (formerly Azure AD): Role assignments, PIM, access reviews • Okta + Workflows: Basic access reviews, limited SoD support",
+    "page": 29
+  },
+  {
+    "section": "Tools for Identity & Access Governance",
+    "content": "A 3D illustration of a network of interlocking gears. A large central gear is surrounded by several smaller gears, all connected by a grid of lines. The gears are metallic and have a blue-green glow. The text \"Identity and Access Governance\" is written in white at the bottom right of the image. A 3D illustration of a network of interlocking gears. A large central gear is surrounded by several smaller gears, all connected by a grid of lines. The gears are metallic and have a blue-green glow. The text 'Identity and Access Governance' is written in white at the bottom right of the image.",
+    "page": 29
+  },
+  {
+    "section": "Key Takeaways",
+    "content": "A large, metallic padlock with a green checkmark on its front, symbolizing security and approval. The padlock is silver with a blue circular element in the center containing a green checkmark. The background is a light blue gradient with faint white lines. A large, metallic padlock with a green checkmark on its front, symbolizing security and approval. Key Takeaways A blue icon of a shield with a cross inside, representing governance or protection. Icon of a shield with a cross, representing governance or protection. IAM governance brings accountability and control to access decisions A blue icon of three stylized human figures, representing policies and roles. Icon of three people, representing policies and roles. Policies and roles must be designed, enforced, and reviewed regularly A blue icon of a padlock, representing SoD, access certification, and logging. Icon of a padlock, representing SoD, access certification, and logging. SoD, access certification, and logging are essential controls A blue icon of three vertical bars of varying heights, representing compliance. Icon of three vertical bars, representing compliance. Compliance is the driver behind many governance practices A blue icon of a key, representing Keycloak. Icon of a key, representing Keycloak. Keycloak supports foundational governance, but IGA tools extend the capability A blue icon of a magnifying glass, representing periodic review and audit. Icon of a magnifying glass, representing periodic review and audit. Periodic review and audit are not optional—they are governance essentials",
+    "page": 30
+  },
+  {
+    "section": "Key Takeaways",
+    "content": "A large, metallic padlock with a green checkmark on its front, symbolizing security and approval. The padlock is silver with a blue circular element in the center containing a green checkmark. The background is a light blue gradient with faint white lines. A large, metallic padlock with a green checkmark on its front, symbolizing security and approval.",
+    "page": 30
+  },
+  {
+    "section": "Key Takeaways",
+    "content": "A blue icon of a shield with a cross inside, representing governance or protection. Icon of a shield with a cross, representing governance or protection.",
+    "page": 30
+  },
+  {
+    "section": "Key Takeaways",
+    "content": "A blue icon of three stylized human figures, representing policies and roles. Icon of three people, representing policies and roles.",
+    "page": 30
+  },
+  {
+    "section": "Key Takeaways",
+    "content": "A blue icon of a padlock, representing SoD, access certification, and logging. Icon of a padlock, representing SoD, access certification, and logging.",
+    "page": 30
+  },
+  {
+    "section": "Key Takeaways",
+    "content": "A blue icon of three vertical bars of varying heights, representing compliance. Icon of three vertical bars, representing compliance.",
+    "page": 30
+  },
+  {
+    "section": "Key Takeaways",
+    "content": "A blue icon of a magnifying glass, representing periodic review and audit. Icon of a magnifying glass, representing periodic review and audit.",
+    "page": 30
+  },
+  {
+    "section": "Governance Practices in This Session",
+    "content": "Governance Practices in This Session In this session, you will practice governance-related tasks using midPoint. Practice Objectives: • Review user-role assignments for policy compliance • Perform and analyze access requests and approvals • Simulate Segregation of Duties (SoD) conflicts and resolutions • Conduct an access certification (recertification) campaign • Explore audit logs and reporting for traceability Key Features Used in midPoint: • Self-service access request & role catalog • Approval workflows (policy rules) • SoD policies (exclusion, approval, pruning) • Certification campaigns (access review) • Audit logs & reporting A woman with short dark hair and glasses, wearing a light-colored sweater, is seated at a modern desk in a brightly lit office. She is holding a smartphone in her right hand, looking at it while her left hand rests on a keyboard. In front of her is a large, curved computer monitor displaying a complex data interface with various charts and tables. The office has large windows in the background, showing a city skyline at dusk or dawn. Other desks and chairs are visible in the background, suggesting a collaborative work environment. A woman working at a desk with a large curved monitor displaying data, holding a smartphone.",
+    "page": 31
+  },
+  {
+    "section": "Governance Practices in This Session",
+    "content": "• Review user-role assignments for policy compliance • Perform and analyze access requests and approvals • Simulate Segregation of Duties (SoD) conflicts and resolutions • Conduct an access certification (recertification) campaign • Explore audit logs and reporting for traceability",
+    "page": 31
+  },
+  {
+    "section": "Governance Practices in This Session",
+    "content": "• Self-service access request & role catalog • Approval workflows (policy rules) • SoD policies (exclusion, approval, pruning) • Certification campaigns (access review) • Audit logs & reporting",
+    "page": 31
+  },
+  {
+    "section": "Governance Practices in This Session",
+    "content": "A woman with short dark hair and glasses, wearing a light-colored sweater, is seated at a modern desk in a brightly lit office. She is holding a smartphone in her right hand, looking at it while her left hand rests on a keyboard. In front of her is a large, curved computer monitor displaying a complex data interface with various charts and tables. The office has large windows in the background, showing a city skyline at dusk or dawn. Other desks and chairs are visible in the background, suggesting a collaborative work environment. A woman working at a desk with a large curved monitor displaying data, holding a smartphone.",
+    "page": 31
+  }
+]
