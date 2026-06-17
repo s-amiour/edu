@@ -2,15 +2,15 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
+COPY backend/package.json backend/package-lock.json* ./
 COPY prisma ./prisma/
 
 RUN npm ci
 
 RUN npx prisma generate
 
-COPY tsconfig.json ./
-COPY src ./src/
+COPY backend/tsconfig.json ./
+COPY backend/src ./src/
 
 RUN npm run build
 
@@ -20,7 +20,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-COPY package.json package-lock.json* ./
+COPY backend/package.json backend/package-lock.json* ./
 COPY prisma ./prisma/
 
 RUN npm ci --omit=dev && npx prisma generate
