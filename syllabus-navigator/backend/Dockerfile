@@ -2,10 +2,10 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
-COPY backend/package.json backend/package-lock.json* ./
+COPY backend/package.json ./
 COPY prisma ./prisma/
 
-RUN npm ci
+RUN npm install
 
 RUN npx prisma generate
 
@@ -20,10 +20,10 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-COPY backend/package.json backend/package-lock.json* ./
+COPY backend/package.json ./
 COPY prisma ./prisma/
 
-RUN npm ci --omit=dev && npx prisma generate
+RUN npm install --omit=dev && npx prisma generate
 
 COPY --from=build /app/dist ./dist/
 
