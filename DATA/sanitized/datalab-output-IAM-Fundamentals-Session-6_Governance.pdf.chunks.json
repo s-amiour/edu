@@ -16,11 +16,6 @@
   },
   {
     "section": "Learning Objectives",
-    "content": "A stylized graphic of a shield with a blue and purple gradient, surrounded by a network of white dots and lines, symbolizing security and technology. A stylized graphic of a shield with a blue and purple gradient, surrounded by a network of white dots and lines, symbolizing security and technology.",
-    "page": 1
-  },
-  {
-    "section": "Learning Objectives",
     "content": "1 Explain the importance of IAM governance and its core components 2 Describe the lifecycle of policies and roles in IAM 3 Identify and evaluate Segregation of Duties (SoD) risks 4 Distinguish between access review, certification, and re-certification 5 Understand audit and logging practices for compliance 6 Explore governance capabilities and limitations in Keycloak",
     "page": 1
   },
@@ -72,11 +67,6 @@
   {
     "section": "Unknown",
     "content": "Policy Lifecycle graph TD; 1((1)) --> 2((2)); 2 --> 3((3)); 3 --> 1; Define Decide what the policy is and why (purpose, risk) Enforce Implement it in systems (e.g., rules, settings, workflows) Verify Monitor compliance (logs, reviews, audits) The diagram illustrates the Policy Lifecycle as a continuous loop of three stages. Stage 1, 'Define', is at the top and involves deciding the policy's purpose and risk. Stage 2, 'Enforce', is at the bottom right and involves implementing the policy in systems. Stage 3, 'Verify', is at the bottom left and involves monitoring compliance. Arrows indicate a clockwise flow from 1 to 2, 2 to 3, and 3 back to 1. A circular diagram showing the three stages of the Policy Lifecycle: Define, Enforce, and Verify.",
-    "page": 7
-  },
-  {
-    "section": "Unknown",
-    "content": "graph TD; 1((1)) --> 2((2)); 2 --> 3((3)); 3 --> 1; Define Decide what the policy is and why (purpose, risk) Enforce Implement it in systems (e.g., rules, settings, workflows) Verify Monitor compliance (logs, reviews, audits) The diagram illustrates the Policy Lifecycle as a continuous loop of three stages. Stage 1, 'Define', is at the top and involves deciding the policy's purpose and risk. Stage 2, 'Enforce', is at the bottom right and involves implementing the policy in systems. Stage 3, 'Verify', is at the bottom left and involves monitoring compliance. Arrows indicate a clockwise flow from 1 to 2, 2 to 3, and 3 back to 1. A circular diagram showing the three stages of the Policy Lifecycle: Define, Enforce, and Verify.",
     "page": 7
   },
   {
@@ -242,11 +232,6 @@
   {
     "section": "Unknown",
     "content": "• Minimize risk by ensuring critical tasks are divided among multiple people • Prevent unauthorized or unreviewed actions (e.g., fraud, data tampering)",
-    "page": 15
-  },
-  {
-    "section": "Unknown",
-    "content": "A small icon consisting of three circles arranged in a triangle, representing a group of people or roles. Icon representing a group of people or roles.",
     "page": 15
   },
   {

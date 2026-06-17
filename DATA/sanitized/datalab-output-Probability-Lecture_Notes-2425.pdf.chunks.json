@@ -1221,16 +1221,6 @@
   },
   {
     "section": "2.5 Exercises",
-    "content": "[*] = Direct application of the course: solve it to check that you have understood the definitions and basic techniques.",
-    "page": 43
-  },
-  {
-    "section": "2.5 Exercises",
-    "content": "[***] = Difficult exercise that explores new ideas or demands a precise and rigorous thought. For the motivated ones !",
-    "page": 43
-  },
-  {
-    "section": "2.5 Exercises",
     "content": "Let A and B be any two events of a sample space \\Omega . Among the following propositions, find those which are true:",
     "page": 43
   },
@@ -1812,11 +1802,6 @@
   {
     "section": "Unknown",
     "content": "★ Let us come back to the example of the EFREI students age (page 57) whose probability mass function was:",
-    "page": 61
-  },
-  {
-    "section": "Unknown",
-    "content": "x_i 16 17 18 19 20 21 22 23 24 25 26 27 P(X = x_i) \\frac{1}{100} \\frac{4}{100} \\frac{10}{100} \\frac{15}{100} \\frac{15}{100} \\frac{20}{100} \\frac{15}{100} \\frac{10}{100} \\frac{5}{100} \\frac{3}{100} \\frac{1}{100} \\frac{1}{100}",
     "page": 61
   },
   {
@@ -3522,11 +3507,6 @@
   {
     "section": "4.6 Exercises",
     "content": "4.6 Exercises ◆ = Mandatory exercise. [*] = Direct application of the course: solve it to check that you have understood the definitions and basic techniques. [**] = Requires more thought but you must master the techniques used to solve it. [***] = Difficult exercise that explores new ideas or demands a precise and rigorous thought. For the motivated ones ! Autonomous work: MCQ to check the basic notions Let Z be a centered reduced normal random variable and X any continuous random variable. Item Claim A The formula Var(X) = E(X^2) - E(X)^2 does not apply to continuous random variables. B If f is the probability density function of X , then f is the derivative of the cumulative distribution function. C The expected value of X , if it exists, is defined by E(X) = \\sum_{-\\infty}^{+\\infty} xf(x)dx . D For the uniform distribution \\mathcal{U}([a,b]) , the expected value is b - a . E The exponential distribution is “memory-less”. F If Z \\sim \\mathcal{N}(1,0) then P(Z = 0) = \\frac{1}{2\\pi} . G If Z \\sim \\mathcal{N}(1,0) then P(Z < 1,26) is close to 0,896. H If Z \\sim \\mathcal{N}(1,0) then the value of a such that P(Z < a) = 0,367 is smaller than -0,3 . ◆ Exercise 4.1 [*] A continuous random variable X admits for probability density function f , a piece-wise affine function whose plot is shown below Graph of a piece-wise affine probability density function f(x) on the interval [0, 6]. The function starts at (0,0), increases linearly to a peak at (2, a), and then decreases linearly to (6,0). The x-axis is labeled with 0, 2, and 6. The y-axis is labeled with a. The origin is marked with O. a) What is the value of a = f(2) ? b) Compute P(X = 1) , P(X < 1) , P(X < 2) and P(2 < X \\leq 6) . c) What is the expected value of X ?",
-    "page": 117
-  },
-  {
-    "section": "4.6 Exercises",
-    "content": "◆ = Mandatory exercise. [*] = Direct application of the course: solve it to check that you have understood the definitions and basic techniques. [**] = Requires more thought but you must master the techniques used to solve it. [***] = Difficult exercise that explores new ideas or demands a precise and rigorous thought. For the motivated ones !",
     "page": 117
   },
   {

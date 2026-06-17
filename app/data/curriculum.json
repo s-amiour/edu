@@ -1,0 +1,1302 @@
+{
+  "course": "Identity and Access Management Fundamentals",
+  "generatedAt": "2026-06-17T14:16:37.477Z",
+  "note": "DEMO: topics derived from lecture slide headings and content.",
+  "topics": [
+    {
+      "id": "counting-counting-enumerating-two-and-a-half-weeks",
+      "title": "COUNTING, ENUMERATING (two and a half weeks)",
+      "summary": "COUNTING, ENUMERATING (two and a half weeks) Contents Module 2 Motivation 2 Learning outcomes 2 1 Cardinal number of a finite set 3 1.1 Summary 3 1.2 Exercises 3 Exercise 1.1 3 Exercise 1.2 3 Exercise 1.3 3 Exercise 1.4 4 Exercise 1.5 4 Exercise 1.6 4 2 Counting and formalizing 4 2.1 Summary 4 2.2 E.",
+      "objectives": [],
+      "sourceChunks": [
+        0,
+        1
+      ],
+      "scheduledFor": "2026-06-18"
+    },
+    {
+      "id": "counting-module",
+      "title": "Module",
+      "summary": "Module This chapter is part of the DP Module (\"Dénombrement et Probabilités\", that is, \"Counting, Enumerating and Probabilities\").",
+      "objectives": [],
+      "sourceChunks": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "scheduledFor": "2026-06-18"
+    },
+    {
+      "id": "counting-1-cardinal-number-of-a-finite-set",
+      "title": "1 Cardinal number of a finite set",
+      "summary": "1 Cardinal number of a finite set 1.1 Summary Solving a counting problem consists in determining the number of elements in a given set.",
+      "objectives": [],
+      "sourceChunks": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "scheduledFor": "2026-06-18"
+    },
+    {
+      "id": "counting-2-counting-and-formalizing",
+      "title": "2 Counting and formalizing",
+      "summary": "Key material covering 2 Counting and formalizing.",
+      "objectives": [],
+      "sourceChunks": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "scheduledFor": "2026-06-18"
+    },
+    {
+      "id": "counting-2-2-exercises",
+      "title": "2.2 Exercises",
+      "summary": "Key material covering 2.2 Exercises.",
+      "objectives": [],
+      "sourceChunks": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "scheduledFor": "2026-06-19"
+    },
+    {
+      "id": "counting-3-combinatorics",
+      "title": "3 Combinatorics",
+      "summary": "Exercise 2.10 An association has 100 members.",
+      "objectives": [],
+      "sourceChunks": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "scheduledFor": "2026-06-19"
+    },
+    {
+      "id": "counting-3-2-exercises",
+      "title": "3.2 Exercises",
+      "summary": "3.2 Exercises ★ Exercise 3.12 This exercise is about the «permutations» of the set \\llbracket 1, n \\rrbracket , that is to say the bijections from this set into itself.",
+      "objectives": [],
+      "sourceChunks": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "scheduledFor": "2026-06-19"
+    },
+    {
+      "id": "counting-4-in-your-programming-activity",
+      "title": "4 In your programming activity",
+      "summary": "Exercise 3.16 Consider the following sum: \\sum_{k=0}^n 2^k \\binom{n}{k} .",
+      "objectives": [],
+      "sourceChunks": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "scheduledFor": "2026-06-19"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-about-me",
+      "title": "About me",
+      "summary": "About me Education & Entrepreneurship PhD in Pattern Recognition and AI from Télécom Paris.",
+      "objectives": [],
+      "sourceChunks": [
+        66,
+        67
+      ],
+      "scheduledFor": "2026-06-22"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-iam-mistake-bingo",
+      "title": "IAM Mistake Bingo!",
+      "summary": "IAM Mistake Bingo! Stand up and present your-self if you've done one of these: ✗ Reused the same password on multiple sites ✗ Forgotten a password more than once in a week ✗ Sent a password via email or SMS ✗ Shared your login with someone else ✗ Clicked on a fake login page by mistake.",
+      "objectives": [],
+      "sourceChunks": [
+        68,
+        69
+      ],
+      "scheduledFor": "2026-06-22"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-learning-objectiv",
+      "title": "Learning Objectives",
+      "summary": "Learning Objectives Icon of a document with lines, representing understanding fundamentals.",
+      "objectives": [],
+      "sourceChunks": [
+        74,
+        75
+      ],
+      "scheduledFor": "2026-06-22"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-why-iam-real-worl",
+      "title": "Why IAM?Real-World Case Studies",
+      "summary": "Why IAM?Real-World Case Studies A stylized illustration of a person wearing a black hoodie, sitting at a laptop.",
+      "objectives": [],
+      "sourceChunks": [
+        76,
+        77
+      ],
+      "scheduledFor": "2026-06-22"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-iam-in-your-daily",
+      "title": "IAM in Your Daily Life",
+      "summary": "IAM in Your Daily Life Question for you: 👉 Can you think of a situation (at school, work, online shopping, etc.) where you personally experienced a problem due to poor Identity and Access Management? 🧠 Examples: • Trouble logging into a system • Accessing information you shouldn't have • Managing.",
+      "objectives": [],
+      "sourceChunks": [
+        93,
+        94,
+        95
+      ],
+      "scheduledFor": "2026-06-23"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-what-is-iam",
+      "title": "What is IAM?",
+      "summary": "What is IAM? The right individuals have the right access to the right resources at the right time A simple black outline icon of a person's head and shoulders, representing a user or identity.",
+      "objectives": [],
+      "sourceChunks": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "scheduledFor": "2026-06-23"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-personal-security",
+      "title": "Personal Security Habits Poll",
+      "summary": "Personal Security Habits Poll How Secure Are Your Personal Accounts? Raise your hand if you use: Multi-Factor Authentication (MFA) Password Managers Biometrics (fingerprint/face scan) Same password across multiple sites Discussion: • Who uses MFA everywhere? • Who still reuses passwords? • Who write.",
+      "objectives": [],
+      "sourceChunks": [
+        116,
+        117
+      ],
+      "scheduledFor": "2026-06-23"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-importance-of-iam",
+      "title": "Importance of IAM",
+      "summary": "Importance of IAM Icon representing protection of sensitive data, showing a shield with a lock inside a circular frame with a digital background.",
+      "objectives": [],
+      "sourceChunks": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128
+      ],
+      "scheduledFor": "2026-06-23"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-iam-challenges",
+      "title": "IAM Challenges",
+      "summary": "IAM Challenges Even robust IAM systems face significant implementation hurdles that require strategic solutions.",
+      "objectives": [],
+      "sourceChunks": [
+        129,
+        130,
+        131
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-iga-vs-am",
+      "title": "IGA vs AM",
+      "summary": "IGA vs AM The diagram illustrates the relationship between Identity Management (IGA) and Access Management (AM) across three phases: Before, During (runtime), and After.",
+      "objectives": [],
+      "sourceChunks": [
+        133,
+        134
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-key-iam-vendors",
+      "title": "Key IAM Vendors",
+      "summary": "Key IAM Vendors Identity Governance & Administration • SailPoint Technologies - AI-driven identity security • Saviynt - Cloud-based governance with automation • One Identity - Unified identity security • ManageEngine - Active Directory specialists • Oracle - scalable IGA solution The logo for SailPo.",
+      "objectives": [],
+      "sourceChunks": [
+        135,
+        136,
+        137
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-gartner-magic-qua",
+      "title": "Gartner Magic Quadrant Access Management",
+      "summary": "Gartner Magic Quadrant Access Management product quality customer experience operations 2024 This Magic Quadrant chart for Access Management as of October 2024 plots various vendors based on their 'Completeness of Vision' (x-axis) and 'Ability to Execute' (y-axis).",
+      "objectives": [],
+      "sourceChunks": [
+        138,
+        139,
+        140
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-iam-trends-1-2",
+      "title": "IAM Trends (1/2)",
+      "summary": "IAM Trends (1/2) Shield icon representing Zero-Trust Security Model Zero-Trust Security Model A framework where no entity is trusted by default, requiring continuous verification and strict access controls.",
+      "objectives": [],
+      "sourceChunks": [
+        141,
+        142,
+        143,
+        144,
+        145,
+        146
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-iam-trends-2-2",
+      "title": "IAM Trends (2/2)",
+      "summary": "On the left is a yellow and black device with a large fingerprint sensor, labeled 'IOT DEVNERPRINT SYSTEM'.",
+      "objectives": [],
+      "sourceChunks": [
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-mini-quiz-1",
+      "title": "Mini-Quiz 1",
+      "summary": "Mini-Quiz 1 What does IAM stand for? A) Internal Audit Management B) Identity and Access Management C) Information Architecture Model D) Internet Account Manager Answer: B) Identity and Access Management.",
+      "objectives": [],
+      "sourceChunks": [
+        155,
+        156
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-mini-quiz-2",
+      "title": "Mini-Quiz 2",
+      "summary": "Mini-Quiz 2 Which of the following is an example of Authentication? A) Checking user permissions for a resource B) Entering a password to verify identity C) Reviewing user activity logs D) Assigning a user to an admin group Answer: B) Entering a password to verify identity.",
+      "objectives": [],
+      "sourceChunks": [
+        157,
+        158
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-mini-quiz-3",
+      "title": "Mini-Quiz 3",
+      "summary": "Mini-Quiz 3 Which risk is associated with poor offboarding processes? A) Faster user access to new resources B) Reduced licensing costs C) Former employees retaining access to sensitive systems D) Improved password strength Answer: C) Former employees retaining access to sensitive systems.",
+      "objectives": [],
+      "sourceChunks": [
+        159,
+        160
+      ],
+      "scheduledFor": "2026-06-26"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-mini-quiz-4",
+      "title": "Mini-Quiz 4",
+      "summary": "Mini-Quiz 4 Which is NOT a benefit of implementing IAM? A) Improved security B) Reduced compliance efforts C) Increased user productivity D) Greater insider threat risks Answer: D) Greater insider threat risks.",
+      "objectives": [],
+      "sourceChunks": [
+        161,
+        162
+      ],
+      "scheduledFor": "2026-06-26"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-iam-concepts-key-",
+      "title": "IAM Concepts: Key Takeaways",
+      "summary": "IAM Concepts: Key Takeaways Icon representing a question or definition, showing a smiley face inside a square frame.",
+      "objectives": [],
+      "sourceChunks": [
+        164,
+        165
+      ],
+      "scheduledFor": "2026-06-26"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-practice",
+      "title": "Practice",
+      "summary": "Practice Objective: Apply the theoretical knowledge gained by setting up a basic enterprise IAM Architecture (IGA + LDAP + AM).",
+      "objectives": [],
+      "sourceChunks": [
+        166,
+        167
+      ],
+      "scheduledFor": "2026-06-26"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-practice-overview",
+      "title": "Practice Overview",
+      "summary": "Practice Overview Goal: Understand separation of responsibilities The diagram illustrates the separation of responsibilities in an IAM system.",
+      "objectives": [],
+      "sourceChunks": [
+        168,
+        169
+      ],
+      "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-practice-what-you",
+      "title": "Practice: What You Will Demonstrate",
+      "summary": "A black and white icon of a bone, positioned to the left of the main title.",
+      "objectives": [],
+      "sourceChunks": [
+        176,
+        177,
+        178
+      ],
+      "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "iam-fundamentals-s1-introduction-to-iam-v1-next-steps",
+      "title": "Next Steps",
+      "summary": "Next Steps Before the next class, you are encouraged to: Review your midPoint/Keycloak/OpenLDAP Setup: • Log in as different users • Test access restrictions • Try changing a user's roles and observing the impact Explore Keycloak Documentation: • Visit • https://docs.evolveum.com/ (midPoint) • https.",
+      "objectives": [],
+      "sourceChunks": [
+        179,
+        180,
+        181,
+        182,
+        183
+      ],
+      "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "iam-fundamentals-s2-authentication-mechanisms-1-the-journey-",
+      "title": "The Journey Forward",
+      "summary": "The Journey Forward A stylized illustration of a winding, glowing path leading through a landscape of rolling hills and clouds.",
+      "objectives": [],
+      "sourceChunks": [
+        186,
+        187
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s2-authentication-mechanisms-1-modern-passw",
+      "title": "Modern Passwordless Authentication: FIDO2 & Passkeys",
+      "summary": "Modern Passwordless Authentication: FIDO2 & Passkeys 1 FIDO2 (Fast Identity Online) and Passkeys represent the future of secure, passwordless login.",
+      "objectives": [],
+      "sourceChunks": [
+        260,
+        261,
+        262,
+        263
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s2-authentication-mechanisms-1-from-method-",
+      "title": "From Method to Protocol: Why Protocols Matter",
+      "summary": "A dashed purple line connects them, with a key icon positioned above the line in the center.",
+      "objectives": [],
+      "sourceChunks": [
+        279,
+        280,
+        281,
+        282
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s2-authentication-mechanisms-1-protocol-mat",
+      "title": "Protocol Matching",
+      "summary": "Protocol Matching 1 VPN login → RADIUS - RADIUS is commonly used to authenticate remote access through VPNs.",
+      "objectives": [],
+      "sourceChunks": [
+        286,
+        287,
+        288
+      ],
+      "scheduledFor": "2026-06-24"
+    },
+    {
+      "id": "iam-fundamentals-s2-authentication-mechanisms-1-where-are-we",
+      "title": "Where Are We Going? (Future of Authentication)",
+      "summary": "Where Are We Going? (Future of Authentication) 1 Passkeys — Replace passwords with device-bound cryptographic keys 2 Continuous authentication — Behavior-based verification over time 3 AI-powered risk scoring — Adjust authentication strength based on context 4 Zero Trust — Verify everything, every t.",
+      "objectives": [],
+      "sourceChunks": [
+        301,
+        302
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s2-authentication-mechanisms-1-final-recap-",
+      "title": "Final Recap & Takeaways",
+      "summary": "Final Recap & Takeaways 1 Authentication verifies identity using factors like passwords, devices, or biometrics 2 MFA significantly improves security – TOTP and Push offer different trade-offs 3 Challenge-response adds flexibility for device pairing or high-security flows 4 OIDC and SAML delegate au.",
+      "objectives": [],
+      "sourceChunks": [
+        304,
+        305,
+        306
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s2-authentication-mechanisms-1-teaser-next-",
+      "title": "Teaser: Next Session – Authorization Models",
+      "summary": "A close-up, artistic photograph of a smartphone screen and a pen tip, suggesting a focus on technology and security.",
+      "objectives": [],
+      "sourceChunks": [
+        307,
+        308,
+        309,
+        310
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s3-authorization-models-access-control-mode",
+      "title": "Access Control Model",
+      "summary": "A cluster of brass padlocks of various sizes, with a single ornate key hanging from the bottom center.",
+      "objectives": [],
+      "sourceChunks": [
+        339,
+        340,
+        341,
+        342
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s3-authorization-models-policy-based-access",
+      "title": "Policy-Based Access Enforcement",
+      "summary": "The gears are rendered in a 3D style with metallic textures.",
+      "objectives": [],
+      "sourceChunks": [
+        355,
+        356
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s3-authorization-models-privileged-access-m",
+      "title": "Privileged Access Management (PAM)",
+      "summary": "Key material covering Privileged Access Management (PAM).",
+      "objectives": [],
+      "sourceChunks": [
+        368,
+        369,
+        370
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s3-authorization-models-design-activity-pic",
+      "title": "Design Activity: Pick a Model",
+      "summary": "A group of five business professionals in an office setting.",
+      "objectives": [],
+      "sourceChunks": [
+        381,
+        382,
+        383
+      ],
+      "scheduledFor": "2026-06-25"
+    },
+    {
+      "id": "iam-fundamentals-s3-authorization-models-summary",
+      "title": "Summary",
+      "summary": "Summary ✓ Access control models define how permissions are granted: - RBAC: Role-based, scalable and simple - ABAC: Attribute-based, more flexible - PBAC: Policy-based, context-aware and dynamic ✓ Authorization is a legal requirement in Europe: - GDPR, CNIL, ISO 27001 emphasize access control, role.",
+      "objectives": [],
+      "sourceChunks": [
+        384,
+        385,
+        386
+      ],
+      "scheduledFor": "2026-06-26"
+    },
+    {
+      "id": "iam-fundamentals-s3-authorization-models-teaser-next-session",
+      "title": "Teaser: Next Session – Identity Lifecycle Management",
+      "summary": "Teaser: Next Session – Identity Lifecycle Management 1 How do we create identities securely? 2 What happens when users move roles or departments? 3 How do we safely deactivate accounts? Topics Covered: • Joiner-Mover-Leaver process • Lifecycle triggers and risks • Automating provisioning and deprovi.",
+      "objectives": [],
+      "sourceChunks": [
+        387,
+        388,
+        389,
+        390
+      ],
+      "scheduledFor": "2026-06-26"
+    },
+    {
+      "id": "iam-fundamentals-s3-authorization-models-hands-on-practice-r",
+      "title": "Hands-On Practice:Role-Based Access in Keycloak",
+      "summary": "Hands-On Practice:Role-Based Access in Keycloak Objective: Implement and test access control using roles Tasks: 1.",
+      "objectives": [],
+      "sourceChunks": [
+        391,
+        392,
+        393
+      ],
+      "scheduledFor": "2026-06-26"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-sta",
+      "title": "Stages in Identity Lifecycle",
+      "summary": "Stages in Identity Lifecycle The identity lifecycle consists of three main stages that manage digital identities throughout their existence in an organization: Icon representing Provisioning: a shopping cart with a plus sign inside.",
+      "objectives": [],
+      "sourceChunks": [
+        415,
+        416,
+        417,
+        418
+      ],
+      "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-dis",
+      "title": "Discussion – Identity Lifecycle",
+      "summary": "Data Confidentiality Integrity A 3D illustration of a shield with horizontal ridges, symbolizing protection and security.",
+      "objectives": [],
+      "sourceChunks": [
+        419,
+        420
+      ],
+      "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-cha",
+      "title": "Challenges in Lifecycle Management",
+      "summary": "Challenges in Lifecycle Management Effectively managing the identity lifecycle can be complex, especially in dynamic and large-scale environments.",
+      "objectives": [],
+      "sourceChunks": [
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478
+      ],
+      "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-con",
+      "title": "Conclusion",
+      "summary": "Challenges of Automation: Complex Setup Initial configuration of workflows and policies can be resource-intensive.",
+      "objectives": [],
+      "sourceChunks": [
+        492,
+        493,
+        494,
+        495
+      ],
+      "scheduledFor": "2026-06-29"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-use",
+      "title": "User Self-Service in Identity Lifecycle Management",
+      "summary": "A digital lock display showing the number 70, with a glowing blue and purple circular interface and a padlock icon.",
+      "objectives": [],
+      "sourceChunks": [
+        496,
+        497,
+        498,
+        499,
+        500,
+        501
+      ],
+      "scheduledFor": "2026-06-30"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-rec",
+      "title": "Recap of Key Concepts",
+      "summary": "Recap of Key Concepts This session covered identity lifecycle management fundamentals and applications, focusing on secure, efficient access control systems.",
+      "objectives": [],
+      "sourceChunks": [
+        504,
+        505,
+        506,
+        507,
+        508,
+        509
+      ],
+      "scheduledFor": "2026-06-30"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-tea",
+      "title": "Teaser: Next Session - Federated Identity and SSO",
+      "summary": "Teaser: Next Session - Federated Identity and SSO Teaser: One Login to Rule Them All? Federated Identity and SSO are transforming how we authenticate across systems and organizations.",
+      "objectives": [],
+      "sourceChunks": [
+        510,
+        511,
+        512
+      ],
+      "scheduledFor": "2026-06-30"
+    },
+    {
+      "id": "iam-fundamentals-session-4-identity-lifecycle-management-pra",
+      "title": "Practical Goal",
+      "summary": "Illustration of three interlocking cubes in purple and blue, with a circular arrow icon on the left cube, symbolizing a cycle or process.",
+      "objectives": [],
+      "sourceChunks": [
+        513,
+        514,
+        515,
+        516
+      ],
+      "scheduledFor": "2026-06-30"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-why-",
+      "title": "Why Federated Identity and SSO?",
+      "summary": "Why Federated Identity and SSO? Multiple Logins for Each Application Users must authenticate separately for each system (email, HR, CRM...) Interrupts productivity and frustrates users Identity Silos Across Organizations No trust or linkage between identity systems (e.g., partners, cloud services) R.",
+      "objectives": [],
+      "sourceChunks": [
+        524,
+        525
+      ],
+      "scheduledFor": "2026-07-01"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-fede",
+      "title": "Federation Protocols Enabling SSO",
+      "summary": "Federation Protocols Enabling SSO Protocol Focus Area Common Use Cases Strengths SAML Authentication & Authorization Enterprise systems and internal portals Strong support for enterprise workflows OAuth2 Authorization API access for third-party applications Flexible and widely adopted OpenID Connect.",
+      "objectives": [],
+      "sourceChunks": [
+        540,
+        541,
+        542
+      ],
+      "scheduledFor": "2026-07-01"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-oaut",
+      "title": "OAuth2 Protocol",
+      "summary": "OAuth2 Protocol The diagram illustrates the OAuth2 Protocol flow.",
+      "objectives": [],
+      "sourceChunks": [
+        554,
+        555,
+        556,
+        557,
+        558
+      ],
+      "scheduledFor": "2026-07-01"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-matc",
+      "title": "Match the Protocol to the Use Case",
+      "summary": "A blurred image of a document or form with various fields and text, suggesting a form or checklist.",
+      "objectives": [],
+      "sourceChunks": [
+        600,
+        601
+      ],
+      "scheduledFor": "2026-07-01"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-chal",
+      "title": "Challenges with Federated Identity (and SSO)",
+      "summary": "An abstract graphic at the top of the slide featuring a network of colorful lines (purple, blue, green, red) and dots, suggesting a complex system or data flow.",
+      "objectives": [],
+      "sourceChunks": [
+        602,
+        603,
+        604
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-reca",
+      "title": "Recap of Concepts",
+      "summary": "Recap of Concepts This session covered federated identity management and Single Sign-On (SSO) fundamentals, their protocols, and applications.",
+      "objectives": [],
+      "sourceChunks": [
+        615,
+        616,
+        617,
+        618,
+        619
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-teas",
+      "title": "Teaser of next session: Identity and access governance",
+      "summary": "Teaser of next session: Identity and access governance How do we control access over time and prove it's appropriate? • Access Reviews & Certification • Policy Enforcement & Audit Trails • Regulatory Compliance (GDPR, CNIL...) Why It Matters • Prevent privilege creep • Pass audits with confidence •.",
+      "objectives": [],
+      "sourceChunks": [
+        620,
+        621,
+        622,
+        623,
+        624
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-5-federated-identity-and-sso-1-prac",
+      "title": "Practice",
+      "summary": "A futuristic digital cityscape with glowing blue light trails and floating labels like 'SECURE NETWORK' and 'NETWORK'.",
+      "objectives": [],
+      "sourceChunks": [
+        625,
+        626,
+        627,
+        628
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-6-governance-learning-objectives",
+      "title": "Learning Objectives",
+      "summary": "Learning Objectives By the end of this session, learners will be able to: 1 Explain the importance of IAM governance and its core components 2 Describe the lifecycle of policies and roles in IAM 3 Identify and evaluate Segregation of Duties (SoD) risks 4 Distinguish between access review, certificat.",
+      "objectives": [
+        "and re-certification"
+      ],
+      "sourceChunks": [
+        631,
+        632
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-6-governance-identity-governance",
+      "title": "Identity Governance",
+      "summary": "What is Governance in IAM? Governance = Oversight, accountability, and control Icon representing identity governance, showing two stylized human figures.",
+      "objectives": [],
+      "sourceChunks": [
+        634,
+        635
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-6-governance-audit-governance-proce",
+      "title": "Audit = Governance Process",
+      "summary": "Audit = Governance Process Audit refers to the systematic evaluation of IAM activities, controls, and compliance.",
+      "objectives": [],
+      "sourceChunks": [
+        702,
+        703,
+        704,
+        705
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-6-governance-tools-for-identity-acc",
+      "title": "Tools for Identity & Access Governance",
+      "summary": "Tools for Identity & Access Governance Identity Governance Platforms: • SailPoint IdentityNow / IdentityIQ: Role modeling, access certification, SoD, lifecycle automation • Saviynt: Cloud-native IGA with strong analytics and compliance features • One Identity Manager: Deep integration with AD, SAP,.",
+      "objectives": [],
+      "sourceChunks": [
+        722,
+        723,
+        724,
+        725,
+        726
+      ],
+      "scheduledFor": "2026-07-02"
+    },
+    {
+      "id": "iam-fundamentals-session-6-governance-key-takeaways",
+      "title": "Key Takeaways",
+      "summary": "A large, metallic padlock with a green checkmark on its front, symbolizing security and approval.",
+      "objectives": [],
+      "sourceChunks": [
+        727,
+        728,
+        729,
+        730,
+        731,
+        732,
+        733
+      ],
+      "scheduledFor": "2026-07-03"
+    },
+    {
+      "id": "iam-fundamentals-session-6-governance-governance-practices-i",
+      "title": "Governance Practices in This Session",
+      "summary": "Governance Practices in This Session In this session, you will practice governance-related tasks using midPoint.",
+      "objectives": [],
+      "sourceChunks": [
+        734,
+        735,
+        736,
+        737
+      ],
+      "scheduledFor": "2026-07-03"
+    },
+    {
+      "id": "probability-lecture-notes-2425-contents",
+      "title": "Contents",
+      "summary": "Contents I Fundamentals of Probability 1 Probability Space 6 1.1 Basic concepts 9 1.2 Review of set theory 10 1.3 Probability functions 14 1.4 [Hors programme] Uncountable sample spaces 19 1.5 Learning outcomes 24 1.6 Exercises 25 2 Conditional probabilities 31 2.1 Definition and basic properties 32.",
+      "objectives": [],
+      "sourceChunks": [
+        741,
+        742,
+        743
+      ],
+      "scheduledFor": "2026-07-06"
+    },
+    {
+      "id": "probability-lecture-notes-2425-4-continuous-random-variables",
+      "title": "4 Continuous random variables . . . . . 91",
+      "summary": "Key material covering 4 Continuous random variables . . . . . 91.",
+      "objectives": [],
+      "sourceChunks": [
+        744,
+        745,
+        746
+      ],
+      "scheduledFor": "2026-07-06"
+    },
+    {
+      "id": "probability-lecture-notes-2425-fundamentals-of-probability",
+      "title": "Fundamentals of Probability",
+      "summary": "Fundamentals of Probability 1 Probability Space .....",
+      "objectives": [],
+      "sourceChunks": [
+        747,
+        748
+      ],
+      "scheduledFor": "2026-07-06"
+    },
+    {
+      "id": "probability-lecture-notes-2425-1-probability-space",
+      "title": "1. Probability Space",
+      "summary": "Key material covering 1. Probability Space.",
+      "objectives": [],
+      "sourceChunks": [
+        749,
+        750,
+        751,
+        752
+      ],
+      "scheduledFor": "2026-07-06"
+    },
+    {
+      "id": "probability-lecture-notes-2425-1-1-basic-concepts",
+      "title": "1.1 Basic concepts",
+      "summary": "1.1 Basic concepts Definition 1.1 (Random experiment, Sample space) A random experiment is a procedure whose outcome cannot be determined with certainty.",
+      "objectives": [],
+      "sourceChunks": [
+        768,
+        769,
+        770,
+        771,
+        772,
+        773
+      ],
+      "scheduledFor": "2026-07-07"
+    },
+    {
+      "id": "probability-lecture-notes-2425-1-2-review-of-set-theory",
+      "title": "1.2 Review of set theory",
+      "summary": "Examples: In the previous examples, we can consider: i) The event E = \\text{“Heads”} = \\{H\\} .",
+      "objectives": [],
+      "sourceChunks": [
+        774,
+        775,
+        776,
+        777
+      ],
+      "scheduledFor": "2026-07-07"
+    },
+    {
+      "id": "probability-lecture-notes-2425-1-3-probability-functions",
+      "title": "1.3 Probability functions",
+      "summary": "Examples: i) In the random experiment “randomly pick a card in a 52-card deck”, the following events form a partition: A_1 = \\text{“the card is a figure or an Ace”}, A_2 = \\text{“the card is a number between 7 and 10”}, A_3 = \\text{“the card is a number between 2 and 6”}.",
+      "objectives": [],
+      "sourceChunks": [
+        793,
+        794,
+        795,
+        796,
+        797,
+        798
+      ],
+      "scheduledFor": "2026-07-07"
+    },
+    {
+      "id": "probability-lecture-notes-2425-1-4-hors-programme-uncountabl",
+      "title": "1.4 (Hors programme) Uncountable sample spaces",
+      "summary": "1.4 (Hors programme) Uncountable sample spaces This section is not part of the syllabus.",
+      "objectives": [],
+      "sourceChunks": [
+        828,
+        829,
+        830,
+        831,
+        832,
+        833,
+        834,
+        835
+      ],
+      "scheduledFor": "2026-07-07"
+    },
+    {
+      "id": "probability-lecture-notes-2425-1-5-learning-outcomes",
+      "title": "1.5 Learning outcomes",
+      "summary": "1.5 Learning outcomes At the end of this chapter, you should be able to: ★ Describe the elementary events of a random experiment.",
+      "objectives": [],
+      "sourceChunks": [
+        866,
+        867
+      ],
+      "scheduledFor": "2026-07-08"
+    },
+    {
+      "id": "probability-lecture-notes-2425-1-6-exercises",
+      "title": "1.6 Exercises",
+      "summary": "Key material covering 1.6 Exercises.",
+      "objectives": [],
+      "sourceChunks": [
+        868,
+        869,
+        870,
+        871,
+        872,
+        873,
+        874
+      ],
+      "scheduledFor": "2026-07-08"
+    },
+    {
+      "id": "probability-lecture-notes-2425-2-conditional-probabilities",
+      "title": "2. Conditional probabilities",
+      "summary": "Key material covering 2. Conditional probabilities.",
+      "objectives": [],
+      "sourceChunks": [
+        908,
+        909,
+        910
+      ],
+      "scheduledFor": "2026-07-08"
+    },
+    {
+      "id": "probability-lecture-notes-2425-2-1-definition-and-basic-prop",
+      "title": "2.1 Definition and basic properties",
+      "summary": "2.1 Definition and basic properties Definition 2.1 (Conditional probability) Let (\\Omega, P) be a probability space and let E, F be two events of \\Omega such that F is not impossible.",
+      "objectives": [],
+      "sourceChunks": [
+        911,
+        912,
+        913,
+        914,
+        915,
+        916,
+        917
+      ],
+      "scheduledFor": "2026-07-08"
+    },
+    {
+      "id": "probability-lecture-notes-2425-2-2-bayes-formula",
+      "title": "2.2 Bayes' formula",
+      "summary": "2.2 Bayes' formula The purpose of Bayes' formula is to allow us to go from P(E|A) to P(A|E) .",
+      "objectives": [],
+      "sourceChunks": [
+        943,
+        944,
+        945,
+        946,
+        947,
+        948
+      ],
+      "scheduledFor": "2026-07-09"
+    },
+    {
+      "id": "probability-lecture-notes-2425-2-3-hors-programme-un-peu-de-",
+      "title": "2.3 (Hors programme) : un peu de philosophie",
+      "summary": "2.3 (Hors programme) : un peu de philosophie Probability is the most important concept in modern science, especially as nobody has the slightest notion what it means Bertrand Russell After the work of Andreï Kolmogorov in the 1930s, a mathematician has no doubts about what a probability is: he will.",
+      "objectives": [],
+      "sourceChunks": [
+        965,
+        966,
+        967,
+        968,
+        969,
+        970,
+        971,
+        972,
+        973
+      ],
+      "scheduledFor": "2026-07-09"
+    },
+    {
+      "id": "probability-lecture-notes-2425-2-4-learning-outcomes",
+      "title": "2.4 Learning outcomes",
+      "summary": "2.4 Learning outcomes At the end of this chapter, you should be able to: ★ Compute the probability of E knowing F , for E, F any two events.",
+      "objectives": [],
+      "sourceChunks": [
+        979,
+        980
+      ],
+      "scheduledFor": "2026-07-09"
+    },
+    {
+      "id": "probability-lecture-notes-2425-2-5-exercises",
+      "title": "2.5 Exercises",
+      "summary": "Key material covering 2.5 Exercises.",
+      "objectives": [],
+      "sourceChunks": [
+        981,
+        982,
+        983,
+        984
+      ],
+      "scheduledFor": "2026-07-09"
+    },
+    {
+      "id": "probability-lecture-notes-2425-random-variables",
+      "title": "Random Variables",
+      "summary": "Random Variables 3 Discrete Random Variables .....",
+      "objectives": [],
+      "sourceChunks": [
+        1040,
+        1041,
+        1042
+      ],
+      "scheduledFor": "2026-07-10"
+    },
+    {
+      "id": "probability-lecture-notes-2425-3-discrete-random-variables",
+      "title": "3. Discrete Random Variables",
+      "summary": "Key material covering 3. Discrete Random Variables.",
+      "objectives": [],
+      "sourceChunks": [
+        1043,
+        1044,
+        1045,
+        1046,
+        1047
+      ],
+      "scheduledFor": "2026-07-10"
+    },
+    {
+      "id": "probability-lecture-notes-2425-3-2-pairs-of-discrete-random-",
+      "title": "3.2 Pairs of discrete random variables",
+      "summary": "Key material covering 3.2 Pairs of discrete random variables.",
+      "objectives": [],
+      "sourceChunks": [
+        1072,
+        1073,
+        1074,
+        1075,
+        1076,
+        1077,
+        1078,
+        1079,
+        1080,
+        1081
+      ],
+      "scheduledFor": "2026-07-10"
+    },
+    {
+      "id": "probability-lecture-notes-2425-3-3-expected-value-variance-s",
+      "title": "3.3 Expected Value, Variance, Standard Deviation",
+      "summary": "★ The joint probability mass function below shows two independent random variables: X = 1 X = 2 X = 3 P(Y = y) Y = 0 \\frac{1}{18} \\frac{1}{6} \\frac{1}{9} \\frac{1}{3} Y = 1 \\frac{1}{9} \\frac{1}{3} \\frac{2}{9} \\frac{2}{3} P(X = x) \\frac{1}{6} \\frac{1}{2} \\frac{1}{3} 1 A straightforward way to notice t.",
+      "objectives": [],
+      "sourceChunks": [
+        1090,
+        1091,
+        1092,
+        1093,
+        1094,
+        1095,
+        1096
+      ],
+      "scheduledFor": "2026-07-10"
+    },
+    {
+      "id": "probability-lecture-notes-2425-3-4-covariance-and-correlatio",
+      "title": "3.4 Covariance and correlation coefficient",
+      "summary": "Key material covering 3.4 Covariance and correlation coefficient.",
+      "objectives": [],
+      "sourceChunks": [
+        1124,
+        1125,
+        1126,
+        1127,
+        1128,
+        1129,
+        1130
+      ],
+      "scheduledFor": "2026-07-13"
+    },
+    {
+      "id": "probability-lecture-notes-2425-3-5-probability-distributions",
+      "title": "3.5 Probability distributions",
+      "summary": "3.5 Probability distributions We will now study in some detail some of the most important probability distributions that one encounters in many situations.",
+      "objectives": [],
+      "sourceChunks": [
+        1160,
+        1161,
+        1162,
+        1163,
+        1164,
+        1165,
+        1166
+      ],
+      "scheduledFor": "2026-07-13"
+    },
+    {
+      "id": "probability-lecture-notes-2425-3-6-learning-outcomes",
+      "title": "3.6 Learning outcomes",
+      "summary": "3.6 Learning outcomes At the end of this chapter, you should be able to: ★ Determine the probability mass function of a discrete random variable.",
+      "objectives": [],
+      "sourceChunks": [
+        1220,
+        1221
+      ],
+      "scheduledFor": "2026-07-13"
+    },
+    {
+      "id": "probability-lecture-notes-2425-3-7-exercises",
+      "title": "3.7 Exercises",
+      "summary": "Key material covering 3.7 Exercises.",
+      "objectives": [],
+      "sourceChunks": [
+        1222,
+        1223,
+        1224,
+        1225,
+        1226,
+        1227
+      ],
+      "scheduledFor": "2026-07-13"
+    },
+    {
+      "id": "probability-lecture-notes-2425-4-continuous-random-variables-2",
+      "title": "4. Continuous random variables",
+      "summary": "Key material covering 4. Continuous random variables.",
+      "objectives": [],
+      "sourceChunks": [
+        1279,
+        1280,
+        1281,
+        1282
+      ],
+      "scheduledFor": "2026-07-14"
+    },
+    {
+      "id": "probability-lecture-notes-2425-4-2-pairs-of-continuous-rando",
+      "title": "4.2 Pairs of continuous random variables",
+      "summary": "d) Lastly, by differentiating F_Y , one obtains the probability density function of Y : f_Y(y) = \\begin{cases} 4y(1-y^2) & \\text{if } y \\in [0, 1] \\\\ 0 & \\text{otherwise.} \\end{cases} (One can check that indeed \\int_{-\\infty}^{+\\infty} f_Y(y) dy = 1 .) 4.2 Pairs of continuous random variables In thi.",
+      "objectives": [],
+      "sourceChunks": [
+        1315,
+        1316,
+        1317,
+        1318,
+        1319
+      ],
+      "scheduledFor": "2026-07-14"
+    },
+    {
+      "id": "probability-lecture-notes-2425-4-3-expected-value-variance-s",
+      "title": "4.3 Expected Value, Variance, Standard deviation",
+      "summary": "Definition 4.5 (Pair of independent jointly continuous random variables) Let X, Y \\in \\mathcal{L}(\\Omega) be two jointly continuous random variables.",
+      "objectives": [],
+      "sourceChunks": [
+        1335,
+        1336,
+        1337,
+        1338,
+        1339,
+        1340,
+        1341
+      ],
+      "scheduledFor": "2026-07-14"
+    },
+    {
+      "id": "probability-lecture-notes-2425-4-4-probability-distributions",
+      "title": "4.4 Probability distributions",
+      "summary": "4.4 Probability distributions We will now study in some detail some of the most important continuous probability distributions that one encounters in many situations.",
+      "objectives": [],
+      "sourceChunks": [
+        1362,
+        1363,
+        1364,
+        1365,
+        1366,
+        1367
+      ],
+      "scheduledFor": "2026-07-14"
+    },
+    {
+      "id": "probability-lecture-notes-2425-4-5-learning-outcomes",
+      "title": "4.5 Learning outcomes",
+      "summary": "4.5 Learning outcomes At the end of this chapter, you should be able to: ★ Recognise if a function is a probability density function.",
+      "objectives": [],
+      "sourceChunks": [
+        1437,
+        1438
+      ],
+      "scheduledFor": "2026-07-15"
+    },
+    {
+      "id": "probability-lecture-notes-2425-4-6-exercises",
+      "title": "4.6 Exercises",
+      "summary": "Key material covering 4.6 Exercises.",
+      "objectives": [],
+      "sourceChunks": [
+        1439,
+        1440,
+        1441,
+        1442,
+        1443
+      ],
+      "scheduledFor": "2026-07-15"
+    }
+  ]
+}

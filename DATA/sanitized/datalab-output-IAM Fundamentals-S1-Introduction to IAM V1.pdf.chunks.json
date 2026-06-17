@@ -595,11 +595,6 @@
     "page": 40
   },
   {
-    "section": "Unknown",
-    "content": "graph TD; Root(( )) --- cGB((c=GB)); Root --- cUS((c=US)); cUS --- stCalifornia((st=California)); stCalifornia --- oAcme((o=Acme)); oAcme --- ouSales((ou=Sales)); oAcme --- ouMarketing((ou=Marketing)); ouSales --- cnBarbaraJensen((cn=Barbara Jensen)); The diagram illustrates a hierarchical LDAP directory structure. At the top is a root node (represented by a triangle) which branches into two nodes: 'c=GB' and 'c=US'. The 'c=US' node branches into 'st=California'. The 'st=California' node branches into 'o=Acme'. The 'o=Acme' node is labeled 'The Organization' and branches into 'ou=Sales' and 'ou=Marketing'. The 'ou=Sales' node is labeled 'Organizational Unit' and branches into 'cn=Barbara Jensen'. The 'cn=Barbara Jensen' node is labeled 'Person'. A hierarchical diagram of an LDAP directory structure. At the top is a root node branching into 'c=GB' and 'c=US'. 'c=US' branches into 'st=California'. 'st=California' branches into 'o=Acme'. 'o=Acme' is labeled 'The Organization' and branches into 'ou=Sales' and 'ou=Marketing'. 'ou=Sales' is labeled 'Organizational Unit' and branches into 'cn=Barbara Jensen'. 'cn=Barbara Jensen' is labeled 'Person'.",
-    "page": 40
-  },
-  {
     "section": "Practice: What You Will Demonstrate",
     "content": "A black and white icon of a bone, positioned to the left of the main title. Bone icon Practice: What You Will Demonstrate By the end of this lab you will: • Create a digital identity in MidPoint • Provision technical accounts in LDAP • Map business roles to LDAP groups • Federate LDAP into Keycloak • Authenticate using LDAP-backed identity A small icon of a target with a red bullseye and a green arrow, positioned to the left of the Real-world Scenario text. Target icon Real-world Scenario: You are building the first version of your company's IAM system!",
     "page": 41

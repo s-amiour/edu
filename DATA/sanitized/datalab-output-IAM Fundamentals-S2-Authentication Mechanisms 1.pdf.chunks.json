@@ -336,11 +336,6 @@
   },
   {
     "section": "Unknown",
-    "content": "graph LR; User[Login initiated by user] --> Server[Authentication server sends push notification]; Server --> Device[User approves or denies request]; Device --> Server; Server --> User; The diagram illustrates the Push-based Authentication process. It shows three main components: a user (represented by a computer icon), an authentication server (represented by a server rack icon), and a mobile device (represented by a smartphone icon). The process flow is as follows: 1. The user initiates a login. 2. The authentication server sends a push notification to the mobile device. 3. The user approves or denies the request on the mobile device. 4. The response is sent back to the server. 5. Finally, access is granted or blocked to the user. Diagram of the Push-based Authentication flow",
-    "page": 19
-  },
-  {
-    "section": "Unknown",
     "content": "• Push authentication sends a login approval request to your mobile app. • You simply tap 'Approve' or 'Deny' on your device. • It requires real-time communication between the IAM system and your device. • Provides a smoother user experience compared to typing codes. • May include context like login location, device, or IP address. • Not supported natively in Keycloak; external services like Duo or Azure AD are used.",
     "page": 19
   },
@@ -522,11 +517,6 @@
   {
     "section": "Protocol Matching",
     "content": "A decorative header image featuring a network diagram with blue nodes and lines, overlaid with a large green checkmark inside a gold padlock, symbolizing secure network authentication. Protocol Matching 1 VPN login → RADIUS - RADIUS is commonly used to authenticate remote access through VPNs. 2 Wi-Fi at school → Kerberos - Many school networks use Active Directory for authentication, which relies on Kerberos internally. - Especially relevant for domain-joined devices on Windows networks. 3 Google login on Trello → OIDC - This uses OpenID Connect for federated web login, authenticating via a third-party identity provider. Tip: Think about the environment — web, enterprise, or infrastructure — to match the right protocol.",
-    "page": 32
-  },
-  {
-    "section": "Protocol Matching",
-    "content": "A decorative header image featuring a network diagram with blue nodes and lines, overlaid with a large green checkmark inside a gold padlock, symbolizing secure network authentication.",
     "page": 32
   },
   {

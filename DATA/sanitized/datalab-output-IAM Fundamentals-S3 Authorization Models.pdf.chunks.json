@@ -236,11 +236,6 @@
   },
   {
     "section": "Unknown",
-    "content": "graph TD\n User((user)) -- \"request access\" --> PEP[PEP Enforce Policies]\n PEP --> Resource[Resource]\n PEP -- \"can this user Access Resource?\" --> PDP[PDP Evaluate Policies]\n PDP -- \"YES/NO\" --> PEP\n SecurityAdmin((Security Admin)) -- \"create policy\" --> PAP[PAP Manage Policies]\n PAP --> PDP\n PDP --> PIP[PIP Retrieve additional Attributes]\n PIP --> PDP\n PIP --- Context[Context: Org Chart, Cloud, DB] The diagram illustrates the PBAC architecture components and their interactions. A user requests access to a resource, which is intercepted by the PEP (Policy Enforcement Point). The PEP then asks the PDP (Policy Decision Point) if the user can access the resource. The PDP evaluates the request and returns a YES/NO decision to the PEP. The PEP then enforces the decision and either grants access to the resource or denies it. The PDP is also responsible for managing policies, which are created by the PAP (Policy Administration Point). The PAP is managed by a Security Admin. The PDP also interacts with the PIP (Policy Information Point) to retrieve additional attributes needed for decisions. The PIP is connected to various data sources, including an organization chart, a cloud, and a database. Diagram of PBAC architecture showing the flow between PEP, PDP, PAP, and PIP.",
-    "page": 15
-  },
-  {
-    "section": "Unknown",
     "content": "Who Decides? Who Enforces? Match each example to the PDP and PEP: • Keycloak Authorization Services evaluates a JavaScript policy. • A React frontend app shows/hides buttons based on user roles. • An API Gateway allows or denies access to endpoints. • An OPA engine checks whether access should be granted to a file. ► Which are PDPs? Which are PEPs? ► Discuss with your neighbor: Why is separating these concerns important?",
     "page": 16
   },

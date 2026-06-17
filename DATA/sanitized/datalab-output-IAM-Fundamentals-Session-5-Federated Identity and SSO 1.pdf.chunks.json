@@ -226,11 +226,6 @@
   },
   {
     "section": "Unknown",
-    "content": "OAuth2 is a token-based authorization protocol that enables secure access to resources on behalf of a user without exposing their credentials.",
-    "page": 15
-  },
-  {
-    "section": "Unknown",
     "content": "(2) Bob contacts the Authorization Desk (Auth Server) and says: \"Allow Fran to access my vault, but only to see documents, not withdraw cash.\"",
     "page": 15
   },
