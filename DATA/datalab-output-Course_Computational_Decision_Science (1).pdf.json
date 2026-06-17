@@ -1,0 +1,455 @@
+{
+  "children": [
+    {
+      "html": "<h1>Computational Decision Science (CDS-410)</h1><h2>Course Description</h2><p>Application of computation, probability, optimization, and behavioral modeling to decision-making under uncertainty.</p><h2>Learning Objectives</h2><ul style=\"list-style-type: none\"><li>• Build probabilistic decision models</li><li>• Apply Bayesian reasoning</li><li>• Solve optimization problems</li><li>• Evaluate decision quality under uncertainty</li></ul><h2>Weekly Topics</h2><p>Week 1: Rational Decision Making Week 2: Utility Theory Week 3: Probability Review Week 4: Bayesian Inference Week 5: Markov Decision Processes Week 6: Multi-Criteria Decisions Week 7: Midterm Week 8: Optimization Methods Week 9: Risk Analysis Week 10: Game Theory Week 11: AI-Assisted Decision Systems Week 12: Capstone Presentations</p><h2>Assessments</h2><p>Quizzes: 15% Midterm: 25% Research Report: 20% Capstone Project: 40%</p><h2>Prerequisites</h2><p>Linear Algebra, Finite Probability, Introductory Programming</p>",
+      "bbox": [
+        0,
+        0,
+        1064,
+        1484
+      ],
+      "polygon": [
+        [
+          0,
+          0
+        ],
+        [
+          1064,
+          0
+        ],
+        [
+          1064,
+          1484
+        ],
+        [
+          0,
+          1484
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/SectionHeader/0",
+          "block_type": "SectionHeader",
+          "html": "<h1>Computational Decision Science (CDS-410)</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              195,
+              140
+            ],
+            [
+              866,
+              140
+            ],
+            [
+              866,
+              178
+            ],
+            [
+              195,
+              178
+            ]
+          ],
+          "bbox": [
+            195,
+            140,
+            866,
+            178
+          ],
+          "section_hierarchy": {},
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/1",
+          "block_type": "SectionHeader",
+          "html": "<h2>Course Description</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              230
+            ],
+            [
+              370,
+              230
+            ],
+            [
+              370,
+              259
+            ],
+            [
+              133,
+              259
+            ]
+          ],
+          "bbox": [
+            133,
+            230,
+            370,
+            259
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/2",
+          "block_type": "Text",
+          "html": "<p>Application of computation, probability, optimization, and behavioral modeling to decision-making under uncertainty.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              271
+            ],
+            [
+              909,
+              271
+            ],
+            [
+              909,
+              314
+            ],
+            [
+              133,
+              314
+            ]
+          ],
+          "bbox": [
+            133,
+            271,
+            909,
+            314
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/1"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>Learning Objectives</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              350
+            ],
+            [
+              379,
+              350
+            ],
+            [
+              379,
+              379
+            ],
+            [
+              133,
+              379
+            ]
+          ],
+          "bbox": [
+            133,
+            350,
+            379,
+            379
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/4",
+          "block_type": "Text",
+          "html": "<ul style=\"list-style-type: none\"><li>• Build probabilistic decision models</li><li>• Apply Bayesian reasoning</li><li>• Solve optimization problems</li><li>• Evaluate decision quality under uncertainty</li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              390
+            ],
+            [
+              900,
+              390
+            ],
+            [
+              900,
+              434
+            ],
+            [
+              133,
+              434
+            ]
+          ],
+          "bbox": [
+            133,
+            390,
+            900,
+            434
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>Weekly Topics</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              467
+            ],
+            [
+              313,
+              467
+            ],
+            [
+              313,
+              498
+            ],
+            [
+              133,
+              498
+            ]
+          ],
+          "bbox": [
+            133,
+            467,
+            313,
+            498
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>Week 1: Rational Decision Making Week 2: Utility Theory Week 3: Probability Review Week 4: Bayesian Inference Week 5: Markov Decision Processes Week 6: Multi-Criteria Decisions Week 7: Midterm Week 8: Optimization Methods Week 9: Risk Analysis Week 10: Game Theory Week 11: AI-Assisted Decision Systems Week 12: Capstone Presentations</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              509
+            ],
+            [
+              924,
+              509
+            ],
+            [
+              924,
+              595
+            ],
+            [
+              133,
+              595
+            ]
+          ],
+          "bbox": [
+            133,
+            509,
+            924,
+            595
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h2>Assessments</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              630
+            ],
+            [
+              302,
+              630
+            ],
+            [
+              302,
+              658
+            ],
+            [
+              133,
+              658
+            ]
+          ],
+          "bbox": [
+            133,
+            630,
+            302,
+            658
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<p>Quizzes: 15% Midterm: 25% Research Report: 20% Capstone Project: 40%</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              670
+            ],
+            [
+              740,
+              670
+            ],
+            [
+              740,
+              694
+            ],
+            [
+              133,
+              694
+            ]
+          ],
+          "bbox": [
+            133,
+            670,
+            740,
+            694
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/9",
+          "block_type": "SectionHeader",
+          "html": "<h2>Prerequisites</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              728
+            ],
+            [
+              298,
+              728
+            ],
+            [
+              298,
+              758
+            ],
+            [
+              133,
+              758
+            ]
+          ],
+          "bbox": [
+            133,
+            728,
+            298,
+            758
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<p>Linear Algebra, Finite Probability, Introductory Programming</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              770
+            ],
+            [
+              616,
+              770
+            ],
+            [
+              616,
+              793
+            ],
+            [
+              133,
+              793
+            ]
+          ],
+          "bbox": [
+            133,
+            770,
+            616,
+            793
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        }
+      ],
+      "section_hierarchy": {},
+      "page": 0
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 11
+      }
+    ]
+  }
+}

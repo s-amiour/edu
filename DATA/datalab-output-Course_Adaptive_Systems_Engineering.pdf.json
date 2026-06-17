@@ -1,0 +1,455 @@
+{
+  "children": [
+    {
+      "html": "<h1>Adaptive Systems Engineering (ASE-301)</h1><h2>Course Description</h2><p>Design of adaptive software and socio-technical systems that respond to changing environments, user behavior, and operational constraints.</p><h2>Learning Objectives</h2><ul style=\"list-style-type: none\"><li>• Model adaptive system behavior</li><li>• Analyze feedback loops and control strategies</li><li>• Design resilient architectures</li><li>• Evaluate system adaptation tradeoffs</li></ul><h2>Weekly Topics</h2><p>Week 1: Introduction to Adaptive Systems Week 2: Feedback Control Week 3: Runtime Monitoring<br/>Week 4: Self-Healing Architectures Week 5: Reinforcement Learning for Adaptation Week 6:<br/>Human-in-the-Loop Systems Week 7: Midterm Review Week 8: Distributed Adaptation Week 9:<br/>Fault Tolerance Week 10: Resource Optimization Week 11: Case Studies Week 12: Final Project<br/>Presentations</p><h2>Assessments</h2><p>Midterm Exam: 25% Lab Assignments: 25% Team Project: 35% Participation: 15%</p><h2>Prerequisites</h2><p>Software Engineering Fundamentals, Data Structures, Probability Basics</p>",
+      "bbox": [
+        0,
+        0,
+        1064,
+        1484
+      ],
+      "polygon": [
+        [
+          0,
+          0
+        ],
+        [
+          1064,
+          0
+        ],
+        [
+          1064,
+          1484
+        ],
+        [
+          0,
+          1484
+        ]
+      ],
+      "id": "/page/0/Page/0",
+      "block_type": "Page",
+      "children": [
+        {
+          "id": "/page/0/SectionHeader/0",
+          "block_type": "SectionHeader",
+          "html": "<h1>Adaptive Systems Engineering (ASE-301)</h1>",
+          "page": 0,
+          "polygon": [
+            [
+              207,
+              140
+            ],
+            [
+              851,
+              140
+            ],
+            [
+              851,
+              178
+            ],
+            [
+              207,
+              178
+            ]
+          ],
+          "bbox": [
+            207,
+            140,
+            851,
+            178
+          ],
+          "section_hierarchy": {},
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/1",
+          "block_type": "SectionHeader",
+          "html": "<h2>Course Description</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              230
+            ],
+            [
+              370,
+              230
+            ],
+            [
+              370,
+              259
+            ],
+            [
+              133,
+              259
+            ]
+          ],
+          "bbox": [
+            133,
+            230,
+            370,
+            259
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/2",
+          "block_type": "Text",
+          "html": "<p>Design of adaptive software and socio-technical systems that respond to changing environments, user behavior, and operational constraints.</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              271
+            ],
+            [
+              911,
+              271
+            ],
+            [
+              911,
+              314
+            ],
+            [
+              133,
+              314
+            ]
+          ],
+          "bbox": [
+            133,
+            271,
+            911,
+            314
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/1"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/3",
+          "block_type": "SectionHeader",
+          "html": "<h2>Learning Objectives</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              350
+            ],
+            [
+              379,
+              350
+            ],
+            [
+              379,
+              379
+            ],
+            [
+              133,
+              379
+            ]
+          ],
+          "bbox": [
+            133,
+            350,
+            379,
+            379
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/4",
+          "block_type": "Text",
+          "html": "<ul style=\"list-style-type: none\"><li>• Model adaptive system behavior</li><li>• Analyze feedback loops and control strategies</li><li>• Design resilient architectures</li><li>• Evaluate system adaptation tradeoffs</li></ul>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              391
+            ],
+            [
+              932,
+              391
+            ],
+            [
+              932,
+              433
+            ],
+            [
+              133,
+              433
+            ]
+          ],
+          "bbox": [
+            133,
+            391,
+            932,
+            433
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/3"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/5",
+          "block_type": "SectionHeader",
+          "html": "<h2>Weekly Topics</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              467
+            ],
+            [
+              313,
+              467
+            ],
+            [
+              313,
+              498
+            ],
+            [
+              133,
+              498
+            ]
+          ],
+          "bbox": [
+            133,
+            467,
+            313,
+            498
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/6",
+          "block_type": "Text",
+          "html": "<p>Week 1: Introduction to Adaptive Systems Week 2: Feedback Control Week 3: Runtime Monitoring<br/>Week 4: Self-Healing Architectures Week 5: Reinforcement Learning for Adaptation Week 6:<br/>Human-in-the-Loop Systems Week 7: Midterm Review Week 8: Distributed Adaptation Week 9:<br/>Fault Tolerance Week 10: Resource Optimization Week 11: Case Studies Week 12: Final Project<br/>Presentations</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              509
+            ],
+            [
+              923,
+              509
+            ],
+            [
+              923,
+              614
+            ],
+            [
+              133,
+              614
+            ]
+          ],
+          "bbox": [
+            133,
+            509,
+            923,
+            614
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/5"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/7",
+          "block_type": "SectionHeader",
+          "html": "<h2>Assessments</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              651
+            ],
+            [
+              302,
+              651
+            ],
+            [
+              302,
+              679
+            ],
+            [
+              133,
+              679
+            ]
+          ],
+          "bbox": [
+            133,
+            651,
+            302,
+            679
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/8",
+          "block_type": "Text",
+          "html": "<p>Midterm Exam: 25% Lab Assignments: 25% Team Project: 35% Participation: 15%</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              691
+            ],
+            [
+              795,
+              691
+            ],
+            [
+              795,
+              715
+            ],
+            [
+              133,
+              715
+            ]
+          ],
+          "bbox": [
+            133,
+            691,
+            795,
+            715
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/7"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/SectionHeader/9",
+          "block_type": "SectionHeader",
+          "html": "<h2>Prerequisites</h2>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              750
+            ],
+            [
+              298,
+              750
+            ],
+            [
+              298,
+              780
+            ],
+            [
+              133,
+              780
+            ]
+          ],
+          "bbox": [
+            133,
+            750,
+            298,
+            780
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        },
+        {
+          "id": "/page/0/Text/10",
+          "block_type": "Text",
+          "html": "<p>Software Engineering Fundamentals, Data Structures, Probability Basics</p>",
+          "page": 0,
+          "polygon": [
+            [
+              133,
+              790
+            ],
+            [
+              716,
+              790
+            ],
+            [
+              716,
+              814
+            ],
+            [
+              133,
+              814
+            ]
+          ],
+          "bbox": [
+            133,
+            790,
+            716,
+            814
+          ],
+          "section_hierarchy": {
+            "1": "/page/0/SectionHeader/0",
+            "2": "/page/0/SectionHeader/9"
+          },
+          "images": {},
+          "markdown": null,
+          "inference_failed": false,
+          "metadata": null
+        }
+      ],
+      "section_hierarchy": {},
+      "page": 0
+    }
+  ],
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 11
+      }
+    ]
+  }
+}

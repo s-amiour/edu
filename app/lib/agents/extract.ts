@@ -1,7 +1,7 @@
-import { GoogleGenAI } from "@google/genai";
+import Groq from "groq-sdk";
 
 function getClient() {
-  return new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+  return new Groq({ apiKey: process.env.GROQ_API_KEY });
 }
 
 export interface RawTopic {
@@ -9,7 +9,7 @@ export interface RawTopic {
   title: string;
   summary: string;
   objectives: string[];
-  sourceChunks: number[]; // indices into chunks.clean.json
+  sourceChunks: number[];
 }
 
 interface ChunkInput {
@@ -31,30 +31,35 @@ Output ONLY valid JSON — no markdown, no commentary, no code fences. The JSON 
 }
 
 Rules:
-- Group related chunks into coherent topics (not one topic per chunk — aim for 3-8 topics per session).
-- Extract objectives ONLY from text that explicitly lists them (look for "By the end", "learners will", "objectives", numbered lists of outcomes).
-- If no explicit objectives found, write 1-2 inferred ones based on content — keep them concise.
-- sourceChunks must reference the exact integer "id" values from the input chunks.
-- Keep ids unique and in kebab-case (e.g. "iam-governance-basics").`;
+- Group related chunks into coherent topics — aim for 3-8 topics per session.
+- Extract objectives ONLY from text that explicitly lists them ("By the end", "learners will", numbered outcome lists).
+- If no explicit objectives found, write 1-2 inferred ones from the content.
+- sourceChunks must be the exact integer id values from the input.
+- ids must be unique kebab-case slugs.`;
 
 export async function extractTopics(
   chunks: ChunkInput[],
   sessionLabel: string
 ): Promise<RawTopic[]> {
-  const sampled = sampleChunks(chunks, 120);
+  const sampled = sampleChunks(chunks, 20);
 
   const chunkText = sampled
     .map((c) => `[id:${c.id}] [section:${c.section}] [page:${c.page}]\n${c.content}`)
     .join("\n\n---\n\n");
 
-  const prompt = `${SYSTEM}\n\nSession: ${sessionLabel}\n\nChunks (${sampled.length} of ${chunks.length}):\n\n${chunkText}\n\nExtract topics as JSON array.`;
+  const userMsg = `Session: ${sessionLabel}\n\nChunks (${sampled.length} of ${chunks.length}):\n\n${chunkText}\n\nExtract topics as JSON array.`;
 
-  const response = await getClient().models.generateContent({
-    model: "gemini-2.0-flash",
-    contents: prompt,
+  const response = await getClient().chat.completions.create({
+    model: "llama-3.3-70b-versatile",
+    messages: [
+      { role: "system", content: SYSTEM },
+      { role: "user", content: userMsg },
+    ],
+    temperature: 0.2,
+    max_tokens: 4096,
   });
 
-  const raw = response.text ?? "";
+  const raw = response.choices[0]?.message?.content ?? "";
   return parseTopics(raw, sessionLabel);
 }
 
@@ -77,7 +82,7 @@ function parseTopics(raw: string, sessionLabel: string): RawTopic[] {
     return parsed.filter(isValidTopic);
   } catch (e) {
     console.error(`[extract] JSON parse failed for "${sessionLabel}":`, e);
-    console.error("[extract] Raw response:", raw.slice(0, 500));
+    console.error("[extract] Raw:", raw.slice(0, 400));
     return [];
   }
 }
