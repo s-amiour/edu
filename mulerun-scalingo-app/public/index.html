@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MuleRun Scalingo App</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --text: #e4e4e7;
+      --text-muted: #8b8d97;
+      --accent: #6366f1;
+      --accent-hover: #818cf8;
+      --success: #22c55e;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    header h1 span { color: var(--accent); }
+
+    header p {
+      margin-top: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 720px;
+      padding: 2rem 1.5rem;
+      flex: 1;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      transition: background 0.3s;
+    }
+
+    .status-dot.connected { background: var(--success); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: var(--accent-hover); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    pre {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      max-height: 320px;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    footer {
+      width: 100%;
+      padding: 1.25rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MuleRun <span>Scalingo</span> App</h1>
+    <p>Node.js + Redis cache demo &mdash; TTL 10 s</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2><span class="status-dot" id="statusDot"></span> Redis Status</h2>
+      <p id="statusText" style="color:var(--text-muted);font-size:0.9rem;">Checking connection&hellip;</p>
+    </div>
+
+    <div class="card">
+      <h2>Cached Data</h2>
+      <button class="btn" id="fetchBtn" onclick="fetchData()">Fetch Data</button>
+      <pre id="output">Click "Fetch Data" to load from the API (cached 10 s).</pre>
+      <p class="meta" id="meta"></p>
+    </div>
+  </main>
+
+  <footer>Powered by Node.js 20 &middot; Redis &middot; Scalingo</footer>
+
+  <script>
+    async function fetchData() {
+      const btn = document.getElementById('fetchBtn');
+      const output = document.getElementById('output');
+      const meta = document.getElementById('meta');
+      btn.disabled = true;
+      btn.textContent = 'Loading...';
+      const start = performance.now();
+
+      try {
+        const res = await fetch('/api/data');
+        const json = await res.json();
+        const elapsed = (performance.now() - start).toFixed(0);
+        output.textContent = JSON.stringify(json, null, 2);
+        meta.textContent = `Fetched in ${elapsed} ms`;
+      } catch (err) {
+        output.textContent = 'Error: ' + err.message;
+        meta.textContent = '';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Fetch Data';
+      }
+    }
+
+    // Ping API on load to show Redis status
+    (async () => {
+      const dot = document.getElementById('statusDot');
+      const txt = document.getElementById('statusText');
+      try {
+        const res = await fetch('/api/data');
+        if (res.ok) {
+          dot.classList.add('connected');
+          txt.textContent = 'Connected to Redis';
+        } else { throw new Error('bad status'); }
+      } catch {
+        txt.textContent = 'Redis unavailable (data served without cache)';
+      }
+    })();
+  </script>
+</body>
+</html>
