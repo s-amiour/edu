@@ -21,10 +21,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 COPY backend/package.json ./
-COPY prisma ./prisma/
-
-RUN npm install --omit=dev && npx prisma generate
-
+COPY --from=build /app/node_modules ./node_modules/
 COPY --from=build /app/dist ./dist/
 
 RUN addgroup -g 1001 -S nodejs && \
